@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پروفایل شخصی و Portfolio حرفه‌ای | Jolly Panda</title>
+  <meta name="description" content="ساخت صفحه شخصی، رزومه و Portfolio اختصاصی برای معرفی حرفه‌ای شما در یک لینک." />
+  <meta name="theme-color" content="#fffbf3" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Jolly Panda" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="پروفایل شخصی و Portfolio حرفه‌ای | Jolly Panda" />
+  <meta property="og:description" content="ساخت صفحه شخصی، رزومه و Portfolio اختصاصی برای معرفی حرفه‌ای شما در یک لینک." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://me.jollypanda.ir/" />
+  <meta property="og:site_name" content="Jolly Panda" />
+  <meta property="og:locale" content="fa_IR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <link rel="canonical" href="https://me.jollypanda.ir/" />
+  <link rel="alternate" hreflang="fa" href="https://me.jollypanda.ir/" />
+  <link rel="alternate" hreflang="en" href="https://me.jollypanda.ir/?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://me.jollypanda.ir/" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts: Inter (Latin) + Vazirmatn (Persian) — matches the Jolly Panda art style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Self-contained: design tokens + base components, then page-specific styles -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/page.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Jolly Panda Profile home">
+        <img src="assets/favicon.svg" alt="" class="brand__mark" width="42" height="42" />
+        <span>
+          <span data-i18n="nav.brand">Jolly Panda</span>
+          <span class="brand__sub" data-i18n="nav.brandSub">Profile</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navLinks" class="nav__links">
+        <a href="#pricing" class="nav__link" data-i18n="nav.pricing">قیمت‌گذاری</a>
+        <a href="#calculator" class="nav__link" data-i18n="nav.calculator">محاسبه‌گر</a>
+        <a href="#request" class="btn btn-primary nav__mobile-cta" data-i18n="nav.request">درخواست پروفایل</a>
+      </nav>
+
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button type="button" class="lang-switch__btn" data-lang="fa">فا</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="#request" class="btn btn-primary" data-i18n="nav.request">درخواست پروفایل</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="section profile-hero">
+      <div class="container profile-hero__grid">
+        <div>
+          <span class="eyebrow" data-i18n="hero.badge">پروفایل اختصاصی شما، در یک لینک</span>
+          <h1 class="profile-hero__title" data-i18n="hero.title">یک صفحه شخصی زیبا، با آدرس اختصاصی خودتان</h1>
+          <p class="profile-hero__desc" data-i18n="hero.description">
+            رزومه، Portfolio و راه‌های ارتباطی‌تان را در یک صفحه شخصی حرفه‌ای کنار هم بگذارید — با آدرسی که کاملاً متعلق به خودتان است.
+          </p>
+          <div class="profile-hero__actions">
+            <a href="#request" class="btn btn-primary" data-i18n="hero.ctaPrimary">ساخت پروفایل من</a>
+            <a href="#pricing" class="btn btn-secondary" data-i18n="hero.ctaSecondary">مشاهده قیمت‌ها</a>
+          </div>
+        </div>
+
+        <div class="profile-hero__url-card" aria-hidden="true">
+          <span class="profile-hero__url-label" data-i18n="hero.urlLabel">آدرس صفحه شما این‌طور خواهد بود:</span>
+          <div class="profile-hero__url-mock">
+            <span class="profile-hero__url-domain">me.jollypanda.ir/</span><span class="profile-hero__url-slug">your-name</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow" data-i18n="pricing.eyebrow">قیمت‌گذاری</span>
+          <h2 data-i18n="pricing.title">پکیجی که مناسب شماست</h2>
+          <p data-i18n="pricing.subtitle">برای برآورد قیمت، از محاسبه‌گر پایین همین صفحه استفاده کنید.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3 data-i18n="pricing.plans.basic.name">پایه</h3>
+            <ul class="pricing-card__features" data-i18n-list="pricing.plans.basic.features"></ul>
+            <a href="#request" class="btn btn-secondary pricing-card__cta" data-i18n="pricing.cta">انتخاب این پکیج</a>
+          </article>
+
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge" data-i18n="pricing.mostPopular">محبوب‌ترین</span>
+            <h3 data-i18n="pricing.plans.professional.name">حرفه‌ای</h3>
+            <ul class="pricing-card__features" data-i18n-list="pricing.plans.professional.features"></ul>
+            <a href="#request" class="btn btn-primary pricing-card__cta" data-i18n="pricing.cta">انتخاب این پکیج</a>
+          </article>
+
+          <article class="pricing-card">
+            <h3 data-i18n="pricing.plans.custom.name">اختصاصی</h3>
+            <ul class="pricing-card__features" data-i18n-list="pricing.plans.custom.features"></ul>
+            <a href="#request" class="btn btn-secondary pricing-card__cta" data-i18n="pricing.cta">انتخاب این پکیج</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALCULATOR ============ -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow" data-i18n="calculator.eyebrow">محاسبه‌گر</span>
+          <h2 data-i18n="calculator.title">برآورد قیمت شخصی‌سازی‌شده</h2>
+          <p data-i18n="calculator.subtitle">امکانات مورد نیازتان را انتخاب کنید تا برآورد قیمت به‌روزرسانی شود.</p>
+        </div>
+
+        <form class="calculator" id="calculatorForm">
+          <div class="calculator__grid">
+            <fieldset class="calculator__group">
+              <legend data-i18n="calculator.packageLabel">پکیج پایه</legend>
+              <label class="calculator__option">
+                <input type="radio" name="calcPackage" value="basic" checked />
+                <span data-i18n="calculator.packages.basic">پایه</span>
+              </label>
+              <label class="calculator__option">
+                <input type="radio" name="calcPackage" value="standard" />
+                <span data-i18n="calculator.packages.standard">حرفه‌ای</span>
+              </label>
+              <label class="calculator__option">
+                <input type="radio" name="calcPackage" value="premium" />
+                <span data-i18n="calculator.packages.premium">اختصاصی</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="calculator__group">
+              <legend data-i18n="calculator.addonsLabel">امکانات اضافه</legend>
+              <label class="calculator__option">
+                <input type="checkbox" name="calcAddon" value="gallery" />
+                <span data-i18n="calculator.addons.gallery">گالری تصاویر</span>
+              </label>
+              <label class="calculator__option">
+                <input type="checkbox" name="calcAddon" value="resume" />
+                <span data-i18n="calculator.addons.resume">دانلود رزومه (PDF)</span>
+              </label>
+              <label class="calculator__option">
+                <input type="checkbox" name="calcAddon" value="animations" />
+                <span data-i18n="calculator.addons.animations">انیمیشن‌های اختصاصی</span>
+              </label>
+              <label class="calculator__option">
+                <input type="checkbox" name="calcAddon" value="contactForm" />
+                <span data-i18n="calculator.addons.contactForm">فرم تماس</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="calculator__result">
+            <span class="calculator__result-label" data-i18n="calculator.totalLabel">برآورد قیمت</span>
+            <span class="calculator__result-value" id="calculatorTotal">۱,۵۰۰,۰۰۰ تومان</span>
+          </div>
+          <p class="calculator__note" data-i18n="calculator.note">این عدد صرفاً یک برآورد اولیه است و قیمت نهایی پس از بررسی پروژه اعلام می‌شود.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ REQUEST FORM ============ -->
+    <section class="section section--alt" id="request">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow" data-i18n="form.eyebrow">درخواست پروفایل</span>
+          <h2 data-i18n="form.title">بگذارید پروفایل‌تان را بسازیم</h2>
+          <p data-i18n="form.subtitle">فرم زیر را پر کنید تا در سریع‌ترین زمان ممکن با شما تماس بگیریم.</p>
+        </div>
+
+        <form class="request-form" id="profileRequestForm" novalidate>
+          <div class="request-form__row">
+            <div class="form-field">
+              <label class="form-field__label" for="fullName" data-i18n="form.labels.fullName">نام و نام خانوادگی</label>
+              <input class="form-field__input" type="text" id="fullName" name="fullName"
+                     data-i18n-placeholder="form.placeholders.fullName" placeholder="مثلاً یوسف فرهمند" />
+              <span class="form-field__error"></span>
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="phone" data-i18n="form.labels.phone">شماره تماس</label>
+              <input class="form-field__input" type="tel" id="phone" name="phone"
+                     data-i18n-placeholder="form.placeholders.phone" placeholder="۰۹۱۲۱۲۳۴۵۶۷" />
+              <span class="form-field__error"></span>
+            </div>
+          </div>
+
+          <div class="request-form__row">
+            <div class="form-field">
+              <label class="form-field__label" for="email" data-i18n="form.labels.email">ایمیل</label>
+              <input class="form-field__input" type="email" id="email" name="email"
+                     data-i18n-placeholder="form.placeholders.email" placeholder="you@example.com" />
+              <span class="form-field__error"></span>
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="profession" data-i18n="form.labels.profession">حوزه فعالیت</label>
+              <input class="form-field__input" type="text" id="profession" name="profession"
+                     data-i18n-placeholder="form.placeholders.profession" placeholder="مثلاً طراح گرافیک، برنامه‌نویس، عکاس..." />
+              <span class="form-field__error"></span>
+            </div>
+          </div>
+
+          <!-- ===== Profile URL / slug picker ===== -->
+          <div class="form-field form-field--url">
+            <label class="form-field__label" for="profileSlugInput" data-i18n="form.labels.urlLabel">آدرس اختصاصی پروفایل</label>
+            <p class="form-field__hint" data-i18n="form.labels.urlSubLabel">این آدرس، لینک نهایی و عمومی صفحه شما خواهد بود.</p>
+
+            <div class="url-picker">
+              <span class="url-picker__prefix" data-i18n="form.labels.urlPreviewPrefix">me.jollypanda.ir/</span>
+              <input class="url-picker__input" type="text" id="profileSlugInput" name="profileSlug"
+                     autocomplete="off" spellcheck="false"
+                     data-i18n-placeholder="form.placeholders.url" placeholder="your-name" />
+            </div>
+            <p class="url-picker__status" id="profileSlugStatus" role="status" aria-live="polite"></p>
+            <p class="url-picker__preview">
+              <span data-i18n="hero.urlLabel">آدرس صفحه شما این‌طور خواهد بود:</span>
+              <a href="#" class="url-picker__preview-link" tabindex="-1">https://me.jollypanda.ir/<span id="profileSlugPreview">your-name</span></a>
+            </p>
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="projectDetails" data-i18n="form.labels.projectDetails">توضیحات پروژه</label>
+            <textarea class="form-field__input form-field__textarea" id="projectDetails" name="projectDetails" rows="4"
+                      data-i18n-placeholder="form.placeholders.projectDetails" placeholder="کمی درباره کاری که می‌خواهید انجام دهیم بنویسید..."></textarea>
+            <span class="form-field__error"></span>
+          </div>
+
+          <div class="request-form__footer">
+            <button type="submit" class="btn btn-primary" id="profileSubmitBtn" data-i18n="form.submit">ارسال درخواست</button>
+            <p class="request-form__feedback" id="profileFormFeedback" role="status" aria-live="polite"></p>
+            <p class="request-form__direct-email">
+              <span data-i18n="form.directEmailLabel">یا مستقیم ایمیل بزنید:</span>
+              <a href="mailto:hello@jollypanda.ir">hello@jollypanda.ir</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__top">
+      <div class="site-footer__brand">
+        <a href="index.html" class="site-footer__logo" aria-label="Jolly Panda Profile home">
+          <img src="assets/favicon.svg" alt="" class="site-footer__mark" width="34" height="34" />
+          <span data-i18n="nav.brand">Jolly Panda</span>
+        </a>
+        <p class="site-footer__tagline" data-i18n="footer.tagline">پروفایل شخصی حرفه‌ای شما، ساخته‌شده توسط Jolly Panda.</p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <div class="site-footer__group">
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="#pricing" data-i18n="nav.pricing">قیمت‌گذاری</a></li>
+            <li><a class="site-footer__link" href="#calculator" data-i18n="nav.calculator">محاسبه‌گر</a></li>
+            <li><a class="site-footer__link" href="#request" data-i18n="nav.request">درخواست پروفایل</a></li>
+            <li><a class="site-footer__link" href="https://jollypanda.ir" data-i18n="nav.backToStudio">بازگشت به استودیو</a></li>
+            <li><a class="site-footer__link site-footer__link--email" href="mailto:hello@jollypanda.ir">hello@jollypanda.ir</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p class="site-footer__copyright" data-i18n="footer.copyright">© ۲۰۲۶ Jolly Panda. تمامی حقوق محفوظ است.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/language.js" defer></script>
+  <script src="js/slug-service.js" defer></script>
+  <script src="js/slug-input.js" defer></script>
+  <script src="js/calculator.js" defer></script>
+  <script src="js/email-service.js" defer></script>
+  <script src="js/form.js" defer></script>
+  <script src="js/list-i18n.js" defer></script>
+</body>
+</html>

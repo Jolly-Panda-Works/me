@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "dir": "ltr",
+    "title": "Personal Profile & Portfolio Websites | Jolly Panda",
+    "description": "Professional personal profile, resume and portfolio websites designed around your identity."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "brand": "Jolly Panda",
+    "brandSub": "Profile",
+    "pricing": "Pricing",
+    "calculator": "Calculator",
+    "request": "Request a Profile",
+    "backToStudio": "Back to Studio"
+  },
+  "hero": {
+    "badge": "Your profile, one link away",
+    "title": "A beautiful personal page, with your own address",
+    "description": "Bring your resume, portfolio and contact details together on one professional profile page — with a URL that's entirely yours.",
+    "ctaPrimary": "Build My Profile",
+    "ctaSecondary": "See Pricing",
+    "urlLabel": "Your page address will look like this:"
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "A plan that fits you",
+    "subtitle": "Use the calculator below to get a price estimate.",
+    "mostPopular": "Most Popular",
+    "cta": "Choose this plan",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "features": [
+          "One single-page profile",
+          "Fully responsive design",
+          "Personal me.jollypanda.ir URL",
+          "Social media links"
+        ]
+      },
+      "professional": {
+        "name": "Professional",
+        "features": [
+          "Everything in Basic",
+          "Portfolio / photo gallery",
+          "Resume download button (PDF)",
+          "Dedicated contact form",
+          "Page entrance animations"
+        ]
+      },
+      "custom": {
+        "name": "Custom",
+        "features": [
+          "Everything in Professional",
+          "Fully custom design",
+          "Unlimited sections",
+          "1:1 design consultation"
+        ]
+      }
+    }
+  },
+  "calculator": {
+    "eyebrow": "Calculator",
+    "title": "Get a personalized estimate",
+    "subtitle": "Pick the features you need and the estimate updates instantly.",
+    "packageLabel": "Base package",
+    "addonsLabel": "Add-ons",
+    "packages": {
+      "basic": "Basic",
+      "standard": "Professional",
+      "premium": "Custom"
+    },
+    "addons": {
+      "gallery": "Photo gallery",
+      "resume": "Resume download (PDF)",
+      "animations": "Custom animations",
+      "contactForm": "Contact form"
+    },
+    "totalLabel": "Estimated Price",
+    "currencySuffix": "Toman",
+    "note": "This number is only an initial estimate. Final pricing will be confirmed after reviewing your project."
+  },
+  "form": {
+    "eyebrow": "Request a Profile",
+    "title": "Let's build your profile",
+    "subtitle": "Fill out the form below and we'll get back to you as soon as possible.",
+    "labels": {
+      "fullName": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email",
+      "profession": "Profession",
+      "projectDetails": "Project Details",
+      "urlLabel": "Personal Profile URL",
+      "urlSubLabel": "This will be the final, public link to your page.",
+      "urlPreviewPrefix": "me.jollypanda.ir/"
+    },
+    "placeholders": {
+      "fullName": "e.g. John Doe",
+      "phone": "+1 555 123 4567",
+      "email": "you@example.com",
+      "profession": "e.g. Graphic Designer, Developer, Photographer...",
+      "projectDetails": "Tell us a bit about what you'd like us to build...",
+      "url": "your-name"
+    },
+    "submit": "Submit Request",
+    "submitting": "Submitting...",
+    "successTitle": "Your request was submitted!",
+    "successBody": "We'll reach out shortly to get started.",
+    "deliveryError": "Something went wrong sending your request. Please try again, or email us directly at the address below.",
+    "directEmailLabel": "Or email us directly:"
+  },
+  "slug": {
+    "checking": "Checking...",
+    "available": "✓ This URL is available",
+    "taken": "✕ This URL is already taken",
+    "reserved": "This URL is reserved.",
+    "invalid": "This URL is not valid",
+    "tooShort": "The URL must be at least 3 characters",
+    "tooLong": "The URL cannot be longer than 30 characters",
+    "invalidChars": "Only lowercase letters, numbers and hyphens are allowed",
+    "takenBySomeoneElse": "This URL was just taken by someone else. Please choose another one."
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Enter a valid email",
+    "invalidPhone": "Enter a valid phone number",
+    "slugRequired": "Please choose a URL",
+    "slugNotAvailable": "Please choose an available URL"
+  },
+  "footer": {
+    "tagline": "Your professional personal profile, built by Jolly Panda.",
+    "copyright": "© 2026 Jolly Panda. All rights reserved."
+  }
+}
