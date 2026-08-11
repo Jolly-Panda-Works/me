@@ -54,7 +54,6 @@
 
       <nav id="navLinks" class="nav__links">
         <a href="#pricing" class="nav__link" data-i18n="nav.pricing">قیمت‌گذاری</a>
-        <a href="#calculator" class="nav__link" data-i18n="nav.calculator">محاسبه‌گر</a>
         <a href="#request" class="btn btn-primary nav__mobile-cta" data-i18n="nav.request">درخواست پروفایل</a>
       </nav>
 
@@ -100,86 +99,29 @@
         <div class="section-heading section-heading--center">
           <span class="eyebrow" data-i18n="pricing.eyebrow">قیمت‌گذاری</span>
           <h2 data-i18n="pricing.title">پکیجی که مناسب شماست</h2>
-          <p data-i18n="pricing.subtitle">برای برآورد قیمت، از محاسبه‌گر پایین همین صفحه استفاده کنید.</p>
+          <p data-i18n="pricing.subtitle">پکیج مدنظرتان را انتخاب کنید تا در فرم درخواست برایتان ثبت شود.</p>
         </div>
 
         <div class="pricing-grid">
           <article class="pricing-card">
             <h3 data-i18n="pricing.plans.basic.name">پایه</h3>
             <ul class="pricing-card__features" data-i18n-list="pricing.plans.basic.features"></ul>
-            <a href="#request" class="btn btn-secondary pricing-card__cta" data-i18n="pricing.cta">انتخاب این پکیج</a>
+            <a href="#request" class="btn btn-secondary pricing-card__cta" data-plan="basic" data-i18n="pricing.cta">انتخاب این پکیج</a>
           </article>
 
           <article class="pricing-card pricing-card--featured">
             <span class="pricing-card__badge" data-i18n="pricing.mostPopular">محبوب‌ترین</span>
             <h3 data-i18n="pricing.plans.professional.name">حرفه‌ای</h3>
             <ul class="pricing-card__features" data-i18n-list="pricing.plans.professional.features"></ul>
-            <a href="#request" class="btn btn-primary pricing-card__cta" data-i18n="pricing.cta">انتخاب این پکیج</a>
+            <a href="#request" class="btn btn-primary pricing-card__cta" data-plan="professional" data-i18n="pricing.cta">انتخاب این پکیج</a>
           </article>
 
           <article class="pricing-card">
             <h3 data-i18n="pricing.plans.custom.name">اختصاصی</h3>
             <ul class="pricing-card__features" data-i18n-list="pricing.plans.custom.features"></ul>
-            <a href="#request" class="btn btn-secondary pricing-card__cta" data-i18n="pricing.cta">انتخاب این پکیج</a>
+            <a href="#request" class="btn btn-secondary pricing-card__cta" data-plan="custom" data-i18n="pricing.cta">انتخاب این پکیج</a>
           </article>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ CALCULATOR ============ -->
-    <section class="section" id="calculator">
-      <div class="container">
-        <div class="section-heading section-heading--center">
-          <span class="eyebrow" data-i18n="calculator.eyebrow">محاسبه‌گر</span>
-          <h2 data-i18n="calculator.title">برآورد قیمت شخصی‌سازی‌شده</h2>
-          <p data-i18n="calculator.subtitle">امکانات مورد نیازتان را انتخاب کنید تا برآورد قیمت به‌روزرسانی شود.</p>
-        </div>
-
-        <form class="calculator" id="calculatorForm">
-          <div class="calculator__grid">
-            <fieldset class="calculator__group">
-              <legend data-i18n="calculator.packageLabel">پکیج پایه</legend>
-              <label class="calculator__option">
-                <input type="radio" name="calcPackage" value="basic" checked />
-                <span data-i18n="calculator.packages.basic">پایه</span>
-              </label>
-              <label class="calculator__option">
-                <input type="radio" name="calcPackage" value="standard" />
-                <span data-i18n="calculator.packages.standard">حرفه‌ای</span>
-              </label>
-              <label class="calculator__option">
-                <input type="radio" name="calcPackage" value="premium" />
-                <span data-i18n="calculator.packages.premium">اختصاصی</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="calculator__group">
-              <legend data-i18n="calculator.addonsLabel">امکانات اضافه</legend>
-              <label class="calculator__option">
-                <input type="checkbox" name="calcAddon" value="gallery" />
-                <span data-i18n="calculator.addons.gallery">گالری تصاویر</span>
-              </label>
-              <label class="calculator__option">
-                <input type="checkbox" name="calcAddon" value="resume" />
-                <span data-i18n="calculator.addons.resume">دانلود رزومه (PDF)</span>
-              </label>
-              <label class="calculator__option">
-                <input type="checkbox" name="calcAddon" value="animations" />
-                <span data-i18n="calculator.addons.animations">انیمیشن‌های اختصاصی</span>
-              </label>
-              <label class="calculator__option">
-                <input type="checkbox" name="calcAddon" value="contactForm" />
-                <span data-i18n="calculator.addons.contactForm">فرم تماس</span>
-              </label>
-            </fieldset>
-          </div>
-
-          <div class="calculator__result">
-            <span class="calculator__result-label" data-i18n="calculator.totalLabel">برآورد قیمت</span>
-            <span class="calculator__result-value" id="calculatorTotal">۱,۵۰۰,۰۰۰ تومان</span>
-          </div>
-          <p class="calculator__note" data-i18n="calculator.note">این عدد صرفاً یک برآورد اولیه است و قیمت نهایی پس از بررسی پروژه اعلام می‌شود.</p>
-        </form>
       </div>
     </section>
 
@@ -223,6 +165,18 @@
                      data-i18n-placeholder="form.placeholders.profession" placeholder="مثلاً طراح گرافیک، برنامه‌نویس، عکاس..." />
               <span class="form-field__error"></span>
             </div>
+          </div>
+
+          <!-- ===== Selected plan ===== -->
+          <div class="form-field">
+            <label class="form-field__label" for="selectedPlan" data-i18n="form.labels.selectedPlan">پلن انتخابی</label>
+            <select class="form-field__input" id="selectedPlan" name="selectedPlan">
+              <option value="" data-i18n="form.selectPlanPlaceholder">— انتخاب کنید —</option>
+              <option value="basic" data-i18n="pricing.plans.basic.name">پایه</option>
+              <option value="professional" data-i18n="pricing.plans.professional.name">حرفه‌ای</option>
+              <option value="custom" data-i18n="pricing.plans.custom.name">اختصاصی</option>
+            </select>
+            <span class="form-field__error"></span>
           </div>
 
           <!-- ===== Profile URL / slug picker ===== -->
@@ -277,7 +231,6 @@
         <div class="site-footer__group">
           <ul class="site-footer__list">
             <li><a class="site-footer__link" href="#pricing" data-i18n="nav.pricing">قیمت‌گذاری</a></li>
-            <li><a class="site-footer__link" href="#calculator" data-i18n="nav.calculator">محاسبه‌گر</a></li>
             <li><a class="site-footer__link" href="#request" data-i18n="nav.request">درخواست پروفایل</a></li>
             <li><a class="site-footer__link" href="https://jollypanda.ir" data-i18n="nav.backToStudio">بازگشت به استودیو</a></li>
             <li><a class="site-footer__link site-footer__link--email" href="mailto:hello@jollypanda.ir">hello@jollypanda.ir</a></li>
@@ -297,7 +250,7 @@
   <script src="js/language.js" defer></script>
   <script src="js/slug-service.js" defer></script>
   <script src="js/slug-input.js" defer></script>
-  <script src="js/calculator.js" defer></script>
+  <script src="js/plan-select.js" defer></script>
   <script src="js/email-service.js" defer></script>
   <script src="js/form.js" defer></script>
   <script src="js/list-i18n.js" defer></script>

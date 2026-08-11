@@ -31,7 +31,7 @@
 
   function validateRequiredFields() {
     var valid = true;
-    ["fullName", "phone", "email", "profession", "projectDetails"].forEach(function (name) {
+    ["fullName", "phone", "email", "profession", "selectedPlan", "projectDetails"].forEach(function (name) {
       var field = form.elements[name];
       if (!field) return;
       var value = field.value.trim();
@@ -105,11 +105,14 @@
       // Actually deliver the submission — see email-service.js for exactly
       // where this data goes and the one-time setup it requires.
       setSubmitting(true);
+      var planValue = form.elements.selectedPlan.value;
       var payload = {
         fullName: form.elements.fullName.value.trim(),
         phone: form.elements.phone.value.trim(),
         email: form.elements.email.value.trim(),
         profession: form.elements.profession.value.trim(),
+        selectedPlan: planValue,
+        selectedPlanLabel: planValue ? t("pricing.plans." + planValue + ".name") : "",
         projectDetails: form.elements.projectDetails.value.trim(),
         profileSlug: result.slug,
         profileUrl: "https://me.jollypanda.ir/" + result.slug

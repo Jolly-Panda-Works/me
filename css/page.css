@@ -169,93 +169,6 @@
   }
 }
 
-/* ---------- Calculator ---------- */
-.calculator {
-  max-width: 760px;
-  margin-inline: auto;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-}
-
-.calculator__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-lg);
-}
-
-.calculator__group {
-  border: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
-
-.calculator__group legend {
-  font-weight: 700;
-  color: var(--color-ink);
-  margin-bottom: var(--space-2xs);
-  padding: 0;
-}
-
-.calculator__option {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-  font-size: var(--fs-small);
-  color: var(--color-ink-soft);
-  padding: 0.6rem 0.85rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: border-color var(--duration-fast) var(--ease-out);
-}
-
-.calculator__option:hover {
-  border-color: var(--color-orange);
-}
-
-.calculator__option input {
-  accent-color: var(--color-orange);
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-}
-
-.calculator__result {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-top: var(--space-lg);
-  padding-top: var(--space-lg);
-  border-top: 1px solid var(--color-border);
-}
-
-.calculator__result-label {
-  font-size: var(--fs-small);
-  color: var(--color-ink-faint);
-}
-
-.calculator__result-value {
-  font-size: var(--fs-h3);
-  font-weight: 800;
-  color: var(--color-orange-dark);
-}
-
-.calculator__note {
-  font-size: var(--fs-tiny);
-  color: var(--color-ink-faint);
-  margin-top: var(--space-sm);
-}
-
-@media (min-width: 700px) {
-  .calculator__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 /* ---------- Request form ---------- */
 .request-form {
   max-width: 760px;
@@ -313,6 +226,29 @@
 .form-field__input:focus {
   outline: none;
   border-color: var(--color-orange);
+}
+
+select.form-field__input {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-ink-faint) 50%),
+    linear-gradient(135deg, var(--color-ink-faint) 50%, transparent 50%);
+  background-position: calc(100% - 1.2rem) center, calc(100% - 0.85rem) center;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+html[dir="rtl"] select.form-field__input {
+  background-position: 1.2rem center, 0.85rem center;
+}
+
+select.form-field__input.is-highlighted {
+  animation: plan-select-pulse 1.2s var(--ease-out);
+}
+
+@keyframes plan-select-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(240, 133, 46, 0.45); border-color: var(--color-orange); }
+  70% { box-shadow: 0 0 0 8px rgba(240, 133, 46, 0); border-color: var(--color-orange); }
+  100% { box-shadow: 0 0 0 0 rgba(240, 133, 46, 0); }
 }
 
 .form-field__textarea {

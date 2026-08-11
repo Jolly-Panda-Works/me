@@ -9,7 +9,6 @@
     "brand": "Jolly Panda",
     "brandSub": "Profile",
     "pricing": "Pricing",
-    "calculator": "Calculator",
     "request": "Request a Profile",
     "backToStudio": "Back to Studio"
   },
@@ -24,7 +23,7 @@
   "pricing": {
     "eyebrow": "Pricing",
     "title": "A plan that fits you",
-    "subtitle": "Use the calculator below to get a price estimate.",
+    "subtitle": "Choose a plan and it'll carry over into the request form.",
     "mostPopular": "Most Popular",
     "cta": "Choose this plan",
     "plans": {
@@ -58,36 +57,17 @@
       }
     }
   },
-  "calculator": {
-    "eyebrow": "Calculator",
-    "title": "Get a personalized estimate",
-    "subtitle": "Pick the features you need and the estimate updates instantly.",
-    "packageLabel": "Base package",
-    "addonsLabel": "Add-ons",
-    "packages": {
-      "basic": "Basic",
-      "standard": "Professional",
-      "premium": "Custom"
-    },
-    "addons": {
-      "gallery": "Photo gallery",
-      "resume": "Resume download (PDF)",
-      "animations": "Custom animations",
-      "contactForm": "Contact form"
-    },
-    "totalLabel": "Estimated Price",
-    "currencySuffix": "Toman",
-    "note": "This number is only an initial estimate. Final pricing will be confirmed after reviewing your project."
-  },
   "form": {
     "eyebrow": "Request a Profile",
     "title": "Let's build your profile",
     "subtitle": "Fill out the form below and we'll get back to you as soon as possible.",
+    "selectPlanPlaceholder": "— Select —",
     "labels": {
       "fullName": "Full Name",
       "phone": "Phone Number",
       "email": "Email",
       "profession": "Profession",
+      "selectedPlan": "Selected Plan",
       "projectDetails": "Project Details",
       "urlLabel": "Personal Profile URL",
       "urlSubLabel": "This will be the final, public link to your page.",
