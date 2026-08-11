@@ -1,3 +1,6 @@
 [submodule "bio/zeinab-nasrollahnia"]
 	path = bio/zeinab-nasrollahnia
 	url = https://github.com/JollyPandaWebProjects/zeinab-nasrollahnia-mashhad.git
+[submodule "bio/Yasamin-Farahmand"]
+	path = bio/Yasamin-Farahmand
+	url = https://github.com/JollyPandaWebProjects/Yasamin-Farahmand.git
