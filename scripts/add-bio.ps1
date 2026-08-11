@@ -1,4 +1,3 @@
-```powershell
 $ErrorActionPreference = "Stop"
 
 Clear-Host
@@ -198,4 +197,4 @@ Write-Host "Commit  : $CommitMessage"
 Write-Host ""
 Write-Host "Nothing was pushed."
 Write-Host ""
-```
+
