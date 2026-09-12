@@ -44,7 +44,8 @@ window.ProfileSlugService = (function () {
     "admin", "api", "www", "mail", "support", "contact", "about",
     "pricing", "login", "signup", "register", "dashboard", "profile",
     "profiles", "settings", "privacy", "terms", "help", "blog",
-    "assets", "static", "cdn", "favicon", "robots", "sitemap"
+    "assets", "static", "cdn", "favicon", "robots", "sitemap",
+    "en", "fa"
   ];
 
   // Mock "already taken" slugs for the static/demo phase only.

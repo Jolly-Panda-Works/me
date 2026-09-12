@@ -8,10 +8,10 @@ This repository is the static site itself, plus the `bio/` directory that hosts 
 
 ## What this site does
 
-* Presents the **Jolly Panda Profile** product: pricing plans, a live price calculator, and an explanation of what's included.
+* Presents the **Jolly Panda Profile** product: three plans (Basic / Professional / Custom) and an explanation of what's included in each. Pricing is intentionally not displayed yet.
 * Lets a visitor **request a profile** through a validated form (name, contact info, chosen plan, and a desired `me.jollypanda.ir/<slug>` address).
 * Checks the desired slug against a reserved-word list and a mock "taken" list on the client, then relays the submission by email — no custom backend exists yet (see [Form submissions & email delivery](#form-submissions--email-delivery)).
-* Is fully bilingual (Persian/English) with RTL/LTR layout switching, and ships as a plain static site — no build step, no framework, no bundler.
+* Is fully bilingual (English/Persian) with RTL/LTR layout switching and routed URLs (`/en/`, `/fa/`), and ships as a plain static site — no build step, no framework, no bundler.
 
 ---
 
@@ -30,24 +30,27 @@ No `package.json`, no `node_modules`, no build tooling is required — the site 
 
 ```text
 .
-├── index.html              # The single page: hero, pricing, request form
+├── index.html              # Root redirector: sends visitors to /en/ (default) or /fa/
+├── en/
+│   └── index.html            # English site (primary language) — hero, pricing, request form
+├── fa/
+│   └── index.html            # Persian (RTL) site — same page, same shared css/js/lang
 ├── css/
 │   ├── variables.css        # Design tokens (colors sampled from the mascot artwork)
 │   ├── base.css              # Shared/reset styles and base components
 │   └── page.css               # Page-specific styles
 ├── js/
 │   ├── app.js                # Sticky header + mobile nav behavior
-│   ├── language.js            # i18n engine: loads lang/*.json, applies data-i18n
+│   ├── language.js            # i18n engine: path-based (/en/, /fa/) + loads lang/*.json
 │   ├── list-i18n.js            # i18n for array/list content (pricing feature lists)
-│   ├── calculator.js            # Live price calculator (package + add-ons)
 │   ├── plan-select.js            # Pre-fills the request form from a pricing card
 │   ├── slug-input.js              # Debounced slug availability UI
 │   ├── slug-service.js             # Mock slug validation/reservation service (client-side only, for now)
 │   ├── form.js                      # Form validation + submission flow
 │   └── email-service.js              # Relays form submissions via FormSubmit
 ├── lang/
-│   ├── fa.json                # Persian strings (default language)
-│   └── en.json                  # English strings
+│   ├── en.json                # English strings (default language)
+│   └── fa.json                  # Persian strings
 ├── assets/                # Favicon and static assets
 ├── bio/                    # Delivered client profiles, added as Git submodules
 ├── scripts/
@@ -70,16 +73,18 @@ python3 -m http.server 8080
 npx serve .
 ```
 
-Then open `http://localhost:8080` in a browser. Opening `index.html` directly via `file://` also works for quick checks, but a local server is recommended so relative fetches (e.g. `lang/*.json`) behave the same as in production.
+Then open `http://localhost:8080/en/` (or `/fa/`) in a browser. Visiting `http://localhost:8080/` redirects to whichever language the visitor last used, defaulting to `/en/`. A local server is required (not `file://`) — every page loads shared CSS/JS/lang files from absolute paths (e.g. `/lang/en.json`), which only resolve correctly when served from the site root.
 
 ---
 
-## Internationalization (i18n)
+## Internationalization (i18n) & URL structure
 
-* Persian (`fa`, RTL) is the default language; English (`en`, LTR) is available via the language switch in the header.
-* All user-facing copy lives in `lang/fa.json` and `lang/en.json` — never hardcoded in `index.html` or the JS files.
+* The site is routed by language: **`/en/`** (English, the site's primary/default language) and **`/fa/`** (Persian, RTL). Visiting `/` redirects to the visitor's last-used language (stored in `localStorage`) or their browser language, falling back to `/en/`.
+* `/en/index.html` and `/fa/index.html` are two independent HTML documents (same layout, pre-rendered in their own language for SEO/no-JS) that both load the same shared `css/`, `js/`, and `lang/*.json` files from the site root.
+* All user-facing copy lives in `lang/en.json` and `lang/fa.json` — never hardcoded in the JS files. The pre-rendered text in each `index.html` is a fallback that matches its own language JSON 1:1.
 * Scalar strings are wired via `data-i18n="path.to.key"` (handled by `js/language.js`); list content (e.g. pricing feature bullets) uses `data-i18n-list="path.to.key"` (handled by `js/list-i18n.js`).
-* The active language is persisted under its own `localStorage` key (`jollypanda:me:lang`), separate from the main Jolly Panda studio site.
+* `js/language.js` treats the URL path as authoritative for which language to render — it only falls back to the stored preference or browser language when neither `/en/` nor `/fa/` is present in the path (e.g. for the root redirector). The language switcher in the header navigates between `/en/` and `/fa/` (preserving any `#section` anchor) rather than swapping content in place, so each language has a real, shareable, indexable URL.
+* `en` and `fa` are reserved in `js/slug-service.js` so a client profile can never be assigned a slug that collides with these site routes.
 
 ---
 

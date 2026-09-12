@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Profile & Portfolio Websites | Jolly Panda</title>
+  <meta name="description" content="Professional personal profile, resume and portfolio websites designed around your identity." />
+  <meta name="keywords" content="personal profile page, online resume, resume website, portfolio website, personal website builder, custom profile URL, professional bio page, CV website, digital resume, personal landing page, link in bio" />
+  <meta name="theme-color" content="#fffbf3" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Jolly Panda" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Personal Profile & Portfolio Websites | Jolly Panda" />
+  <meta property="og:description" content="Professional personal profile, resume and portfolio websites designed around your identity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://me.jollypanda.ir/en/" />
+  <meta property="og:site_name" content="Jolly Panda" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="fa_IR" />
+
+  <link rel="canonical" href="https://me.jollypanda.ir/en/" />
+  <link rel="alternate" hreflang="en" href="https://me.jollypanda.ir/en/" />
+  <link rel="alternate" hreflang="fa" href="https://me.jollypanda.ir/fa/" />
+  <link rel="alternate" hreflang="x-default" href="https://me.jollypanda.ir/en/" />
+
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts: Inter (Latin) + Vazirmatn (Persian) — matches the Jolly Panda art style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Self-contained: design tokens + base components, then page-specific styles -->
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/page.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="./" class="brand" aria-label="Jolly Panda Profile home">
+        <img src="/assets/favicon.svg" alt="" class="brand__mark" width="42" height="42" />
+        <span>
+          <span data-i18n="nav.brand">Jolly Panda</span>
+          <span class="brand__sub" data-i18n="nav.brandSub">Profile</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navLinks" class="nav__links">
+        <a href="#request" class="btn btn-primary nav__mobile-cta" data-i18n="nav.request">Request a Profile</a>
+      </nav>
+
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button type="button" class="lang-switch__btn" data-lang="fa">فا</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="#request" class="btn btn-primary" data-i18n="nav.request">Request a Profile</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="section profile-hero">
+      <div class="container profile-hero__grid">
+        <div>
+          <span class="eyebrow" data-i18n="hero.badge">Your profile, one link away</span>
+          <h1 class="profile-hero__title" data-i18n="hero.title">A beautiful personal page, with your own address</h1>
+          <p class="profile-hero__desc" data-i18n="hero.description">
+            Bring your resume, portfolio and contact details together on one professional profile page — with a URL that's entirely yours.
+          </p>
+          <div class="profile-hero__actions">
+            <a href="#request" class="btn btn-primary" data-i18n="hero.ctaPrimary">Build My Profile</a>
+            <a href="#pricing" class="btn btn-secondary" data-i18n="hero.ctaSecondary">See Pricing</a>
+          </div>
+        </div>
+
+        <div class="profile-hero__url-card" aria-hidden="true">
+          <span class="profile-hero__url-label" data-i18n="hero.urlLabel">Your page address will look like this:</span>
+          <div class="profile-hero__url-mock">
+            <span class="profile-hero__url-domain">me.jollypanda.ir/</span><span class="profile-hero__url-slug">your-name</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow" data-i18n="pricing.eyebrow">Pricing</span>
+          <h2 data-i18n="pricing.title">A plan that fits you</h2>
+          <p data-i18n="pricing.subtitle">Choose a plan and it'll carry over into the request form.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3 data-i18n="pricing.plans.basic.name">Basic</h3>
+            <ul class="pricing-card__features" data-i18n-list="pricing.plans.basic.features"></ul>
+            <a href="#request" class="btn btn-secondary pricing-card__cta" data-plan="basic" data-i18n="pricing.cta">Choose this plan</a>
+          </article>
+
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge" data-i18n="pricing.mostPopular">Most Popular</span>
+            <h3 data-i18n="pricing.plans.professional.name">Professional</h3>
+            <ul class="pricing-card__features" data-i18n-list="pricing.plans.professional.features"></ul>
+            <a href="#request" class="btn btn-primary pricing-card__cta" data-plan="professional" data-i18n="pricing.cta">Choose this plan</a>
+          </article>
+
+          <article class="pricing-card">
+            <h3 data-i18n="pricing.plans.custom.name">Custom</h3>
+            <ul class="pricing-card__features" data-i18n-list="pricing.plans.custom.features"></ul>
+            <a href="#request" class="btn btn-secondary pricing-card__cta" data-plan="custom" data-i18n="pricing.cta">Choose this plan</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REQUEST FORM ============ -->
+    <section class="section section--alt" id="request">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow" data-i18n="form.eyebrow">Request a Profile</span>
+          <h2 data-i18n="form.title">Let's build your profile</h2>
+          <p data-i18n="form.subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
+        </div>
+
+        <form class="request-form" id="profileRequestForm" novalidate>
+          <div class="request-form__row">
+            <div class="form-field">
+              <label class="form-field__label" for="fullName" data-i18n="form.labels.fullName">Full Name</label>
+              <input class="form-field__input" type="text" id="fullName" name="fullName"
+                     data-i18n-placeholder="form.placeholders.fullName" placeholder="e.g. John Doe" />
+              <span class="form-field__error"></span>
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="phone" data-i18n="form.labels.phone">Phone Number</label>
+              <input class="form-field__input" type="tel" id="phone" name="phone"
+                     data-i18n-placeholder="form.placeholders.phone" placeholder="+1 555 123 4567" />
+              <span class="form-field__error"></span>
+            </div>
+          </div>
+
+          <div class="request-form__row">
+            <div class="form-field">
+              <label class="form-field__label" for="email" data-i18n="form.labels.email">Email</label>
+              <input class="form-field__input" type="email" id="email" name="email"
+                     data-i18n-placeholder="form.placeholders.email" placeholder="you@example.com" />
+              <span class="form-field__error"></span>
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="profession" data-i18n="form.labels.profession">Profession</label>
+              <input class="form-field__input" type="text" id="profession" name="profession"
+                     data-i18n-placeholder="form.placeholders.profession" placeholder="e.g. Graphic Designer, Developer, Photographer..." />
+              <span class="form-field__error"></span>
+            </div>
+          </div>
+
+          <!-- ===== Selected plan ===== -->
+          <div class="form-field">
+            <label class="form-field__label" for="selectedPlan" data-i18n="form.labels.selectedPlan">Selected Plan</label>
+            <select class="form-field__input" id="selectedPlan" name="selectedPlan">
+              <option value="" data-i18n="form.selectPlanPlaceholder">— Select —</option>
+              <option value="basic" data-i18n="pricing.plans.basic.name">Basic</option>
+              <option value="professional" data-i18n="pricing.plans.professional.name">Professional</option>
+              <option value="custom" data-i18n="pricing.plans.custom.name">Custom</option>
+            </select>
+            <span class="form-field__error"></span>
+          </div>
+
+          <!-- ===== Profile URL / slug picker ===== -->
+          <div class="form-field form-field--url">
+            <label class="form-field__label" for="profileSlugInput" data-i18n="form.labels.urlLabel">Personal Profile URL</label>
+            <p class="form-field__hint" data-i18n="form.labels.urlSubLabel">This will be the final, public link to your page.</p>
+
+            <div class="url-picker">
+              <span class="url-picker__prefix" data-i18n="form.labels.urlPreviewPrefix">me.jollypanda.ir/</span>
+              <input class="url-picker__input" type="text" id="profileSlugInput" name="profileSlug"
+                     autocomplete="off" spellcheck="false"
+                     data-i18n-placeholder="form.placeholders.url" placeholder="your-name" />
+            </div>
+            <p class="url-picker__status" id="profileSlugStatus" role="status" aria-live="polite"></p>
+            <p class="url-picker__preview">
+              <span data-i18n="hero.urlLabel">Your page address will look like this:</span>
+              <a href="#" class="url-picker__preview-link" tabindex="-1">https://me.jollypanda.ir/<span id="profileSlugPreview">your-name</span></a>
+            </p>
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="projectDetails" data-i18n="form.labels.projectDetails">Project Details</label>
+            <textarea class="form-field__input form-field__textarea" id="projectDetails" name="projectDetails" rows="4"
+                      data-i18n-placeholder="form.placeholders.projectDetails" placeholder="Tell us a bit about what you'd like us to build..."></textarea>
+            <span class="form-field__error"></span>
+          </div>
+
+          <div class="request-form__footer">
+            <button type="submit" class="btn btn-primary" id="profileSubmitBtn" data-i18n="form.submit">Submit Request</button>
+            <p class="request-form__feedback" id="profileFormFeedback" role="status" aria-live="polite"></p>
+            <p class="request-form__direct-email">
+              <span data-i18n="form.directEmailLabel">Or email us directly:</span>
+              <a href="mailto:hello@jollypanda.ir">hello@jollypanda.ir</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__top">
+      <div class="site-footer__brand">
+        <a href="./" class="site-footer__logo" aria-label="Jolly Panda Profile home">
+          <img src="/assets/favicon.svg" alt="" class="site-footer__mark" width="34" height="34" />
+          <span data-i18n="nav.brand">Jolly Panda</span>
+        </a>
+        <p class="site-footer__tagline" data-i18n="footer.tagline">Your professional personal profile, built by Jolly Panda.</p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <div class="site-footer__group">
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a class="site-footer__link" href="#request" data-i18n="nav.request">Request a Profile</a></li>
+            <li><a class="site-footer__link" href="https://jollypanda.ir" data-i18n="nav.backToStudio">Back to Studio</a></li>
+            <li><a class="site-footer__link site-footer__link--email" href="mailto:hello@jollypanda.ir">hello@jollypanda.ir</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p class="site-footer__copyright" data-i18n="footer.copyright">© 2026 Jolly Panda. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js" defer></script>
+  <script src="/js/language.js" defer></script>
+  <script src="/js/slug-service.js" defer></script>
+  <script src="/js/slug-input.js" defer></script>
+  <script src="/js/plan-select.js" defer></script>
+  <script src="/js/email-service.js" defer></script>
+  <script src="/js/form.js" defer></script>
+  <script src="/js/list-i18n.js" defer></script>
+</body>
+</html>

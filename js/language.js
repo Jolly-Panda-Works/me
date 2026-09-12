@@ -1,15 +1,19 @@
 /* ==========================================================================
    Jolly Panda Profile — language.js
-   Same data-i18n architecture as the main studio site, but this product is
-   Persian-first: DEFAULT_LANG is "fa" and language state is stored under
-   its own key so it never collides with the studio site's preference.
+   Same data-i18n architecture as the main studio site, but this product now
+   ships as two routed pages: /en/ (primary — DEFAULT_LANG) and /fa/. The
+   URL path is the source of truth for which language is active — it always
+   wins over a stored preference, so a visitor landing on /fa/ never briefly
+   flashes English before the "real" language kicks in. Preference is still
+   persisted under its own key so the root redirector (/index.html) can send
+   a returning visitor straight to the language they used last time.
    ========================================================================== */
 
 (function () {
   "use strict";
 
   var SUPPORTED_LANGS = ["fa", "en"];
-  var DEFAULT_LANG = "fa";
+  var DEFAULT_LANG = "en";
   var STORAGE_KEY = "jollypanda:me:lang";
   var cache = {};
   var currentDict = null;
@@ -21,7 +25,18 @@
     }, obj);
   }
 
+  function detectPathLang() {
+    var match = window.location.pathname.match(/^\/(en|fa)(\/|$)/);
+    return match ? match[1] : null;
+  }
+
   function detectInitialLang() {
+    // The URL path (/en/ or /fa/) is authoritative when present — the
+    // served page's own static markup is already in that language, so
+    // anything else here should confirm it, never override it.
+    var pathLang = detectPathLang();
+    if (pathLang) return pathLang;
+
     var stored = null;
     try {
       stored = localStorage.getItem(STORAGE_KEY);
@@ -38,7 +53,10 @@
 
   function fetchDictionary(lang) {
     if (cache[lang]) return Promise.resolve(cache[lang]);
-    return fetch("lang/" + lang + ".json")
+    // Absolute path: language.js is loaded from both /en/ and /fa/, so a
+    // path relative to the page (e.g. "lang/en.json") would resolve one
+    // level too deep. "/lang/..." always resolves from the site root.
+    return fetch("/lang/" + lang + ".json")
       .then(function (res) {
         if (!res.ok) throw new Error("Failed to load language file: " + lang);
         return res.json();
@@ -126,10 +144,25 @@
     });
   }
 
+  function pathForLang(lang) {
+    // Preserve any in-page anchor (e.g. "#pricing") across the switch so
+    // a visitor mid-way down the page lands back in the same spot.
+    return "/" + lang + "/" + (window.location.hash || "");
+  }
+
   function initLanguageSwitchers() {
     document.querySelectorAll(".lang-switch__btn").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        setLanguage(btn.getAttribute("data-lang"));
+        var lang = btn.getAttribute("data-lang");
+        if (SUPPORTED_LANGS.indexOf(lang) === -1) return;
+        if (lang === detectPathLang()) return; // already on this language's page
+
+        try {
+          localStorage.setItem(STORAGE_KEY, lang);
+        } catch (e) {
+          /* ignore persistence failures */
+        }
+        window.location.href = pathForLang(lang);
       });
     });
   }
