@@ -190,7 +190,9 @@ for (const repo of repos) {
     url: `/bio/${name}/`,
   });
 
-  fs.renameSync(clone, dest);
+  // copy instead of rename: /tmp and the build dir can be different devices
+  // on Vercel (EXDEV), and rename() cannot cross devices.
+  fs.cpSync(clone, dest, { recursive: true });
   fs.rmSync(tmp, { recursive: true, force: true });
   log(`ok    ${name} -> /bio/${name}/`);
 }
