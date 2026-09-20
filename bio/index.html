@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profiles | Jolly Panda</title>
+  <meta name="description" content="Browse the personal profile and portfolio websites built by Jolly Panda." />
+  <meta name="theme-color" content="#fffbf3" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://me.jollypanda.ir/bio/" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/bio.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header is-scrolled" id="siteHeader">
+    <div class="container nav">
+      <a href="/" class="brand" aria-label="Jolly Panda Profile home">
+        <img src="/assets/favicon.svg" alt="" class="brand__mark" width="42" height="42" />
+        <span>
+          <span>Jolly Panda</span>
+          <span class="brand__sub" data-i18n="brandSub">Profile</span>
+        </span>
+      </a>
+
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button type="button" class="lang-switch__btn" data-lang="fa">فا</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="/en/#request" class="btn btn-primary" id="requestLink" data-i18n="request">Request a Profile</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section bio-page">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow" data-i18n="eyebrow">Profiles</span>
+          <h1 class="bio-title" data-i18n="title">Profiles built by Jolly Panda</h1>
+          <p data-i18n="lead">Browse personal profile and portfolio pages. Search by name or filter by topic.</p>
+        </div>
+
+        <div class="bio-toolbar" role="search">
+          <label class="bio-search">
+            <span class="sr-only" data-i18n="searchLabel">Search profiles</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" id="bioSearch" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search by name, role or topic…" />
+          </label>
+
+          <label class="bio-sort">
+            <span class="sr-only" data-i18n="sortLabel">Sort by</span>
+            <select id="bioSort">
+              <option value="name" data-i18n="sortName">Name (A–Z)</option>
+              <option value="updated" data-i18n="sortUpdated">Recently updated</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="bio-chips" id="bioChips" role="group" aria-label="Filter by topic" hidden></div>
+
+        <p class="bio-count" id="bioCount" role="status" aria-live="polite"></p>
+
+        <div class="bio-table-wrap">
+          <table class="bio-table" id="bioTable" hidden>
+            <thead>
+              <tr>
+                <th scope="col" class="col-preview"><span class="sr-only" data-i18n="colPreview">Preview</span></th>
+                <th scope="col" data-i18n="colName">Name</th>
+                <th scope="col" class="col-topics" data-i18n="colTopics">Topics</th>
+                <th scope="col" class="col-updated" data-i18n="colUpdated">Updated</th>
+                <th scope="col" class="col-action"><span class="sr-only" data-i18n="colOpen">Open</span></th>
+              </tr>
+            </thead>
+            <tbody id="bioRows"></tbody>
+          </table>
+        </div>
+
+        <p class="bio-state" id="bioState" hidden></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p class="site-footer__copyright" data-i18n="copyright">© 2026 Jolly Panda. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/bio.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# OPTIONAL — put this file in each bio repo at .github/workflows/notify-site.yml
+# so the main site rebuilds right after a push instead of waiting for the hourly run.
+# Needs an organization-level secret VERCEL_DEPLOY_HOOK (the Deploy Hook URL created
+# in the Vercel project: Settings -> Git -> Deploy Hooks).
+name: Notify site
+on:
+  push:
+    branches: [main]
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -fsS -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"

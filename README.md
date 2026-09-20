@@ -2,7 +2,7 @@
 
 **me.jollypanda.ir** — a marketing and self-service landing page where people request a personal profile / resume / portfolio page built by [Jolly Panda](https://jollypanda.ir), reachable at their own `me.jollypanda.ir/your-name` address.
 
-This repository is the static site itself, plus the `bio/` directory that hosts each delivered profile as a Git submodule.
+This repository is the static site itself, plus the build that publishes each delivered profile under `/bio/`.
 
 ---
 
@@ -38,12 +38,14 @@ No `package.json`, no `node_modules`, no build tooling is required — the site 
 ├── css/
 │   ├── variables.css        # Design tokens (colors sampled from the mascot artwork)
 │   ├── base.css              # Shared/reset styles and base components
-│   └── page.css               # Page-specific styles
+│   ├── page.css               # Page-specific styles
+│   └── bio.css                # Styles for the /bio/ listing page
 ├── js/
 │   ├── app.js                # Sticky header + mobile nav behavior
 │   ├── language.js            # i18n engine: path-based (/en/, /fa/) + loads lang/*.json
 │   ├── list-i18n.js            # i18n for array/list content (pricing feature lists)
 │   ├── plan-select.js            # Pre-fills the request form from a pricing card
+│   ├── bio.js                    # Renders bio/projects.json as the searchable table
 │   ├── slug-input.js              # Debounced slug availability UI
 │   ├── slug-service.js             # Mock slug validation/reservation service (client-side only, for now)
 │   ├── form.js                      # Form validation + submission flow
@@ -52,10 +54,13 @@ No `package.json`, no `node_modules`, no build tooling is required — the site 
 │   ├── en.json                # English strings (default language)
 │   └── fa.json                  # Persian strings
 ├── assets/                # Favicon and static assets
-├── bio/                    # Delivered client profiles, added as Git submodules
+├── bio/
+│   └── index.html            # /bio/ listing page (table + search + filter); client repos are cloned in here at build time
 ├── scripts/
-│   ├── add-bio.ps1          # Interactive script: adds a client profile repo as a submodule under bio/
-│   └── add-bio.cmd          # Double-click launcher for add-bio.ps1 on Windows
+│   └── build-site.mjs       # Vercel build: copies the site, clones the org's bio repos, writes bio/projects.json
+├── vercel.json              # Build command, output dir, trailing-slash routing
+├── .github/workflows/       # redeploy.yml: hourly Vercel deploy hook
+├── templates/               # notify-site.yml: optional instant-redeploy workflow for bio repos
 └── README.md
 ```
 
@@ -106,19 +111,42 @@ When a real backend exists, only `js/email-service.js`'s `sendRequest()` needs t
 
 ---
 
-## Adding a delivered client profile
+## Delivered client profiles (`/bio/`)
 
-Each finished client profile lives in its own separate Git repository and is attached here as a submodule under `bio/<username>`.
+Every repository in the **Jolly-Panda-Me** GitHub organization that has an `index.html` in its root is published automatically at:
 
-On Windows, run `scripts/add-bio.cmd` (or `scripts/add-bio.ps1` directly in PowerShell) from the project root. It will prompt for a username and a repository URL, then run the equivalent of:
-
-```bash
-git submodule add <repository-url> bio/<username>
+```text
+https://me.jollypanda.ir/bio/<repo-name>/
 ```
 
-and create a commit — nothing is pushed automatically.
+and listed on **https://me.jollypanda.ir/bio/** in a searchable, filterable table (preview image, name, topics, last update).
 
----
+There are no submodules and nothing to add by hand. On every Vercel build, `scripts/build-site.mjs` (configured in `vercel.json`):
+
+1. copies this site into `_site/`,
+2. lists the organization's repos through the GitHub API and clones each into `_site/bio/<repo-name>/`,
+3. writes `_site/bio/projects.json`, which `bio/index.html` + `js/bio.js` render as the table.
+
+**What the listing shows for each repo** (all read from the repo itself):
+
+| Column | Source |
+| --- | --- |
+| Name / role | `og:title` or `<title>`, split at " — ", " \| " or " - " |
+| Description | `og:description` or `<meta name="description">`, else the GitHub repo description |
+| Preview image | `og:image` / `twitter:image` if the file exists in the repo, else `preview.jpg`, `og-image.jpg`, `screenshot.jpg`, `assets/images/og/og-image.jpg` (png / webp also work); otherwise a coloured placeholder |
+| Topics (filter chips) | the repo's **GitHub topics** |
+| Updated | the repo's last push |
+
+**Requirements for a bio repo:** `index.html` in the root and **relative** asset paths (`css/style.css`, not `/css/style.css`). Archived repos and repos without a root `index.html` are skipped.
+
+### Vercel setup
+
+* Import this repo in Vercel; `vercel.json` already sets the build command, output directory (`_site`) and `trailingSlash` (needed so `/bio/<name>` redirects to `/bio/<name>/` and relative asset paths resolve).
+* Add `me.jollypanda.ir` under Project → Settings → Domains.
+* Environment variables (optional): `BIO_TOKEN` - a token with read access to the organization, only needed if some bio repos are private (private repos that contain an `index.html` are published publicly); `BIO_ORG`, `BIO_EXCLUDE`.
+* Keeping it fresh: create a **Deploy Hook** (Settings → Git → Deploy Hooks) and save its URL as the `VERCEL_DEPLOY_HOOK` secret in this repo. `.github/workflows/redeploy.yml` calls it hourly; `templates/notify-site.yml` can be copied into bio repos to redeploy right after a push.
+
+Local check: `BIO_REPOS="mojtaba-mofidinejad" node scripts/build-site.mjs`, then serve `_site/` (for example `python3 -m http.server -d _site 8080`).
 
 ## Contributing
 

@@ -1,0 +1,378 @@
+/* ==========================================================================
+   Jolly Panda Profile — /bio/ listing page
+   Uses only the shared design tokens from variables.css.
+   ========================================================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.bio-page {
+  padding-top: calc(var(--nav-height) + var(--space-xl));
+  min-height: 70vh;
+}
+
+.bio-title {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  margin-top: var(--space-sm);
+}
+
+/* ---------- Toolbar ---------- */
+.bio-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.bio-search {
+  position: relative;
+  flex: 1 1 280px;
+  display: flex;
+  align-items: center;
+}
+
+.bio-search svg {
+  position: absolute;
+  inset-inline-start: 1rem;
+  color: var(--color-ink-faint);
+  pointer-events: none;
+}
+
+.bio-search input,
+.bio-sort select {
+  width: 100%;
+  font: inherit;
+  font-size: var(--fs-small);
+  color: var(--color-ink);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  padding: 0.85rem 1.25rem;
+  transition: border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.bio-search input {
+  padding-inline-start: 2.75rem;
+}
+
+.bio-search input:focus,
+.bio-sort select:focus {
+  outline: none;
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 4px var(--color-orange-light);
+}
+
+.bio-sort {
+  flex: 0 0 auto;
+}
+
+.bio-sort select {
+  cursor: pointer;
+  padding-inline-end: 1.25rem;
+}
+
+/* ---------- Topic chips ---------- */
+.bio-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-sm);
+}
+
+.bio-chips[hidden] {
+  display: none;
+}
+
+.bio-chip {
+  font: inherit;
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-ink-soft);
+  border: 1.5px solid var(--color-border-strong);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.bio-chip:hover {
+  border-color: var(--color-ink);
+}
+
+.bio-chip[aria-pressed="true"] {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.bio-count {
+  font-size: var(--fs-small);
+  color: var(--color-ink-faint);
+  margin-bottom: var(--space-xs);
+  min-height: 1.4em;
+}
+
+/* ---------- Table ---------- */
+.bio-table-wrap {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.bio-table-wrap:has(.bio-table[hidden]) {
+  display: none;
+}
+
+.bio-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.bio-table th {
+  text-align: start;
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--color-paper-alt);
+  border-bottom: 1px solid var(--color-border);
+}
+
+html[lang="fa"] .bio-table th {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.bio-table td {
+  padding: var(--space-xs) var(--space-sm);
+  vertical-align: middle;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bio-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.bio-table tbody tr {
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.bio-table tbody tr:hover {
+  background: var(--color-yellow-light);
+}
+
+.col-preview {
+  width: 148px;
+}
+
+.col-updated {
+  width: 150px;
+  white-space: nowrap;
+}
+
+.col-action {
+  width: 56px;
+}
+
+.bio-thumb {
+  display: block;
+  width: 128px;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--color-paper-alt);
+  border: 1px solid var(--color-border);
+}
+
+.bio-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bio-thumb__ph {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--gradient-brand);
+}
+
+.bio-name {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--color-ink);
+}
+
+.bio-name:hover {
+  color: var(--color-orange-dark);
+}
+
+.bio-sub {
+  margin-top: 2px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-orange-dark);
+}
+
+.bio-desc {
+  margin-top: var(--space-3xs);
+  font-size: var(--fs-small);
+  color: var(--color-ink-soft);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 56ch;
+}
+
+.bio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3xs);
+}
+
+.bio-tag {
+  font-size: var(--fs-tiny);
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background: var(--color-taupe-light);
+  color: var(--color-ink-soft);
+}
+
+.bio-date {
+  font-size: var(--fs-small);
+  color: var(--color-ink-faint);
+}
+
+.bio-open {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-orange-light);
+  color: var(--color-orange-dark);
+  transition: transform var(--duration-base) var(--ease-bounce),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.bio-open:hover {
+  background: var(--color-orange);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+[dir="rtl"] .bio-open svg {
+  transform: scaleX(-1);
+}
+
+.bio-state {
+  text-align: center;
+  padding: var(--space-xl) var(--space-sm);
+  font-size: var(--fs-lead);
+  color: var(--color-ink-soft);
+}
+
+/* ---------- Mobile: rows become cards ---------- */
+@media (max-width: 760px) {
+  .bio-table-wrap {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .bio-table thead {
+    display: none;
+  }
+
+  .bio-table,
+  .bio-table tbody {
+    display: block;
+  }
+
+  .bio-table tbody tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-2xs) var(--space-sm);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xs);
+    padding: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .bio-table td {
+    display: block;
+    padding: 0;
+    border: 0;
+  }
+
+  .bio-table td.col-preview {
+    grid-column: 1 / -1;
+    width: auto;
+  }
+
+  .bio-thumb {
+    width: 100%;
+  }
+
+  .bio-table td.col-name {
+    grid-column: 1;
+  }
+
+  .bio-table td.col-action {
+    grid-column: 2;
+    grid-row: 2;
+    width: auto;
+    align-self: start;
+  }
+
+  .bio-table td.col-topics,
+  .bio-table td.col-updated {
+    grid-column: 1 / -1;
+    width: auto;
+  }
+}
+
+.bio-table[hidden],
+.bio-table[hidden] tbody {
+  display: none !important;
+}
+
+/* base.css hides .nav__actions below 768px (the main pages use a hamburger
+   menu); this page has no menu, so keep the language switch visible. */
+.site-header .nav__actions {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  #requestLink {
+    display: none;
+  }
+}

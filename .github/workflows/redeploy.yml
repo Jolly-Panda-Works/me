@@ -1,0 +1,17 @@
+name: Redeploy on Vercel
+
+# Vercel already redeploys on every push to main. This workflow only exists so
+# new / changed repos in the Jolly-Panda-Me organization get picked up too.
+on:
+  schedule:
+    - cron: "17 * * * *"      # hourly safety net (mind Vercel's daily deploy limit)
+  workflow_dispatch:
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: curl -fsS -X POST "$HOOK"
