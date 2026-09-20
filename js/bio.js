@@ -36,7 +36,11 @@
       error: "Couldn't load the profiles. Please try again later.",
       open: "Open profile",
       copyright: "© 2026 Jolly Panda. All rights reserved.",
-      docTitle: "Profiles | Jolly Panda"
+      docTitle: "Profiles | Jolly Panda",
+      metaDesc: "Browse the personal profile and portfolio websites built by Jolly Panda.",
+      homeLabel: "Jolly Panda Profile home",
+      langLabel: "Language switch",
+      filterLabel: "Filter by topic"
     },
     fa: {
       skip: "رفتن به محتوا",
@@ -63,7 +67,11 @@
       error: "بارگذاری پروفایل‌ها ممکن نشد. لطفاً بعداً دوباره تلاش کنید.",
       open: "باز کردن پروفایل",
       copyright: "© ۲۰۲۶ جالی پاندا. تمامی حقوق محفوظ است.",
-      docTitle: "پروفایل‌ها | جالی پاندا"
+      docTitle: "پروفایل‌ها | جالی پاندا",
+      metaDesc: "صفحه‌های شخصی و نمونه‌کارهای ساخته‌شده توسط جالی پاندا را ببینید.",
+      homeLabel: "صفحهٔ اصلی پروفایل جالی پاندا",
+      langLabel: "تغییر زبان",
+      filterLabel: "فیلتر بر اساس موضوع"
     }
   };
 
@@ -108,6 +116,15 @@
       var v = t(el.getAttribute("data-i18n"));
       if (typeof v === "string") el.textContent = v;
     });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-i18n-attr]"), function (el) {
+      el.getAttribute("data-i18n-attr").split("|").forEach(function (pair) {
+        var parts = pair.split(":");
+        var v = t(parts[1]);
+        if (parts[0] && typeof v === "string") el.setAttribute(parts[0], v);
+      });
+    });
+    var descEl = document.querySelector('meta[name="description"]');
+    if (descEl) descEl.setAttribute("content", t("metaDesc"));
     Array.prototype.forEach.call(document.querySelectorAll("[data-i18n-placeholder]"), function (el) {
       el.setAttribute("placeholder", t(el.getAttribute("data-i18n-placeholder")));
     });
@@ -303,6 +320,7 @@
   /* ---------- boot ---------- */
   readUrl();
   applyLang(pickLang());
+  writeUrl(); // also drops the one-time ?lang= parameter from the address bar
 
   fetch(DATA_URL, { cache: "no-cache" })
     .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })

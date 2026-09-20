@@ -10,7 +10,8 @@
     "brandSub": "Profile",
     "pricing": "Pricing",
     "request": "Request a Profile",
-    "backToStudio": "Back to Studio"
+    "backToStudio": "Back to Studio",
+    "bio": "Profiles"
   },
   "hero": {
     "badge": "Your profile, one link away",
