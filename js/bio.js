@@ -84,6 +84,8 @@
 
   /* ---------- language ---------- */
   function pickLang() {
+    var fromUrl = new URLSearchParams(location.search).get("lang");
+    if (fromUrl === "fa" || fromUrl === "en") return fromUrl;
     try {
       var stored = localStorage.getItem(STORAGE_KEY);
       if (stored === "fa" || stored === "en") return stored;

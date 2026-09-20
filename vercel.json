@@ -4,5 +4,27 @@
   "buildCommand": "node scripts/build-site.mjs _site",
   "outputDirectory": "_site",
   "installCommand": "",
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/fa/bio",
+      "destination": "/bio/?lang=fa",
+      "permanent": false
+    },
+    {
+      "source": "/fa/bio/:path*",
+      "destination": "/bio/:path*?lang=fa",
+      "permanent": false
+    },
+    {
+      "source": "/en/bio",
+      "destination": "/bio/?lang=en",
+      "permanent": false
+    },
+    {
+      "source": "/en/bio/:path*",
+      "destination": "/bio/:path*?lang=en",
+      "permanent": false
+    }
+  ]
 }
