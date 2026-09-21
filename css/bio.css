@@ -382,7 +382,43 @@ html[lang="fa"] .bio-table th {
 }
 
 @media (max-width: 767px) {
-  #requestLink {
+  .site-header .nav__actions {
+    gap: var(--space-2xs);
+  }
+
+  .site-header .nav__actions .btn {
+    padding: 0.6rem 0.9rem;
+    font-size: var(--fs-tiny);
+  }
+}
+
+@media (max-width: 520px) {
+  .nav__btn-pricing {
+    display: none;
+  }
+}
+
+.site-header .brand {
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .site-header .brand {
+    font-size: 1rem;
+  }
+
+  .site-header .brand__sub {
+    display: none;
+  }
+
+  .site-header .nav__actions .btn {
+    padding: 0.55rem 0.8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  /* keep only the logo mark so the buttons never get clipped */
+  .site-header .brand > span {
     display: none;
   }
 }

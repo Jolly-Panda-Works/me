@@ -115,7 +115,7 @@
         selectedPlanLabel: planValue ? t("pricing.plans." + planValue + ".name") : "",
         projectDetails: form.elements.projectDetails.value.trim(),
         profileSlug: result.slug,
-        profileUrl: "https://me.jollypanda.ir/" + result.slug
+        profileUrl: "https://me.jollypanda.ir/bio/" + result.slug
       };
 
       window.ProfileEmailService.sendRequest(payload).then(function (sendResult) {

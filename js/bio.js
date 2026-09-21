@@ -36,6 +36,19 @@
       error: "Couldn't load the profiles. Please try again later.",
       open: "Open profile",
       copyright: "© 2026 Jolly Panda. All rights reserved.",
+      pricing: "Pricing",
+      profiles: "Profiles",
+      tagline: "Your professional personal profile, built by Jolly Panda.",
+      navigate: "Navigate",
+      studio: "Jolly Panda Studio",
+      studioHome: "Home",
+      studioServices: "Services",
+      studioProjects: "Projects",
+      studioAbout: "About",
+      telegram: "Telegram",
+      linkedin: "LinkedIn",
+      github: "GitHub",
+      footerNavLabel: "Footer navigation",
       docTitle: "Profiles | Jolly Panda",
       metaDesc: "Browse the personal profile and portfolio websites built by Jolly Panda.",
       homeLabel: "Jolly Panda Profile home",
@@ -67,6 +80,19 @@
       error: "بارگذاری پروفایل‌ها ممکن نشد. لطفاً بعداً دوباره تلاش کنید.",
       open: "باز کردن پروفایل",
       copyright: "© ۲۰۲۶ جالی پاندا. تمامی حقوق محفوظ است.",
+      pricing: "قیمت‌گذاری",
+      profiles: "پروفایل‌ها",
+      tagline: "پروفایل شخصی حرفه‌ای شما، ساخته‌شده توسط Jolly Panda.",
+      navigate: "ناوبری",
+      studio: "استودیو Jolly Panda",
+      studioHome: "خانه",
+      studioServices: "خدمات",
+      studioProjects: "پروژه‌ها",
+      studioAbout: "درباره ما",
+      telegram: "تلگرام",
+      linkedin: "لینکدین",
+      github: "گیت‌هاب",
+      footerNavLabel: "ناوبری پایین صفحه",
       docTitle: "پروفایل‌ها | جالی پاندا",
       metaDesc: "صفحه‌های شخصی و نمونه‌کارهای ساخته‌شده توسط جالی پاندا را ببینید.",
       homeLabel: "صفحهٔ اصلی پروفایل جالی پاندا",
@@ -79,7 +105,7 @@
   var els = {
     search: $("bioSearch"), sort: $("bioSort"), chips: $("bioChips"),
     count: $("bioCount"), table: $("bioTable"), rows: $("bioRows"),
-    state: $("bioState"), request: $("requestLink")
+    state: $("bioState")
   };
 
   var lang = "en";
@@ -133,7 +159,9 @@
       btn.classList.toggle("is-active", on);
       btn.setAttribute("aria-pressed", on ? "true" : "false");
     });
-    els.request.setAttribute("href", "/" + lang + "/#request");
+    Array.prototype.forEach.call(document.querySelectorAll("[data-href]"), function (a) {
+      a.setAttribute("href", a.getAttribute("data-href").replace("{lang}", lang));
+    });
     render();
   }
 

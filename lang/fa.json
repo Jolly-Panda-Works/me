@@ -19,7 +19,8 @@
     "description": "رزومه، Portfolio و راه‌های ارتباطی‌تان را در یک صفحه شخصی حرفه‌ای کنار هم بگذارید — با آدرسی که کاملاً متعلق به خودتان است.",
     "ctaPrimary": "ساخت پروفایل من",
     "ctaSecondary": "مشاهده قیمت‌ها",
-    "urlLabel": "آدرس صفحه شما این‌طور خواهد بود:"
+    "urlLabel": "آدرس صفحه شما این‌طور خواهد بود:",
+    "mascotAlt": "ماسکوت Jolly Panda"
   },
   "pricing": {
     "eyebrow": "قیمت‌گذاری",
@@ -33,7 +34,7 @@
         "features": [
           "یک صفحه پروفایل تک‌صفحه‌ای",
           "طراحی واکنش‌گرا (موبایل و دسکتاپ)",
-          "آدرس اختصاصی me.jollypanda.ir",
+          "آدرس اختصاصی در ⁦me.jollypanda.ir/bio/⁩",
           "لینک‌های شبکه‌های اجتماعی"
         ]
       },
@@ -72,7 +73,7 @@
       "projectDetails": "توضیحات پروژه",
       "urlLabel": "آدرس اختصاصی پروفایل",
       "urlSubLabel": "این آدرس، لینک نهایی و عمومی صفحه شما خواهد بود.",
-      "urlPreviewPrefix": "me.jollypanda.ir/"
+      "urlPreviewPrefix": "me.jollypanda.ir/bio/"
     },
     "placeholders": {
       "fullName": "مثلاً یوسف فرهمند",
@@ -109,6 +110,15 @@
   },
   "footer": {
     "tagline": "پروفایل شخصی حرفه‌ای شما، ساخته‌شده توسط Jolly Panda.",
-    "copyright": "© ۲۰۲۶ Jolly Panda. تمامی حقوق محفوظ است."
+    "copyright": "© ۲۰۲۶ Jolly Panda. تمامی حقوق محفوظ است.",
+    "navigate": "ناوبری",
+    "studio": "استودیو Jolly Panda",
+    "studioHome": "خانه",
+    "studioServices": "خدمات",
+    "studioProjects": "پروژه‌ها",
+    "studioAbout": "درباره ما",
+    "telegram": "تلگرام",
+    "linkedin": "لینکدین",
+    "github": "گیت‌هاب"
   }
 }

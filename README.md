@@ -1,6 +1,6 @@
 # Jolly Panda — Profile
 
-**me.jollypanda.ir** — a marketing and self-service landing page where people request a personal profile / resume / portfolio page built by [Jolly Panda](https://jollypanda.ir), reachable at their own `me.jollypanda.ir/your-name` address.
+**me.jollypanda.ir** — a marketing and self-service landing page where people request a personal profile / resume / portfolio page built by [Jolly Panda](https://jollypanda.ir), reachable at their own `me.jollypanda.ir/bio/your-name` address.
 
 This repository is the static site itself, plus the build that publishes each delivered profile under `/bio/`.
 
@@ -9,7 +9,7 @@ This repository is the static site itself, plus the build that publishes each de
 ## What this site does
 
 * Presents the **Jolly Panda Profile** product: three plans (Basic / Professional / Custom) and an explanation of what's included in each. Pricing is intentionally not displayed yet.
-* Lets a visitor **request a profile** through a validated form (name, contact info, chosen plan, and a desired `me.jollypanda.ir/<slug>` address).
+* Lets a visitor **request a profile** through a validated form (name, contact info, chosen plan, and a desired `me.jollypanda.ir/bio/<slug>` address).
 * Checks the desired slug against a reserved-word list and a mock "taken" list on the client, then relays the submission by email — no custom backend exists yet (see [Form submissions & email delivery](#form-submissions--email-delivery)).
 * Is fully bilingual (English/Persian) with RTL/LTR layout switching and routed URLs (`/en/`, `/fa/`), and ships as a plain static site — no build step, no framework, no bundler.
 
@@ -105,7 +105,7 @@ When a real backend exists, only `js/email-service.js`'s `sendRequest()` needs t
 
 ## Slug availability (client-side, mock)
 
-`js/slug-service.js` is a self-contained, clearly-labeled mock: it checks a requested `me.jollypanda.ir/<slug>` against a reserved-word list and a hardcoded "taken" list, purely for the demo/static phase. The module is written to mirror the eventual real contract (`GET /api/profile/check-slug`, `POST /api/profile/reserve-slug`) so that swapping in real backend calls later requires no changes in the calling code (`slug-input.js`, `form.js`).
+`js/slug-service.js` is a self-contained, clearly-labeled mock: it checks a requested `me.jollypanda.ir/bio/<slug>` against a reserved-word list and a hardcoded "taken" list, purely for the demo/static phase. The module is written to mirror the eventual real contract (`GET /api/profile/check-slug`, `POST /api/profile/reserve-slug`) so that swapping in real backend calls later requires no changes in the calling code (`slug-input.js`, `form.js`).
 
 **Important:** the client-side check is never authoritative — a real backend must still enforce slug uniqueness at the database level before a slug is considered reserved.
 

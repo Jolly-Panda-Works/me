@@ -451,16 +451,117 @@ main {
   color: var(--color-on-night-soft);
 }
 
+.site-footer__tagline {
+  /* the global `p` rule would otherwise make this dark-on-dark */
+  color: var(--color-on-night-soft);
+}
+
+/* ---------- 6b. Footer v2: social buttons + link columns ---------- */
+.site-footer__social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-block-start: var(--space-sm);
+}
+
+.site-footer__social-link {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(253, 243, 234, 0.08);
+  color: var(--color-on-night);
+  transition: background var(--duration-fast) var(--ease-out),
+    transform var(--duration-base) var(--ease-bounce);
+}
+
+.site-footer__social-link:hover,
+.site-footer__social-link:focus-visible {
+  background: var(--color-orange);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.site-footer__social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.site-footer__nav {
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+}
+
+.site-footer__heading {
+  font-size: var(--fs-small);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-on-night);
+  margin-block-end: var(--space-sm);
+}
+
+html[lang="fa"] .site-footer__heading {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.site-footer__list--stack {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+@media (min-width: 768px) {
+  .site-footer__top {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+  }
+
+  .site-footer__brand {
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  .site-footer__tagline {
+    margin-inline: 0;
+    text-align: start;
+  }
+
+  .site-footer__social {
+    justify-content: flex-start;
+  }
+
+  .site-footer__nav {
+    justify-content: flex-end;
+  }
+
+  .site-footer__group {
+    text-align: start;
+  }
+
+  .site-footer__list--stack {
+    align-items: flex-start;
+  }
+}
+
 /* ---------- 7. Mobile navigation (below 768px) ---------- */
 .nav-toggle {
   display: flex;
 }
 
 .nav__links {
-  position: fixed;
-  top: var(--nav-height);
+  /* absolute, not fixed: the header has backdrop-filter, which makes it the
+     containing block for fixed children and collapsed the menu to 0 height. */
+  position: absolute;
+  top: 100%;
   inset-inline: 0;
-  bottom: 0;
+  height: calc(100vh - var(--nav-height));
+  height: calc(100dvh - var(--nav-height));
+  overflow-y: auto;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
@@ -503,6 +604,15 @@ main {
   margin-top: var(--space-lg);
 }
 
+.nav__links .nav__mobile-cta + .nav__mobile-cta {
+  margin-top: var(--space-sm);
+}
+
+.nav__links .nav__mobile-lang {
+  align-self: flex-start;
+  margin-top: var(--space-lg);
+}
+
 @media (min-width: 768px) {
   .nav-toggle {
     display: none;
@@ -510,6 +620,8 @@ main {
 
   .nav__links {
     position: static;
+    height: auto;
+    overflow: visible;
     flex-direction: row;
     align-items: center;
     gap: var(--space-lg);
@@ -534,6 +646,10 @@ main {
 
   .nav__actions {
     display: flex;
+  }
+
+  .nav__links .nav__mobile-lang {
+    display: none;
   }
 
   .nav__links .nav__mobile-cta {

@@ -19,7 +19,8 @@
     "description": "Bring your resume, portfolio and contact details together on one professional profile page — with a URL that's entirely yours.",
     "ctaPrimary": "Build My Profile",
     "ctaSecondary": "See Pricing",
-    "urlLabel": "Your page address will look like this:"
+    "urlLabel": "Your page address will look like this:",
+    "mascotAlt": "Jolly Panda mascot"
   },
   "pricing": {
     "eyebrow": "Pricing",
@@ -33,7 +34,7 @@
         "features": [
           "One single-page profile",
           "Fully responsive design",
-          "Personal me.jollypanda.ir URL",
+          "Your own me.jollypanda.ir/bio/ URL",
           "Social media links"
         ]
       },
@@ -72,7 +73,7 @@
       "projectDetails": "Project Details",
       "urlLabel": "Personal Profile URL",
       "urlSubLabel": "This will be the final, public link to your page.",
-      "urlPreviewPrefix": "me.jollypanda.ir/"
+      "urlPreviewPrefix": "me.jollypanda.ir/bio/"
     },
     "placeholders": {
       "fullName": "e.g. John Doe",
@@ -109,6 +110,15 @@
   },
   "footer": {
     "tagline": "Your professional personal profile, built by Jolly Panda.",
-    "copyright": "© 2026 Jolly Panda. All rights reserved."
+    "copyright": "© 2026 Jolly Panda. All rights reserved.",
+    "navigate": "Navigate",
+    "studio": "Jolly Panda Studio",
+    "studioHome": "Home",
+    "studioServices": "Services",
+    "studioProjects": "Projects",
+    "studioAbout": "About",
+    "telegram": "Telegram",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   }
 }
