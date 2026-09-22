@@ -49,6 +49,10 @@
             "a": "Prices are listed in [Pricing](/{lang}/#pricing), together with the date they were last updated. Custom projects are priced according to the options you choose."
           },
           {
+            "q": "How do I pay?",
+            "a": "We're launching an online payment gateway soon so you can pay right when you submit your order. Until then, once we contact you to confirm your request, we'll arrange payment directly together. See [How it works](/{lang}/how-it-works/) for the full process."
+          },
+          {
             "q": "What do I need to provide?",
             "a": "A short bio or your resume, a profile photo, links to your social profiles and work, and portfolio material if your plan includes it. We'll tell you exactly what's needed when we get in touch."
           }
@@ -144,6 +148,10 @@
           {
             "q": "هزینه چقدر است؟",
             "a": "قیمت‌ها همراه با تاریخ آخرین به‌روزرسانی در بخش [قیمت‌گذاری](/{lang}/#pricing) آمده است. قیمت پروژه‌های اختصاصی بسته به انتخاب‌های شما تعیین می‌شود."
+          },
+          {
+            "q": "چطور پرداخت کنم؟",
+            "a": "درگاه پرداخت آنلاین به‌زودی راه‌اندازی می‌شود تا بتوانید همان لحظهٔ ثبت سفارش پرداخت کنید. تا آن زمان، وقتی برای تأیید درخواست‌تان با شما تماس بگیریم، نحوهٔ پرداخت را مستقیم هماهنگ می‌کنیم. برای مسیر کامل به صفحهٔ [نحوه کار](/{lang}/how-it-works/) مراجعه کنید."
           },
           {
             "q": "چه اطلاعاتی باید بدهم؟",

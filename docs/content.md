@@ -14,7 +14,8 @@ All visible text lives in JSON, not in the HTML.
 
 Each file has an `en` and a `fa` block. In text you can use `**bold**`, `[link text](/{lang}/faq/)` and the placeholders `{lang}`, `{email}`, `{year}`. **Change the JSON, commit, push, and Vercel rebuilds.**
 
-Updating prices: edit `pricing.plans.*.price / usd / hint`, `pricing.updated` (the date shown) and `pricing.note` in `lang/en.json` and `lang/fa.json`.
+Updating prices: edit `pricing.plans.*.price / hint`, `pricing.updated` (the date shown) and `pricing.note` in `lang/en.json` and `lang/fa.json`.
+English prices are shown in **USD only** (e.g. `"$20"`); Persian prices are shown in **Rial only** (e.g. `"۵۰ میلیون ریال"`) — each language's `price` field is independent, there's no automatic conversion between them. The `usd` field on each plan is unused (kept empty) now that each language shows a single currency; it renders nothing if left empty.
 
 The header and footer come from `content/site.json` and are inserted into **every** page by the build (including the home pages, through the `<!--@header-->` / `<!--@footer-->` markers in `en/index.html` and `fa/index.html`), so they cannot drift apart.
 

@@ -32,8 +32,8 @@
           "Your own me.jollypanda.ir/bio/ URL",
           "Social media links"
         ],
-        "price": "5 million Toman",
-        "usd": "≈ $22 USD",
+        "price": "$20",
+        "usd": "",
         "hint": ""
       },
       "professional": {
@@ -45,8 +45,8 @@
           "Dedicated contact form",
           "Page entrance animations"
         ],
-        "price": "10 million Toman",
-        "usd": "≈ $43 USD",
+        "price": "$40",
+        "usd": "",
         "hint": ""
       },
       "custom": {
@@ -57,14 +57,14 @@
           "Unlimited sections",
           "1:1 design consultation"
         ],
-        "price": "15–20 million Toman",
-        "usd": "≈ $65–$87 USD",
+        "price": "$60–$80",
+        "usd": "",
         "hint": "The final price depends on the options you choose"
       }
     },
     "updatedLabel": "Prices last updated",
     "updated": "September 22, 2026",
-    "note": "USD amounts are approximate, based on about 230,000 Toman per US dollar."
+    "note": ""
   },
   "form": {
     "eyebrow": "Request a Profile",

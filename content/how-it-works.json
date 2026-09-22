@@ -55,6 +55,11 @@
         "label": "See examples",
         "href": "/{lang}/bio/"
       }
+    },
+    "payment": {
+      "badge": "Coming soon",
+      "title": "How you pay",
+      "text": "We're launching an online payment gateway soon so you'll be able to pay and confirm your order right when you submit it. Until then, once we contact you to confirm your request, we'll arrange payment directly together."
     }
   },
   "fa": {
@@ -111,6 +116,11 @@
         "label": "مشاهده نمونه‌ها",
         "href": "/{lang}/bio/"
       }
+    },
+    "payment": {
+      "badge": "به‌زودی",
+      "title": "نحوه پرداخت",
+      "text": "درگاه پرداخت آنلاین به‌زودی راه‌اندازی می‌شود تا بتوانید همان لحظهٔ ثبت سفارش، پرداخت و آن را نهایی کنید. تا آن زمان، وقتی برای تأیید درخواست‌تان با شما تماس بگیریم، نحوهٔ پرداخت را مستقیم هماهنگ می‌کنیم."
     }
   }
 }

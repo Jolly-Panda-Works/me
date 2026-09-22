@@ -587,7 +587,7 @@ select.form-field__input.is-highlighted {
 .pricing-card__price {
   display: grid;
   align-content: start;
-  min-height: 5.6rem; /* keeps the feature lists of the three cards aligned */
+  min-height: 3.4rem; /* keeps the feature lists of the three cards aligned (Custom's hint line is the tallest) */
   gap: 2px;
   margin-block: var(--space-2xs) var(--space-sm);
 }
@@ -632,6 +632,10 @@ select.form-field__input.is-highlighted {
   text-align: center;
   font-size: var(--fs-tiny);
   color: var(--color-ink-faint);
+}
+
+.pricing-note:empty {
+  display: none;
 }
 
 /* ---------- Anti-bot honeypot (never visible, never focusable) ---------- */

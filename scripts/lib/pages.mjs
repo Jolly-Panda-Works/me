@@ -54,6 +54,19 @@ export function howItWorks(site, data, lang) {
     )
     .join("\n");
   const needs = c.needs.items.map((i) => `            <li>${inline(i, v)}</li>`).join("\n");
+  const payment = c.payment
+    ? `    <section class="section section--tight">
+      <div class="container">
+        <div class="payment-note">
+          <span class="payment-note__badge">${esc(c.payment.badge)}</span>
+          <h2>${esc(c.payment.title)}</h2>
+          <p>${inline(c.payment.text, v)}</p>
+        </div>
+      </div>
+    </section>
+
+`
+    : "";
   const body = `${heroHtml(c.hero)}
 
     <section class="section section--tight">
@@ -75,7 +88,7 @@ ${needs}
       </div>
     </section>
 
-${ctaBand(c.cta, v)}`;
+${payment}${ctaBand(c.cta, v)}`;
   return { key: "howItWorks", path: "how-it-works/", meta: c.meta, body, jsonLd: [breadcrumb(site, lang, "how-it-works/", c.hero.eyebrow)] };
 }
 
