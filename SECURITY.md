@@ -1,6 +1,6 @@
 # Security Policy
 
-This repository is the marketing/request site for Jolly Panda Profile. It has no database or authenticated user data of its own — the request form is validated by a serverless function (`api/request.js`) that emails it to the team through Resend (see the README's "The request form" section).
+This repository is the marketing/request site for Jolly Panda Profile. It has no database or authenticated user data of its own — the request form is validated by a serverless function (`api/request.js`) that emails it to the team through Resend (see [docs/form.md](docs/form.md)).
 
 ## Reporting a Vulnerability
 

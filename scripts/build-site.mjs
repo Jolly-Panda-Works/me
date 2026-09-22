@@ -37,7 +37,7 @@ const EXCLUDE = new Set((process.env.BIO_EXCLUDE || "").split(/\s+/).filter(Bool
 // Top-level entries that are source / tooling, not part of the public site.
 const SKIP_TOP = new Set([
   ".git", ".github", ".vscode", ".vercel", "scripts", "templates", "content", "src", "api", "_site",
-  "node_modules", "package.json", "package-lock.json", "server", "README.md", "CONTRIBUTING.md", "SECURITY.md",
+  "node_modules", "package.json", "package-lock.json", "server", "docs", "README.md", "CONTRIBUTING.md", "SECURITY.md",
   "LICENSE", ".gitignore", "vercel.json",
   "en", "fa", "bio", // generated below
 ]);

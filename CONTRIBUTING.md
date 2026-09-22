@@ -24,7 +24,7 @@ BIO_REPOS="mojtaba-mofidinejad" node scripts/build-site.mjs   # writes _site/
 python3 -m http.server -d _site 8080                            # http://localhost:8080/en/
 ```
 
-See the [README](README.md) for the full project structure.
+See [docs/architecture.md](docs/architecture.md) for the full project structure.
 
 ## Conventions to follow
 
