@@ -1,7 +1,8 @@
 /* ==========================================================================
    Jolly Panda Studio — app.js
-   Core interactive behavior: sticky-nav scroll state, responsive mobile
-   menu, and closing the mobile menu after a link is used.
+   Core interactive behavior shared by EVERY page: sticky-nav scroll state,
+   responsive mobile menu, and the language links (real <a href> links to the
+   same page in the other language, so /en/faq/ <-> /fa/faq/).
    ========================================================================== */
 
 (function () {
@@ -61,8 +62,29 @@
     });
   }
 
+  var LANG_KEY = "jollypanda:me:lang";
+
+  function initLanguageLinks() {
+    // Remember the language of the page being read, so the root redirector
+    // can send a returning visitor to the language they used last.
+    var m = window.location.pathname.match(/^\/(en|fa)(\/|$)/);
+    if (m) {
+      try { localStorage.setItem(LANG_KEY, m[1]); } catch (e) { /* ignore */ }
+    }
+
+    document.querySelectorAll("a.lang-switch__btn").forEach(function (link) {
+      var base = link.getAttribute("href");
+      link.addEventListener("click", function () {
+        try { localStorage.setItem(LANG_KEY, link.getAttribute("data-lang")); } catch (e) { /* ignore */ }
+        // Keep the visitor's place: the search/filter query and #anchor
+        link.setAttribute("href", base + window.location.search + window.location.hash);
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initStickyHeader();
     initMobileMenu();
+    initLanguageLinks();
   });
 })();

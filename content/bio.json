@@ -1,0 +1,86 @@
+{
+  "_readme": "Content of /en/bio/ and /fa/bio/ (the searchable list of published profiles). The list itself is generated from the GitHub organization. 'ui' strings are used by js/bio.js; {n} and {total} are replaced with numbers.",
+  "slug": "bio",
+  "en": {
+    "meta": {
+      "title": "Profiles | Jolly Panda Profile",
+      "description": "Browse the personal profile and portfolio websites built by Jolly Panda. Search by name or filter by topic."
+    },
+    "hero": {
+      "eyebrow": "Profiles",
+      "title": "Profiles built by Jolly Panda",
+      "lead": "Browse personal profile and portfolio pages. Search by name or filter by topic."
+    },
+    "ui": {
+      "searchLabel": "Search profiles",
+      "searchPlaceholder": "Search by name, role or topic…",
+      "sortLabel": "Sort by",
+      "sortName": "Name (A–Z)",
+      "sortUpdated": "Recently updated",
+      "filterLabel": "Filter by topic",
+      "all": "All",
+      "colPreview": "Preview",
+      "colName": "Name",
+      "colTopics": "Topics",
+      "colUpdated": "Updated",
+      "colOpen": "Open",
+      "countOne": "{n} profile",
+      "countMany": "{n} profiles",
+      "countPartial": "{n} of {total} profiles",
+      "empty": "No profiles match your search.",
+      "clear": "Clear filters",
+      "loading": "Loading profiles…",
+      "error": "Couldn't load the profiles. Please try again later.",
+      "open": "Open profile"
+    },
+    "cta": {
+      "title": "Want a page like these?",
+      "text": "Tell us about yourself and we'll build your profile.",
+      "primary": {
+        "label": "Request a Profile",
+        "href": "/{lang}/#request"
+      }
+    }
+  },
+  "fa": {
+    "meta": {
+      "title": "پروفایل‌ها | Jolly Panda Profile",
+      "description": "صفحه‌های شخصی و نمونه‌کارهایی را که Jolly Panda ساخته ببینید. بر اساس نام جست‌وجو کنید یا با موضوع فیلتر کنید."
+    },
+    "hero": {
+      "eyebrow": "پروفایل‌ها",
+      "title": "پروفایل‌های ساخته‌شده توسط Jolly Panda",
+      "lead": "صفحه‌های شخصی و نمونه‌کار را ببینید. بر اساس نام جست‌وجو کنید یا با موضوع فیلتر کنید."
+    },
+    "ui": {
+      "searchLabel": "جست‌وجوی پروفایل‌ها",
+      "searchPlaceholder": "جست‌وجو بر اساس نام، عنوان شغلی یا موضوع…",
+      "sortLabel": "مرتب‌سازی",
+      "sortName": "نام (الف تا ی)",
+      "sortUpdated": "آخرین به‌روزرسانی",
+      "filterLabel": "فیلتر بر اساس موضوع",
+      "all": "همه",
+      "colPreview": "پیش‌نمایش",
+      "colName": "نام",
+      "colTopics": "موضوع‌ها",
+      "colUpdated": "به‌روزرسانی",
+      "colOpen": "باز کردن",
+      "countOne": "{n} پروفایل",
+      "countMany": "{n} پروفایل",
+      "countPartial": "{n} از {total} پروفایل",
+      "empty": "پروفایلی با این جست‌وجو پیدا نشد.",
+      "clear": "پاک کردن فیلترها",
+      "loading": "در حال بارگذاری…",
+      "error": "بارگذاری پروفایل‌ها ممکن نشد. لطفاً بعداً دوباره تلاش کنید.",
+      "open": "باز کردن پروفایل"
+    },
+    "cta": {
+      "title": "صفحه‌ای مثل این‌ها می‌خواهید؟",
+      "text": "خودتان را معرفی کنید تا پروفایل‌تان را بسازیم.",
+      "primary": {
+        "label": "درخواست پروفایل",
+        "href": "/{lang}/#request"
+      }
+    }
+  }
+}

@@ -144,31 +144,9 @@
     });
   }
 
-  function pathForLang(lang) {
-    // Preserve any in-page anchor (e.g. "#pricing") across the switch so
-    // a visitor mid-way down the page lands back in the same spot.
-    return "/" + lang + "/" + (window.location.hash || "");
-  }
-
-  function initLanguageSwitchers() {
-    document.querySelectorAll(".lang-switch__btn").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var lang = btn.getAttribute("data-lang");
-        if (SUPPORTED_LANGS.indexOf(lang) === -1) return;
-        if (lang === detectPathLang()) return; // already on this language's page
-
-        try {
-          localStorage.setItem(STORAGE_KEY, lang);
-        } catch (e) {
-          /* ignore persistence failures */
-        }
-        window.location.href = pathForLang(lang);
-      });
-    });
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
-    initLanguageSwitchers();
+    // The header's language switch is plain links (see app.js), so all that
+    // is left to do here is to translate the page's own text.
     setLanguage(detectInitialLang());
   });
 

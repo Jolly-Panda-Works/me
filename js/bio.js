@@ -1,168 +1,44 @@
 /* ==========================================================================
    Jolly Panda Profile — bio.js
-   Renders /bio/projects.json (generated at build time by
-   scripts/build-site.mjs) as a searchable, filterable table.
-   Vanilla ES5-style, no dependencies.
+   Search / filter / sort for the profiles table on /en/bio/ and /fa/bio/.
+
+   The page is generated at build time in the visitor's language (rows are
+   already in the HTML, so search engines see them). This script loads
+   /bio/projects.json and re-renders the table so it can be searched,
+   filtered by topic and sorted. All text comes from the page itself
+   (<script id="bioUi"> is generated from content/bio.json).
    ========================================================================== */
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "jollypanda:me:lang";
   var DATA_URL = "/bio/projects.json";
 
-  var STRINGS = {
-    en: {
-      skip: "Skip to content",
-      brandSub: "Profile",
-      request: "Request a Profile",
-      eyebrow: "Profiles",
-      title: "Profiles built by Jolly Panda",
-      lead: "Browse personal profile and portfolio pages. Search by name or filter by topic.",
-      searchLabel: "Search profiles",
-      searchPlaceholder: "Search by name, role or topic…",
-      sortLabel: "Sort by",
-      sortName: "Name (A–Z)",
-      sortUpdated: "Recently updated",
-      colPreview: "Preview",
-      colName: "Name",
-      colTopics: "Topics",
-      colUpdated: "Updated",
-      colOpen: "Open",
-      all: "All",
-      count: function (n, total) { return n === total ? n + (n === 1 ? " profile" : " profiles") : n + " of " + total + " profiles"; },
-      empty: "No profiles match your search.",
-      clear: "Clear filters",
-      loading: "Loading profiles…",
-      error: "Couldn't load the profiles. Please try again later.",
-      open: "Open profile",
-      copyright: "© 2026 Jolly Panda. All rights reserved.",
-      pricing: "Pricing",
-      profiles: "Profiles",
-      tagline: "Your professional personal profile, built by Jolly Panda.",
-      navigate: "Navigate",
-      studio: "Jolly Panda Studio",
-      studioHome: "Home",
-      studioServices: "Services",
-      studioProjects: "Projects",
-      studioAbout: "About",
-      telegram: "Telegram",
-      linkedin: "LinkedIn",
-      github: "GitHub",
-      footerNavLabel: "Footer navigation",
-      docTitle: "Profiles | Jolly Panda",
-      metaDesc: "Browse the personal profile and portfolio websites built by Jolly Panda.",
-      homeLabel: "Jolly Panda Profile home",
-      langLabel: "Language switch",
-      filterLabel: "Filter by topic"
-    },
-    fa: {
-      skip: "رفتن به محتوا",
-      brandSub: "پروفایل",
-      request: "درخواست پروفایل",
-      eyebrow: "پروفایل‌ها",
-      title: "پروفایل‌های ساخته‌شده توسط جالی پاندا",
-      lead: "صفحه‌های شخصی و نمونه‌کار را ببینید. بر اساس نام جست‌وجو کنید یا با موضوع فیلتر کنید.",
-      searchLabel: "جست‌وجوی پروفایل‌ها",
-      searchPlaceholder: "جست‌وجو بر اساس نام، عنوان شغلی یا موضوع…",
-      sortLabel: "مرتب‌سازی",
-      sortName: "نام (الف تا ی)",
-      sortUpdated: "آخرین به‌روزرسانی",
-      colPreview: "پیش‌نمایش",
-      colName: "نام",
-      colTopics: "موضوع‌ها",
-      colUpdated: "به‌روزرسانی",
-      colOpen: "باز کردن",
-      all: "همه",
-      count: function (n, total) { return n === total ? n.toLocaleString("fa-IR") + " پروفایل" : n.toLocaleString("fa-IR") + " از " + total.toLocaleString("fa-IR") + " پروفایل"; },
-      empty: "پروفایلی با این جست‌وجو پیدا نشد.",
-      clear: "پاک کردن فیلترها",
-      loading: "در حال بارگذاری…",
-      error: "بارگذاری پروفایل‌ها ممکن نشد. لطفاً بعداً دوباره تلاش کنید.",
-      open: "باز کردن پروفایل",
-      copyright: "© ۲۰۲۶ جالی پاندا. تمامی حقوق محفوظ است.",
-      pricing: "قیمت‌گذاری",
-      profiles: "پروفایل‌ها",
-      tagline: "پروفایل شخصی حرفه‌ای شما، ساخته‌شده توسط Jolly Panda.",
-      navigate: "ناوبری",
-      studio: "استودیو Jolly Panda",
-      studioHome: "خانه",
-      studioServices: "خدمات",
-      studioProjects: "پروژه‌ها",
-      studioAbout: "درباره ما",
-      telegram: "تلگرام",
-      linkedin: "لینکدین",
-      github: "گیت‌هاب",
-      footerNavLabel: "ناوبری پایین صفحه",
-      docTitle: "پروفایل‌ها | جالی پاندا",
-      metaDesc: "صفحه‌های شخصی و نمونه‌کارهای ساخته‌شده توسط جالی پاندا را ببینید.",
-      homeLabel: "صفحهٔ اصلی پروفایل جالی پاندا",
-      langLabel: "تغییر زبان",
-      filterLabel: "فیلتر بر اساس موضوع"
-    }
-  };
+  var ui = {};
+  try {
+    ui = JSON.parse(document.getElementById("bioUi").textContent);
+  } catch (e) { /* the page still works without dynamic strings */ }
+
+  var lang = ui.lang || document.documentElement.lang || "en";
 
   var $ = function (id) { return document.getElementById(id); };
   var els = {
     search: $("bioSearch"), sort: $("bioSort"), chips: $("bioChips"),
-    count: $("bioCount"), table: $("bioTable"), rows: $("bioRows"),
-    state: $("bioState")
+    count: $("bioCount"), table: $("bioTable"), rows: $("bioRows"), state: $("bioState")
   };
+  if (!els.rows) return;
 
-  var lang = "en";
   var projects = [];
   var loaded = false;
-  var failed = false;
   var query = "";
   var topic = "";
   var sortKey = "name";
 
-  /* ---------- language ---------- */
-  function pickLang() {
-    var fromUrl = new URLSearchParams(location.search).get("lang");
-    if (fromUrl === "fa" || fromUrl === "en") return fromUrl;
-    try {
-      var stored = localStorage.getItem(STORAGE_KEY);
-      if (stored === "fa" || stored === "en") return stored;
-    } catch (e) {}
-    return (navigator.language || "").slice(0, 2) === "fa" ? "fa" : "en";
+  function fmt(str, vars) {
+    return String(str || "").replace(/\{(\w+)\}/g, function (m, k) { return k in vars ? vars[k] : m; });
   }
 
-  function t(key) { return STRINGS[lang][key]; }
-
-  function applyLang(next) {
-    lang = next;
-    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
-    var dir = lang === "fa" ? "rtl" : "ltr";
-    document.documentElement.setAttribute("lang", lang);
-    document.documentElement.setAttribute("dir", dir);
-    document.body.setAttribute("dir", dir);
-    document.title = t("docTitle");
-
-    Array.prototype.forEach.call(document.querySelectorAll("[data-i18n]"), function (el) {
-      var v = t(el.getAttribute("data-i18n"));
-      if (typeof v === "string") el.textContent = v;
-    });
-    Array.prototype.forEach.call(document.querySelectorAll("[data-i18n-attr]"), function (el) {
-      el.getAttribute("data-i18n-attr").split("|").forEach(function (pair) {
-        var parts = pair.split(":");
-        var v = t(parts[1]);
-        if (parts[0] && typeof v === "string") el.setAttribute(parts[0], v);
-      });
-    });
-    var descEl = document.querySelector('meta[name="description"]');
-    if (descEl) descEl.setAttribute("content", t("metaDesc"));
-    Array.prototype.forEach.call(document.querySelectorAll("[data-i18n-placeholder]"), function (el) {
-      el.setAttribute("placeholder", t(el.getAttribute("data-i18n-placeholder")));
-    });
-    Array.prototype.forEach.call(document.querySelectorAll(".lang-switch__btn"), function (btn) {
-      var on = btn.getAttribute("data-lang") === lang;
-      btn.classList.toggle("is-active", on);
-      btn.setAttribute("aria-pressed", on ? "true" : "false");
-    });
-    Array.prototype.forEach.call(document.querySelectorAll("[data-href]"), function (a) {
-      a.setAttribute("href", a.getAttribute("data-href").replace("{lang}", lang));
-    });
-    render();
+  function num(n) {
+    try { return new Intl.NumberFormat(lang === "fa" ? "fa-IR" : "en-US").format(n); } catch (e) { return String(n); }
   }
 
   /* ---------- text normalisation (Persian-friendly search) ---------- */
@@ -171,7 +47,7 @@
       .toLowerCase()
       .replace(/[\u200c\u200f\u200e]/g, " ")      // ZWNJ / direction marks
       .replace(/[\u064b-\u065f\u0670]/g, "")       // Arabic diacritics
-      .replace(/ي/g, "ی").replace(/ك/g, "ک")       // Arabic -> Persian letters
+      .replace(/\u064a/g, "\u06cc").replace(/\u0643/g, "\u06a9") // Arabic -> Persian letters
       .replace(/[\u06f0-\u06f9]/g, function (d) { return String(d.charCodeAt(0) - 0x06f0); })
       .replace(/[\u0660-\u0669]/g, function (d) { return String(d.charCodeAt(0) - 0x0660); })
       .replace(/\s+/g, " ")
@@ -226,12 +102,10 @@
       p.subtitle ? h("div", { class: "bio-sub", text: p.subtitle }) : null,
       p.description ? h("p", { class: "bio-desc", text: p.description }) : null
     ]);
-
     var tags = h("div", { class: "bio-tags" }, (p.topics || []).map(function (tp) {
       return h("span", { class: "bio-tag", text: tp });
     }));
-
-    var arrow = h("a", { class: "bio-open", href: p.url, "aria-label": t("open") + ": " + p.name });
+    var arrow = h("a", { class: "bio-open", href: p.url, "aria-label": (ui.open || "") + ": " + p.name });
     arrow.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
     return h("tr", {}, [
@@ -254,7 +128,7 @@
     });
     list.sort(function (a, b) {
       if (sortKey === "updated") return String(b.updated || "").localeCompare(String(a.updated || ""));
-      return a.name.localeCompare(b.name, lang === "fa" ? "fa" : "en", { sensitivity: "base" });
+      return a.name.localeCompare(b.name, lang, { sensitivity: "base" });
     });
     return list;
   }
@@ -271,7 +145,7 @@
     if (!topics.length) { els.chips.hidden = true; return; }
     els.chips.hidden = false;
     [""].concat(topics).forEach(function (tp) {
-      var btn = h("button", { type: "button", class: "bio-chip", "data-topic": tp, text: tp || t("all") });
+      var btn = h("button", { type: "button", class: "bio-chip", "data-topic": tp, text: tp || ui.all });
       btn.setAttribute("aria-pressed", tp === topic ? "true" : "false");
       els.chips.appendChild(btn);
     });
@@ -282,26 +156,25 @@
     els.state.hidden = false;
     els.state.textContent = msg;
     if (withClear) {
-      var btn = h("button", { type: "button", class: "btn btn-secondary", id: "bioClear", text: t("clear") });
       els.state.appendChild(document.createElement("br"));
-      els.state.appendChild(btn);
+      els.state.appendChild(h("button", { type: "button", class: "btn btn-secondary", id: "bioClear", text: ui.clear }));
     }
   }
 
+  function countText(n) {
+    if (n === projects.length) return fmt(n === 1 ? ui.countOne : ui.countMany, { n: num(n) });
+    return fmt(ui.countPartial, { n: num(n), total: num(projects.length) });
+  }
+
   function render() {
-    if (!loaded) {
-      els.table.hidden = true;
-      els.count.textContent = "";
-      setState(failed ? t("error") : t("loading"));
-      return;
-    }
+    if (!loaded) return; // until the data arrives, keep the pre-rendered rows
     renderChips();
     var list = visible();
     els.rows.innerHTML = "";
     list.forEach(function (p) { els.rows.appendChild(row(p)); });
     els.table.hidden = list.length === 0;
-    els.count.textContent = t("count")(list.length, projects.length);
-    setState(list.length ? "" : t("empty"), list.length === 0 && (query || topic));
+    els.count.textContent = countText(list.length);
+    setState(list.length ? "" : ui.empty, list.length === 0 && (query || topic));
   }
 
   /* ---------- URL <-> state ---------- */
@@ -320,7 +193,7 @@
     if (topic) params.set("topic", topic);
     if (sortKey !== "name") params.set("sort", sortKey);
     var qs = params.toString();
-    history.replaceState(null, "", location.pathname + (qs ? "?" + qs : ""));
+    history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
   }
 
   /* ---------- events ---------- */
@@ -341,14 +214,8 @@
     }
   });
 
-  Array.prototype.forEach.call(document.querySelectorAll(".lang-switch__btn"), function (btn) {
-    btn.addEventListener("click", function () { applyLang(btn.getAttribute("data-lang")); });
-  });
-
   /* ---------- boot ---------- */
   readUrl();
-  applyLang(pickLang());
-  writeUrl(); // also drops the one-time ?lang= parameter from the address bar
 
   fetch(DATA_URL, { cache: "no-cache" })
     .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
@@ -358,5 +225,7 @@
       loaded = true;
       render();
     })
-    .catch(function () { failed = true; render(); });
+    .catch(function () {
+      if (!els.rows.children.length) setState(ui.error);
+    });
 })();

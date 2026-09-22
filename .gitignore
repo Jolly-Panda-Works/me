@@ -25,3 +25,7 @@ npm-debug.log*
 *.bak
 *~
 *.zip
+
+# Build output / Vercel
+_site/
+.vercel/

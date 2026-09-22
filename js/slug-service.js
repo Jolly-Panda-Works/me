@@ -45,13 +45,29 @@ window.ProfileSlugService = (function () {
     "pricing", "login", "signup", "register", "dashboard", "profile",
     "profiles", "settings", "privacy", "terms", "help", "blog",
     "assets", "static", "cdn", "favicon", "robots", "sitemap",
-    "en", "fa", "bio"
+    "en", "fa", "bio", "faq", "how-it-works", "404", "index"
   ];
 
   // Mock "already taken" slugs for the static/demo phase only.
   // In production this array disappears entirely — the database is
   // the single source of truth.
   var mockTakenSlugs = ["useffarahmand", "john-doe", "sara-ahmadi", "ali1378"];
+
+  // Every profile that is already published lives at /bio/<slug>/ and is
+  // listed in /bio/projects.json (generated at build time), so those slugs
+  // are genuinely taken. Loaded once, best effort.
+  var publishedSlugsPromise = null;
+  function loadPublishedSlugs() {
+    if (!publishedSlugsPromise) {
+      publishedSlugsPromise = fetch("/bio/projects.json", { cache: "no-cache" })
+        .then(function (res) { return res.ok ? res.json() : []; })
+        .then(function (list) {
+          return (Array.isArray(list) ? list : []).map(function (p) { return String(p.slug || "").toLowerCase(); });
+        })
+        .catch(function () { return []; });
+    }
+    return publishedSlugsPromise;
+  }
 
   var SLUG_MIN = 3;
   var SLUG_MAX = 30;
@@ -92,14 +108,15 @@ window.ProfileSlugService = (function () {
     var slug = normalizeSlug(rawSlug);
     var format = validateFormat(slug);
 
-    return delay(450).then(function () {
+    return Promise.all([delay(450), loadPublishedSlugs()]).then(function (results) {
+      var published = results[1];
       if (!format.valid) {
         return { status: "invalid", slug: slug, reason: format.reason };
       }
       if (isReserved(slug)) {
         return { status: "reserved", slug: slug };
       }
-      if (mockTakenSlugs.indexOf(slug) !== -1) {
+      if (mockTakenSlugs.indexOf(slug) !== -1 || published.indexOf(slug) !== -1) {
         return { status: "taken", slug: slug };
       }
       return { status: "available", slug: slug };

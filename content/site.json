@@ -1,0 +1,248 @@
+{
+  "_readme": "Shared by EVERY page: header, footer, social links. Edit text here and rebuild. {lang} in a link is replaced with en / fa.",
+  "domain": "https://me.jollypanda.ir",
+  "email": "hello@jollypanda.ir",
+  "year": 2026,
+  "social": [
+    {
+      "id": "telegram",
+      "url": "https://t.me/UsefGameLab"
+    },
+    {
+      "id": "linkedin",
+      "url": "https://www.linkedin.com/company/jolly-panda"
+    },
+    {
+      "id": "github",
+      "url": "https://github.com/Jolly-Panda-Works"
+    }
+  ],
+  "en": {
+    "brand": "Jolly Panda",
+    "brandSub": "Profile",
+    "skip": "Skip to content",
+    "menuLabel": "Toggle menu",
+    "langLabel": "Language switch",
+    "homeLabel": "Jolly Panda Profile home",
+    "footerNavLabel": "Footer navigation",
+    "socialLabels": {
+      "telegram": "Jolly Panda on Telegram",
+      "linkedin": "Jolly Panda on LinkedIn",
+      "github": "Jolly Panda on GitHub"
+    },
+    "header": {
+      "links": [
+        {
+          "key": "bio",
+          "label": "Profiles",
+          "href": "/{lang}/bio/"
+        },
+        {
+          "key": "howItWorks",
+          "label": "How it works",
+          "href": "/{lang}/how-it-works/"
+        },
+        {
+          "key": "faq",
+          "label": "FAQ",
+          "href": "/{lang}/faq/"
+        }
+      ],
+      "pricing": {
+        "label": "Pricing",
+        "href": "/{lang}/#pricing"
+      },
+      "request": {
+        "label": "Request a Profile",
+        "href": "/{lang}/#request"
+      }
+    },
+    "footer": {
+      "tagline": "Your professional personal profile, built by Jolly Panda.",
+      "groups": [
+        {
+          "title": "Navigate",
+          "links": [
+            {
+              "label": "Home",
+              "href": "/{lang}/"
+            },
+            {
+              "label": "Profiles",
+              "href": "/{lang}/bio/"
+            },
+            {
+              "label": "How it works",
+              "href": "/{lang}/how-it-works/"
+            },
+            {
+              "label": "Pricing",
+              "href": "/{lang}/#pricing"
+            },
+            {
+              "label": "FAQ",
+              "href": "/{lang}/faq/"
+            },
+            {
+              "label": "Request a Profile",
+              "href": "/{lang}/#request"
+            }
+          ]
+        },
+        {
+          "title": "Support",
+          "links": [
+            {
+              "label": "Privacy Policy",
+              "href": "/{lang}/privacy/"
+            },
+            {
+              "label": "{email}",
+              "href": "mailto:{email}"
+            }
+          ]
+        },
+        {
+          "title": "Jolly Panda Studio",
+          "links": [
+            {
+              "label": "Home",
+              "href": "https://jollypanda.ir/",
+              "external": true
+            },
+            {
+              "label": "Services",
+              "href": "https://jollypanda.ir/services.html",
+              "external": true
+            },
+            {
+              "label": "Projects",
+              "href": "https://jollypanda.ir/projects.html",
+              "external": true
+            },
+            {
+              "label": "About",
+              "href": "https://jollypanda.ir/about.html",
+              "external": true
+            }
+          ]
+        }
+      ],
+      "copyright": "© {year} Jolly Panda. All rights reserved."
+    }
+  },
+  "fa": {
+    "brand": "Jolly Panda",
+    "brandSub": "Profile",
+    "skip": "رفتن به محتوای اصلی",
+    "menuLabel": "باز و بسته کردن منو",
+    "langLabel": "تغییر زبان",
+    "homeLabel": "صفحه اصلی Jolly Panda Profile",
+    "footerNavLabel": "ناوبری پایین صفحه",
+    "socialLabels": {
+      "telegram": "Jolly Panda در تلگرام",
+      "linkedin": "Jolly Panda در لینکدین",
+      "github": "Jolly Panda در گیت‌هاب"
+    },
+    "header": {
+      "links": [
+        {
+          "key": "bio",
+          "label": "پروفایل‌ها",
+          "href": "/{lang}/bio/"
+        },
+        {
+          "key": "howItWorks",
+          "label": "نحوه کار",
+          "href": "/{lang}/how-it-works/"
+        },
+        {
+          "key": "faq",
+          "label": "سؤالات متداول",
+          "href": "/{lang}/faq/"
+        }
+      ],
+      "pricing": {
+        "label": "قیمت‌گذاری",
+        "href": "/{lang}/#pricing"
+      },
+      "request": {
+        "label": "درخواست پروفایل",
+        "href": "/{lang}/#request"
+      }
+    },
+    "footer": {
+      "tagline": "پروفایل شخصی حرفه‌ای شما، ساخته‌شده توسط Jolly Panda.",
+      "groups": [
+        {
+          "title": "ناوبری",
+          "links": [
+            {
+              "label": "خانه",
+              "href": "/{lang}/"
+            },
+            {
+              "label": "پروفایل‌ها",
+              "href": "/{lang}/bio/"
+            },
+            {
+              "label": "نحوه کار",
+              "href": "/{lang}/how-it-works/"
+            },
+            {
+              "label": "قیمت‌گذاری",
+              "href": "/{lang}/#pricing"
+            },
+            {
+              "label": "سؤالات متداول",
+              "href": "/{lang}/faq/"
+            },
+            {
+              "label": "درخواست پروفایل",
+              "href": "/{lang}/#request"
+            }
+          ]
+        },
+        {
+          "title": "پشتیبانی",
+          "links": [
+            {
+              "label": "سیاست حریم خصوصی",
+              "href": "/{lang}/privacy/"
+            },
+            {
+              "label": "{email}",
+              "href": "mailto:{email}"
+            }
+          ]
+        },
+        {
+          "title": "استودیو Jolly Panda",
+          "links": [
+            {
+              "label": "خانه",
+              "href": "https://jollypanda.ir/fa/",
+              "external": true
+            },
+            {
+              "label": "خدمات",
+              "href": "https://jollypanda.ir/fa/services.html",
+              "external": true
+            },
+            {
+              "label": "پروژه‌ها",
+              "href": "https://jollypanda.ir/fa/projects.html",
+              "external": true
+            },
+            {
+              "label": "درباره ما",
+              "href": "https://jollypanda.ir/fa/about.html",
+              "external": true
+            }
+          ]
+        }
+      ],
+      "copyright": "© {year} Jolly Panda. تمامی حقوق محفوظ است."
+    }
+  }
+}

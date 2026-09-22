@@ -548,6 +548,25 @@ html[lang="fa"] .site-footer__heading {
   }
 }
 
+/* ---------- 6c. Shared header details ---------- */
+.brand__sub {
+  display: block;
+  font-size: var(--fs-tiny);
+  font-weight: 600;
+  color: var(--color-ink-faint);
+  letter-spacing: 0.02em;
+}
+
+a.lang-switch__btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-footer__group {
+  min-width: 140px;
+}
+
 /* ---------- 7. Mobile navigation (below 768px) ---------- */
 .nav-toggle {
   display: flex;
@@ -657,7 +676,7 @@ html[lang="fa"] .site-footer__heading {
   }
 
   .site-footer__top {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     text-align: start;
   }
 
@@ -672,13 +691,15 @@ html[lang="fa"] .site-footer__heading {
   }
 
   .site-footer__nav {
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-lg);
+    justify-content: normal;
   }
 
   .site-footer__group,
   .site-footer__list {
     text-align: start;
-    justify-content: flex-end;
   }
 
   .site-footer__copyright {

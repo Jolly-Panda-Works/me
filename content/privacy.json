@@ -1,0 +1,194 @@
+{
+  "_readme": "Content of /en/privacy/ and /fa/privacy/. Each section has a title, optional paragraphs (p) and an optional bullet list (list). Supports **bold** and [text](link) with {lang}/{email}. Update 'updated' when you change the policy. Review it with a legal adviser before relying on it.",
+  "slug": "privacy",
+  "en": {
+    "meta": {
+      "title": "Privacy Policy | Jolly Panda Profile",
+      "description": "How Jolly Panda Profile collects, uses and protects the information you send us through the request form and this website."
+    },
+    "hero": {
+      "eyebrow": "Privacy Policy",
+      "title": "Your privacy matters",
+      "lead": "This policy explains what information we collect through me.jollypanda.ir, why we collect it and the choices you have."
+    },
+    "updatedLabel": "Last updated",
+    "updated": "September 21, 2026",
+    "sections": [
+      {
+        "title": "Who we are",
+        "p": [
+          "Jolly Panda Profile (me.jollypanda.ir) is operated by Jolly Panda Studio (“we”, “us”). You can reach us at [{email}](mailto:{email})."
+        ]
+      },
+      {
+        "title": "Information we collect",
+        "p": [
+          "We collect only what's needed to run the service:"
+        ],
+        "list": [
+          "**Request form details:** your full name, phone number, email address, profession, the plan you select, the profile address you want and the project details you write.",
+          "**Technical data:** like most websites, our hosting provider processes technical data such as your IP address, browser type and the pages requested in its server logs.",
+          "**Your language choice:** we save it in your browser's local storage so the site opens in the language you used last. It stays on your device."
+        ]
+      },
+      {
+        "title": "How we use your information",
+        "list": [
+          "To review your request and contact you.",
+          "To design, build and publish your profile page.",
+          "To protect the request form from spam and abuse.",
+          "To answer questions you send us."
+        ]
+      },
+      {
+        "title": "Who we share it with",
+        "p": [
+          "We don't sell your information. To run the service we rely on trusted providers that process data on our behalf:"
+        ],
+        "list": [
+          "**Hosting:** Vercel serves this website.",
+          "**Email delivery:** Resend delivers your request to our inbox.",
+          "**Spam protection:** Cloudflare Turnstile may be used on the request form to tell people from bots.",
+          "**Fonts:** your browser loads fonts directly from Google Fonts, which receives your IP address when it does."
+        ]
+      },
+      {
+        "title": "Your public profile",
+        "p": [
+          "A profile page we publish for you is public by design at me.jollypanda.ir/bio/ and can be found by search engines. We publish only what you ask us to include, so please share only what you're comfortable making public."
+        ]
+      },
+      {
+        "title": "How long we keep it",
+        "p": [
+          "We keep your request details for as long as needed to handle your request and, if we build your page, for as long as it stays published. You can ask us to delete them at any time."
+        ]
+      },
+      {
+        "title": "Your choices and rights",
+        "p": [
+          "You can ask us to give you a copy of the information we hold about you, correct it, delete it, or take your published page down. Email [{email}](mailto:{email}) and we'll respond as soon as we reasonably can."
+        ]
+      },
+      {
+        "title": "Security",
+        "p": [
+          "We use HTTPS and limit access to your request to our team. No method of transmission or storage is completely secure, so we can't guarantee absolute security."
+        ]
+      },
+      {
+        "title": "Children",
+        "p": [
+          "This service is intended for adults and isn't directed at children."
+        ]
+      },
+      {
+        "title": "Changes to this policy",
+        "p": [
+          "We may update this policy from time to time. The “Last updated” date at the top shows the latest revision."
+        ]
+      },
+      {
+        "title": "Contact us",
+        "p": [
+          "Questions about this policy or your information? Write to [{email}](mailto:{email})."
+        ]
+      }
+    ]
+  },
+  "fa": {
+    "meta": {
+      "title": "سیاست حریم خصوصی | Jolly Panda Profile",
+      "description": "نحوهٔ جمع‌آوری، استفاده و محافظت Jolly Panda Profile از اطلاعاتی که از طریق فرم درخواست و این وب‌سایت برای ما ارسال می‌کنید."
+    },
+    "hero": {
+      "eyebrow": "سیاست حریم خصوصی",
+      "title": "حریم خصوصی شما برای ما مهم است",
+      "lead": "این صفحه توضیح می‌دهد از طریق me.jollypanda.ir چه اطلاعاتی جمع می‌کنیم، چرا جمع می‌کنیم و شما چه اختیاراتی دارید."
+    },
+    "updatedLabel": "آخرین به‌روزرسانی",
+    "updated": "۳۰ شهریور ۱۴۰۵",
+    "sections": [
+      {
+        "title": "ما کیستیم",
+        "p": [
+          "Jolly Panda Profile (me.jollypanda.ir) توسط استودیو Jolly Panda («ما») اداره می‌شود. از طریق [{email}](mailto:{email}) می‌توانید با ما در تماس باشید."
+        ]
+      },
+      {
+        "title": "اطلاعاتی که جمع می‌کنیم",
+        "p": [
+          "فقط اطلاعاتی را جمع می‌کنیم که برای ارائه سرویس لازم است:"
+        ],
+        "list": [
+          "**اطلاعات فرم درخواست:** نام و نام خانوادگی، شماره تماس، ایمیل، حوزه فعالیت، پکیج انتخابی، آدرس دلخواه پروفایل و توضیحاتی که برای پروژه می‌نویسید.",
+          "**داده‌های فنی:** مانند بیشتر وب‌سایت‌ها، سرویس میزبانی ما داده‌های فنی مانند آدرس IP، نوع مرورگر و صفحات درخواست‌شده را در لاگ‌های سرور پردازش می‌کند.",
+          "**زبان انتخابی شما:** آن را در حافظه محلی (local storage) مرورگرتان ذخیره می‌کنیم تا سایت با زبانی که آخرین بار استفاده کردید باز شود. این اطلاعات روی دستگاه شما می‌ماند."
+        ]
+      },
+      {
+        "title": "از اطلاعات شما چگونه استفاده می‌کنیم",
+        "list": [
+          "برای بررسی درخواست شما و تماس با شما.",
+          "برای طراحی، ساخت و انتشار صفحه پروفایل شما.",
+          "برای محافظت از فرم درخواست در برابر اسپم و سوءاستفاده.",
+          "برای پاسخ به پرسش‌هایی که برای ما می‌فرستید."
+        ]
+      },
+      {
+        "title": "اطلاعات را با چه کسانی به اشتراک می‌گذاریم",
+        "p": [
+          "اطلاعات شما را نمی‌فروشیم. برای ارائه سرویس از ارائه‌دهندگان معتبری استفاده می‌کنیم که از طرف ما داده‌ها را پردازش می‌کنند:"
+        ],
+        "list": [
+          "**میزبانی:** Vercel این وب‌سایت را ارائه می‌کند.",
+          "**ارسال ایمیل:** Resend درخواست شما را به صندوق ایمیل ما می‌رساند.",
+          "**محافظت در برابر اسپم:** ممکن است از Cloudflare Turnstile در فرم درخواست برای تشخیص انسان از ربات استفاده شود.",
+          "**فونت‌ها:** مرورگر شما فونت‌ها را مستقیماً از Google Fonts دریافت می‌کند و گوگل در این حالت آدرس IP شما را دریافت می‌کند."
+        ]
+      },
+      {
+        "title": "پروفایل عمومی شما",
+        "p": [
+          "صفحه‌ای که برای شما منتشر می‌کنیم ذاتاً عمومی است، در me.jollypanda.ir/bio/ قرار می‌گیرد و موتورهای جست‌وجو می‌توانند آن را پیدا کنند. ما فقط مواردی را منتشر می‌کنیم که از ما بخواهید؛ پس فقط اطلاعاتی را بدهید که راحت هستید عمومی شود."
+        ]
+      },
+      {
+        "title": "تا چه مدت نگهداری می‌کنیم",
+        "p": [
+          "اطلاعات درخواست شما را تا زمانی که برای رسیدگی به آن لازم است و، در صورت ساخت صفحه، تا زمانی که صفحه منتشر باقی می‌ماند نگه می‌داریم. هر زمان بخواهید می‌توانید حذف آن را درخواست کنید."
+        ]
+      },
+      {
+        "title": "اختیارات و حقوق شما",
+        "p": [
+          "می‌توانید نسخه‌ای از اطلاعات خود را بخواهید، آن را اصلاح یا حذف کنید یا درخواست برداشتن صفحه منتشرشده‌تان را بدهید. به [{email}](mailto:{email}) ایمیل بزنید تا در اسرع وقت پاسخ بدهیم."
+        ]
+      },
+      {
+        "title": "امنیت",
+        "p": [
+          "از HTTPS استفاده می‌کنیم و دسترسی به درخواست شما را به تیم خود محدود می‌کنیم. هیچ روش انتقال یا نگهداری کاملاً ایمن نیست، بنابراین نمی‌توانیم امنیت مطلق را تضمین کنیم."
+        ]
+      },
+      {
+        "title": "کودکان",
+        "p": [
+          "این سرویس برای بزرگسالان است و مخاطب آن کودکان نیستند."
+        ]
+      },
+      {
+        "title": "تغییرات این سیاست",
+        "p": [
+          "ممکن است این سیاست را گاهی به‌روزرسانی کنیم. تاریخ «آخرین به‌روزرسانی» در بالای صفحه آخرین نسخه را نشان می‌دهد."
+        ]
+      },
+      {
+        "title": "تماس با ما",
+        "p": [
+          "دربارهٔ این سیاست یا اطلاعات خود پرسشی دارید؟ به [{email}](mailto:{email}) بنویسید."
+        ]
+      }
+    ]
+  }
+}

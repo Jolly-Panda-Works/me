@@ -1,0 +1,198 @@
+{
+  "_readme": "Content of /en/faq/ and /fa/faq/. Answers support **bold** and [text](link) with {lang}/{email}. Blank line = new paragraph. A FAQPage structured-data block is generated from this file automatically.",
+  "slug": "faq",
+  "en": {
+    "meta": {
+      "title": "FAQ | Jolly Panda Profile",
+      "description": "Answers to common questions about Jolly Panda Profile: addresses, plans, what you need to provide, privacy and how to get in touch."
+    },
+    "hero": {
+      "eyebrow": "FAQ",
+      "title": "Frequently asked questions",
+      "lead": "Quick answers about how your personal profile page works. Can't find yours? Just ask."
+    },
+    "groups": [
+      {
+        "title": "About the service",
+        "items": [
+          {
+            "q": "What is Jolly Panda Profile?",
+            "a": "Jolly Panda Profile is a service from Jolly Panda Studio that builds a personal profile page for you: your resume, portfolio and contact details together on one professional page with its own web address."
+          },
+          {
+            "q": "What will my page address look like?",
+            "a": "Every profile lives at **me.jollypanda.ir/bio/** followed by the name you choose, for example me.jollypanda.ir/bio/your-name."
+          },
+          {
+            "q": "Who is it for?",
+            "a": "Anyone who wants a clean, professional page to share: freelancers, developers, designers, photographers, creators, job seekers and specialists in any field."
+          }
+        ]
+      },
+      {
+        "title": "Requesting a profile",
+        "items": [
+          {
+            "q": "How do I request a profile?",
+            "a": "Fill in the [request form](/{lang}/#request) with your details, choose a plan and pick the address you'd like. We'll contact you to take it from there. The [How it works](/{lang}/how-it-works/) page explains every step."
+          },
+          {
+            "q": "What can I choose as my address?",
+            "a": "Between 3 and 30 characters, using lowercase English letters, numbers and hyphens. It can't start or end with a hyphen. The form checks whether an address is available while you type and again when you submit."
+          },
+          {
+            "q": "Which plans are available?",
+            "a": "**Basic** is a single-page profile with your own address and social links. **Professional** adds a portfolio or photo gallery, a resume download button, a contact form and entrance animations. **Custom** adds a fully custom design, unlimited sections and a one-to-one design consultation. See [Pricing](/{lang}/#pricing)."
+          },
+          {
+            "q": "How much does it cost?",
+            "a": "Prices are listed in [Pricing](/{lang}/#pricing), together with the date they were last updated. Custom projects are priced according to the options you choose."
+          },
+          {
+            "q": "What do I need to provide?",
+            "a": "A short bio or your resume, a profile photo, links to your social profiles and work, and portfolio material if your plan includes it. We'll tell you exactly what's needed when we get in touch."
+          }
+        ]
+      },
+      {
+        "title": "Your page",
+        "items": [
+          {
+            "q": "Will my page work on phones?",
+            "a": "Yes. Every profile is fully responsive and designed to look good on phones, tablets and desktops."
+          },
+          {
+            "q": "Can people find my page on Google?",
+            "a": "Profile pages are public, and we list them in this site's sitemap so search engines can discover them. How a page ranks depends on its content and on the search engine, so we can't promise a specific position."
+          },
+          {
+            "q": "Can I update my page later?",
+            "a": "Yes. Write to [{email}](mailto:{email}) and tell us what you'd like to change."
+          }
+        ]
+      },
+      {
+        "title": "Privacy and contact",
+        "items": [
+          {
+            "q": "What happens to the information I send?",
+            "a": "We use it only to handle your request and build your page. The [Privacy Policy](/{lang}/privacy/) explains the details."
+          },
+          {
+            "q": "How can I contact you?",
+            "a": "Email [{email}](mailto:{email}) or use the [request form](/{lang}/#request). You'll also find us on Telegram, LinkedIn and GitHub through the links in the footer."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Still have a question?",
+      "text": "Write to us and we'll get back to you.",
+      "primary": {
+        "label": "Email us",
+        "href": "mailto:{email}"
+      },
+      "secondary": {
+        "label": "Request a Profile",
+        "href": "/{lang}/#request"
+      }
+    }
+  },
+  "fa": {
+    "meta": {
+      "title": "سؤالات متداول | Jolly Panda Profile",
+      "description": "پاسخ پرسش‌های رایج دربارهٔ Jolly Panda Profile: آدرس صفحه، پکیج‌ها، اطلاعات موردنیاز، حریم خصوصی و راه‌های ارتباطی."
+    },
+    "hero": {
+      "eyebrow": "سؤالات متداول",
+      "title": "پرسش‌های پرتکرار",
+      "lead": "پاسخ‌های کوتاه دربارهٔ نحوهٔ کار صفحه شخصی شما. پاسخ پرسشتان را پیدا نکردید؟ از ما بپرسید."
+    },
+    "groups": [
+      {
+        "title": "دربارهٔ سرویس",
+        "items": [
+          {
+            "q": "Jolly Panda Profile چیست؟",
+            "a": "Jolly Panda Profile سرویسی از استودیو Jolly Panda است که برای شما یک صفحه شخصی می‌سازد: رزومه، نمونه‌کارها و راه‌های ارتباطی‌تان در یک صفحه حرفه‌ای با آدرس اختصاصی."
+          },
+          {
+            "q": "آدرس صفحه من چه شکلی خواهد بود؟",
+            "a": "هر پروفایل روی **me.jollypanda.ir/bio/** و به دنبال آن نامی که انتخاب می‌کنید قرار می‌گیرد، مثلاً me.jollypanda.ir/bio/your-name."
+          },
+          {
+            "q": "این سرویس برای چه کسانی است؟",
+            "a": "برای هر کسی که یک صفحه مرتب و حرفه‌ای برای معرفی خودش می‌خواهد: فریلنسرها، برنامه‌نویس‌ها، طراح‌ها، عکاس‌ها، تولیدکنندگان محتوا، کارجوها و متخصصان هر حوزه."
+          }
+        ]
+      },
+      {
+        "title": "ثبت درخواست",
+        "items": [
+          {
+            "q": "چطور درخواست پروفایل بدهم؟",
+            "a": "[فرم درخواست](/{lang}/#request) را با اطلاعات‌تان پر کنید، یک پکیج انتخاب کنید و آدرس دلخواه را بنویسید. ما با شما تماس می‌گیریم و ادامه کار را پیش می‌بریم. صفحهٔ [نحوه کار](/{lang}/how-it-works/) همهٔ مراحل را توضیح داده است."
+          },
+          {
+            "q": "چه آدرسی می‌توانم انتخاب کنم؟",
+            "a": "بین ۳ تا ۳۰ کاراکتر شامل حروف کوچک انگلیسی، عدد و خط تیره. آدرس نمی‌تواند با خط تیره شروع یا تمام شود. فرم هنگام تایپ و دوباره هنگام ارسال بررسی می‌کند که آدرس آزاد است یا نه."
+          },
+          {
+            "q": "چه پکیج‌هایی وجود دارد؟",
+            "a": "**پایه** یک صفحه پروفایل تک‌صفحه‌ای با آدرس اختصاصی و لینک شبکه‌های اجتماعی است. **حرفه‌ای** علاوه بر آن گالری نمونه‌کار یا تصاویر، دکمه دانلود رزومه، فرم تماس اختصاصی و انیمیشن ورود صفحه دارد. **اختصاصی** طراحی کاملاً سفارشی، بخش‌های نامحدود و مشاوره طراحی یک‌به‌یک را هم اضافه می‌کند. بخش [قیمت‌گذاری](/{lang}/#pricing) را ببینید."
+          },
+          {
+            "q": "هزینه چقدر است؟",
+            "a": "قیمت‌ها همراه با تاریخ آخرین به‌روزرسانی در بخش [قیمت‌گذاری](/{lang}/#pricing) آمده است. قیمت پروژه‌های اختصاصی بسته به انتخاب‌های شما تعیین می‌شود."
+          },
+          {
+            "q": "چه اطلاعاتی باید بدهم؟",
+            "a": "یک معرفی کوتاه یا رزومه، عکس پروفایل، لینک شبکه‌های اجتماعی و کارهایتان و در صورت داشتن گالری در پکیج، نمونه‌کارها. هنگام تماس دقیقاً می‌گوییم چه چیزهایی لازم است."
+          }
+        ]
+      },
+      {
+        "title": "صفحه شما",
+        "items": [
+          {
+            "q": "صفحه من روی موبایل هم درست نمایش داده می‌شود؟",
+            "a": "بله. همهٔ پروفایل‌ها کاملاً واکنش‌گرا هستند و روی موبایل، تبلت و دسکتاپ خوب نمایش داده می‌شوند."
+          },
+          {
+            "q": "آیا صفحه من در گوگل پیدا می‌شود؟",
+            "a": "پروفایل‌ها عمومی هستند و ما آن‌ها را در نقشه سایت (sitemap) این وب‌سایت قرار می‌دهیم تا موتورهای جست‌وجو بتوانند پیدایشان کنند. جایگاه صفحه در نتایج به محتوای آن و به موتور جست‌وجو بستگی دارد و نمی‌توانیم رتبه مشخصی را تضمین کنیم."
+          },
+          {
+            "q": "بعداً می‌توانم صفحه‌ام را ویرایش کنم؟",
+            "a": "بله. به [{email}](mailto:{email}) ایمیل بزنید و بنویسید چه چیزی را می‌خواهید تغییر دهید."
+          }
+        ]
+      },
+      {
+        "title": "حریم خصوصی و تماس",
+        "items": [
+          {
+            "q": "با اطلاعاتی که می‌فرستم چه می‌شود؟",
+            "a": "فقط برای رسیدگی به درخواست و ساخت صفحه‌تان از آن استفاده می‌کنیم. جزئیات در [سیاست حریم خصوصی](/{lang}/privacy/) آمده است."
+          },
+          {
+            "q": "چطور با شما در تماس باشم؟",
+            "a": "به [{email}](mailto:{email}) ایمیل بزنید یا از [فرم درخواست](/{lang}/#request) استفاده کنید. از لینک‌های پایین صفحه هم می‌توانید ما را در تلگرام، لینکدین و گیت‌هاب پیدا کنید."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "هنوز پرسشی دارید؟",
+      "text": "برایمان بنویسید تا پاسخ بدهیم.",
+      "primary": {
+        "label": "ارسال ایمیل",
+        "href": "mailto:{email}"
+      },
+      "secondary": {
+        "label": "درخواست پروفایل",
+        "href": "/{lang}/#request"
+      }
+    }
+  }
+}

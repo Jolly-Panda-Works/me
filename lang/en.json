@@ -4,23 +4,18 @@
     "title": "Personal Profile & Portfolio Websites | Jolly Panda",
     "description": "Professional personal profile, resume and portfolio websites designed around your identity."
   },
-  "nav": {
-    "skip": "Skip to content",
-    "brand": "Jolly Panda",
-    "brandSub": "Profile",
-    "pricing": "Pricing",
-    "request": "Request a Profile",
-    "backToStudio": "Back to Studio",
-    "bio": "Profiles"
-  },
   "hero": {
     "badge": "Your profile, one link away",
-    "title": "A beautiful personal page, with your own address",
+    "title": {
+      "line1": "A beautiful personal page with",
+      "line2": "your own address"
+    },
     "description": "Bring your resume, portfolio and contact details together on one professional profile page — with a URL that's entirely yours.",
     "ctaPrimary": "Build My Profile",
     "ctaSecondary": "See Pricing",
     "urlLabel": "Your page address will look like this:",
-    "mascotAlt": "Jolly Panda mascot"
+    "mascotAlt": "Jolly Panda mascot",
+    "scroll": "Scroll"
   },
   "pricing": {
     "eyebrow": "Pricing",
@@ -36,7 +31,10 @@
           "Fully responsive design",
           "Your own me.jollypanda.ir/bio/ URL",
           "Social media links"
-        ]
+        ],
+        "price": "5 million Toman",
+        "usd": "≈ $22 USD",
+        "hint": ""
       },
       "professional": {
         "name": "Professional",
@@ -46,7 +44,10 @@
           "Resume download button (PDF)",
           "Dedicated contact form",
           "Page entrance animations"
-        ]
+        ],
+        "price": "10 million Toman",
+        "usd": "≈ $43 USD",
+        "hint": ""
       },
       "custom": {
         "name": "Custom",
@@ -55,9 +56,15 @@
           "Fully custom design",
           "Unlimited sections",
           "1:1 design consultation"
-        ]
+        ],
+        "price": "15–20 million Toman",
+        "usd": "≈ $65–$87 USD",
+        "hint": "The final price depends on the options you choose"
       }
-    }
+    },
+    "updatedLabel": "Prices last updated",
+    "updated": "September 22, 2026",
+    "note": "USD amounts are approximate, based on about 230,000 Toman per US dollar."
   },
   "form": {
     "eyebrow": "Request a Profile",
@@ -88,7 +95,10 @@
     "successTitle": "Your request was submitted!",
     "successBody": "We'll reach out shortly to get started.",
     "deliveryError": "Something went wrong sending your request. Please try again, or email us directly at the address below.",
-    "directEmailLabel": "Or email us directly:"
+    "directEmailLabel": "Or email us directly:",
+    "antiBotError": "We couldn't verify your submission. Please wait a few seconds and try again.",
+    "rateLimitError": "Too many attempts. Please try again in a few minutes.",
+    "honeypotLabel": "Leave this field empty"
   },
   "slug": {
     "checking": "Checking...",
@@ -107,18 +117,5 @@
     "invalidPhone": "Enter a valid phone number",
     "slugRequired": "Please choose a URL",
     "slugNotAvailable": "Please choose an available URL"
-  },
-  "footer": {
-    "tagline": "Your professional personal profile, built by Jolly Panda.",
-    "copyright": "© 2026 Jolly Panda. All rights reserved.",
-    "navigate": "Navigate",
-    "studio": "Jolly Panda Studio",
-    "studioHome": "Home",
-    "studioServices": "Services",
-    "studioProjects": "Projects",
-    "studioAbout": "About",
-    "telegram": "Telegram",
-    "linkedin": "LinkedIn",
-    "github": "GitHub"
   }
 }

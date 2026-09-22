@@ -1,0 +1,116 @@
+{
+  "_readme": "Content of /en/how-it-works/ and /fa/how-it-works/. Edit and rebuild.",
+  "slug": "how-it-works",
+  "en": {
+    "meta": {
+      "title": "How it works | Jolly Panda Profile",
+      "description": "From request to a live personal page: see how Jolly Panda builds and publishes your profile at me.jollypanda.ir/bio/your-name."
+    },
+    "hero": {
+      "eyebrow": "How it works",
+      "title": "From request to a live page, in five steps",
+      "lead": "No accounts and no technical setup. You tell us about yourself, and we design and publish your personal profile at an address that's entirely yours."
+    },
+    "stepsLabel": "Step",
+    "steps": [
+      {
+        "title": "Choose a plan",
+        "text": "Compare Basic, Professional and Custom and pick the one that fits. Not sure yet? You can talk to us before deciding."
+      },
+      {
+        "title": "Send your request",
+        "text": "Fill in the request form with your name, contact details, profession, the plan you chose and the address you'd like, such as me.jollypanda.ir/bio/your-name. Add a few words about what you want on your page."
+      },
+      {
+        "title": "We get in touch",
+        "text": "We review your request and contact you by email or phone to confirm the details, your address and what we need from you."
+      },
+      {
+        "title": "We design and build",
+        "text": "You share your resume, photo, links and portfolio material. We turn them into a responsive personal page designed around your identity."
+      },
+      {
+        "title": "Your page goes live",
+        "text": "When you're happy with it, we publish it at your own address. Share the link on your CV, in your email signature or on your social profiles."
+      }
+    ],
+    "needs": {
+      "title": "What to have ready",
+      "items": [
+        "A short bio or your resume",
+        "A profile photo",
+        "Links to your social profiles and work",
+        "Portfolio items, if your plan includes a gallery",
+        "The web address you'd like"
+      ]
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "text": "Sending your request only takes a couple of minutes.",
+      "primary": {
+        "label": "Request a Profile",
+        "href": "/{lang}/#request"
+      },
+      "secondary": {
+        "label": "See examples",
+        "href": "/{lang}/bio/"
+      }
+    }
+  },
+  "fa": {
+    "meta": {
+      "title": "نحوه کار | Jolly Panda Profile",
+      "description": "از ثبت درخواست تا صفحه شخصی آنلاین: ببینید Jolly Panda چگونه پروفایل شما را می‌سازد و روی me.jollypanda.ir/bio/your-name منتشر می‌کند."
+    },
+    "hero": {
+      "eyebrow": "نحوه کار",
+      "title": "از درخواست تا صفحه آنلاین، در پنج قدم",
+      "lead": "نه نیاز به ساخت حساب دارید و نه دانش فنی. شما خودتان را معرفی می‌کنید و ما پروفایل شخصی‌تان را طراحی و روی آدرسی که کاملاً متعلق به شماست منتشر می‌کنیم."
+    },
+    "stepsLabel": "قدم",
+    "steps": [
+      {
+        "title": "پکیج خود را انتخاب کنید",
+        "text": "پکیج‌های پایه، حرفه‌ای و اختصاصی را مقایسه کنید و مناسب‌ترین را برگزینید. هنوز مطمئن نیستید؟ می‌توانید پیش از تصمیم با ما صحبت کنید."
+      },
+      {
+        "title": "درخواست خود را ثبت کنید",
+        "text": "فرم درخواست را با نام، اطلاعات تماس، حوزه فعالیت، پکیج انتخابی و آدرس دلخواه‌تان، مثلاً me.jollypanda.ir/bio/your-name، پر کنید. چند کلمه هم دربارهٔ چیزهایی که می‌خواهید در صفحه‌تان باشد بنویسید."
+      },
+      {
+        "title": "با شما تماس می‌گیریم",
+        "text": "درخواست را بررسی می‌کنیم و از طریق ایمیل یا تلفن با شما تماس می‌گیریم تا جزئیات، آدرس صفحه و مواردی که از شما لازم داریم را نهایی کنیم."
+      },
+      {
+        "title": "طراحی و ساخت",
+        "text": "رزومه، عکس، لینک‌ها و نمونه‌کارهایتان را برای ما می‌فرستید و ما آن‌ها را به یک صفحه شخصی واکنش‌گرا و متناسب با هویت شما تبدیل می‌کنیم."
+      },
+      {
+        "title": "صفحه شما منتشر می‌شود",
+        "text": "وقتی از نتیجه راضی بودید، صفحه را روی آدرس اختصاصی‌تان منتشر می‌کنیم. لینک را در رزومه، امضای ایمیل یا شبکه‌های اجتماعی‌تان به اشتراک بگذارید."
+      }
+    ],
+    "needs": {
+      "title": "چه چیزهایی آماده داشته باشید",
+      "items": [
+        "یک معرفی کوتاه یا رزومه‌تان",
+        "یک عکس پروفایل",
+        "لینک شبکه‌های اجتماعی و کارهایتان",
+        "نمونه‌کارها، اگر پکیج شما گالری دارد",
+        "آدرس دلخواه صفحه"
+      ]
+    },
+    "cta": {
+      "title": "آماده شروع هستید؟",
+      "text": "ثبت درخواست فقط چند دقیقه طول می‌کشد.",
+      "primary": {
+        "label": "درخواست پروفایل",
+        "href": "/{lang}/#request"
+      },
+      "secondary": {
+        "label": "مشاهده نمونه‌ها",
+        "href": "/{lang}/bio/"
+      }
+    }
+  }
+}

@@ -65,6 +65,23 @@
     submitBtn.setAttribute("data-i18n", isSubmitting ? "form.submitting" : "form.submit");
   }
 
+  // Which message to show for each failure code of /api/request
+  function deliveryErrorKey(code) {
+    switch (code) {
+      case "captcha":
+      case "token":
+      case "too_fast":
+      case "expired":
+        return "form.antiBotError";
+      case "rate":
+        return "form.rateLimitError";
+      case "invalid":
+        return "errors.required";
+      default:
+        return "form.deliveryError";
+    }
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     showFeedback(null, "");
@@ -122,7 +139,7 @@
         setSubmitting(false);
 
         if (!sendResult.ok) {
-          showFeedback("error", "form.deliveryError");
+          showFeedback("error", deliveryErrorKey(sendResult.code));
           return;
         }
 

@@ -1,6 +1,6 @@
 # Security Policy
 
-This repository is the static marketing/request site for Jolly Panda Profile. It has no backend, database, or authenticated user data of its own — form submissions are relayed by email via a third-party service (see the README's "Form submissions & email delivery" section).
+This repository is the marketing/request site for Jolly Panda Profile. It has no database or authenticated user data of its own — the request form is validated by a serverless function (`api/request.js`) that emails it to the team through Resend (see the README's "The request form" section).
 
 ## Reporting a Vulnerability
 
@@ -13,4 +13,4 @@ Please allow a reasonable amount of time for a response and a fix before disclos
 
 ## Scope
 
-This site does not store passwords, payment details, or any authenticated session data. Reports about the third-party FormSubmit service itself should go to that service's own security contact rather than to Jolly Panda.
+This site does not store passwords, payment details, or any authenticated session data. Reports about third-party services we rely on (Vercel, Resend, Cloudflare) should go to that service's own security contact rather than to Jolly Panda.

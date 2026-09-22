@@ -1,0 +1,40 @@
+{
+  "_readme": "Content of the 404 page (404.html). One page serves both languages; the visitor's language is detected from the URL prefix, the saved preference or the browser.",
+  "slug": "404",
+  "en": {
+    "meta": {
+      "title": "Page not found | Jolly Panda Profile",
+      "description": "The page you're looking for couldn't be found."
+    },
+    "code": "404",
+    "title": "Page not found",
+    "text": "The page you're looking for has moved, been renamed, or never existed. Let's get you back on track.",
+    "imageAlt": "A puzzled panda in a hard hat holding a map, standing in front of a large 404",
+    "primary": {
+      "label": "Back to home",
+      "href": "/{lang}/"
+    },
+    "secondary": {
+      "label": "Browse profiles",
+      "href": "/{lang}/bio/"
+    }
+  },
+  "fa": {
+    "meta": {
+      "title": "صفحه پیدا نشد | Jolly Panda Profile",
+      "description": "صفحه‌ای که دنبالش می‌گردید پیدا نشد."
+    },
+    "code": "404",
+    "title": "صفحه پیدا نشد",
+    "text": "صفحه‌ای که دنبالش هستید جابه‌جا شده، نامش عوض شده یا هرگز وجود نداشته است. بیایید شما را به مسیر برگردانیم.",
+    "imageAlt": "پاندای گیج با کلاه ایمنی که نقشه‌ای در دست دارد و جلوی یک ۴۰۴ بزرگ ایستاده است",
+    "primary": {
+      "label": "بازگشت به خانه",
+      "href": "/{lang}/"
+    },
+    "secondary": {
+      "label": "مشاهده پروفایل‌ها",
+      "href": "/{lang}/bio/"
+    }
+  }
+}
