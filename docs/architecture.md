@@ -12,11 +12,13 @@
 ├── assets/                   # favicon, mascot artwork, 404 image
 ├── scripts/
 │   ├── build-site.mjs        # the build (see profiles.md)
+│   ├── update-prices.mjs     # daily: USD price x Navasan rate -> Persian prices (lang/fa.json)
 │   └── lib/                  # layout (header/footer/head), pages, sitemap/404/redirect helpers
 ├── api/                      # Vercel functions: request.js (send form), token.js (anti-bot token)
 ├── server/form-security.js   # validation, tokens, rate limit, Turnstile check, e-mail body
 ├── templates/notify-site.yml # optional: redeploy right after a profile repo is pushed
-├── .github/workflows/redeploy.yml  # hourly redeploy through the Vercel deploy hook
+├── .github/workflows/redeploy.yml        # hourly redeploy through the Vercel deploy hook
+├── .github/workflows/update-prices.yml   # daily Persian price update (commits to main)
 └── vercel.json
 ```
 

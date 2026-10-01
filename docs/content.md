@@ -14,8 +14,7 @@ All visible text lives in JSON, not in the HTML.
 
 Each file has an `en` and a `fa` block. In text you can use `**bold**`, `[link text](/{lang}/faq/)` and the placeholders `{lang}`, `{email}`, `{year}`. **Change the JSON, commit, push, and Vercel rebuilds.**
 
-Updating prices: edit `pricing.plans.*.price / hint`, `pricing.updated` (the date shown) and `pricing.note` in `lang/en.json` and `lang/fa.json`.
-English prices are shown in **USD only** (e.g. `"$20"`); Persian prices are shown in **Rial only** (e.g. `"۵۰ میلیون ریال"`) — each language's `price` field is independent, there's no automatic conversion between them. The `usd` field on each plan is unused (kept empty) now that each language shows a single currency; it renders nothing if left empty.
+Updating prices: the **USD price of each package** lives in `content/pricing.json` (and, as text, in `lang/en.json`). **Persian prices are generated, don't edit them by hand** — `scripts/update-prices.mjs` multiplies the USD prices by the day's dollar rate from the Navasan API, rounds (`roundToMillionRial`) and writes the Rial text into `lang/fa.json`, the `pricing.updated` date, and the static fallback text in `fa/index.html`. The GitHub Action `.github/workflows/update-prices.yml` runs it every day and commits the result; see [setup](setup.md#daily-persian-prices). To change a package price: edit `content/pricing.json` **and** `pricing.plans.*.price` in `lang/en.json`, then run the workflow (Actions → *Update Persian prices* → Run workflow) or `node scripts/update-prices.mjs` locally.
 
 The header and footer come from `content/site.json` and are inserted into **every** page by the build (including the home pages, through the `<!--@header-->` / `<!--@footer-->` markers in `en/index.html` and `fa/index.html`), so they cannot drift apart.
 

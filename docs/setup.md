@@ -6,6 +6,17 @@
 * Add the domain `me.jollypanda.ir` under Settings → Domains.
 * To pick up new or changed profile repos, create a **Deploy Hook** (Settings → Git → Deploy Hooks) and save its URL as the `VERCEL_DEPLOY_HOOK` secret in this GitHub repo. `.github/workflows/redeploy.yml` calls it hourly; copy `templates/notify-site.yml` into a profile repo (with an org-level `VERCEL_DEPLOY_HOOK` secret) to redeploy right after a push there.
 
+## Daily Persian prices
+
+`.github/workflows/update-prices.yml` runs every day at 06:00 Tehran time (and on demand), fetches the dollar rate from [Navasan](https://www.navasan.tech/en/api) and rewrites the Persian prices (USD price × rate, shown in Rial).
+
+1. Get an API key (free plan: 120 calls/month, enough for one call per day) from the Telegram bot [@navasan_contact_bot](https://t.me/navasan_contact_bot).
+2. In this GitHub repo: Settings → Secrets and variables → Actions → add **`NAVASAN_API_KEY`**. (`VERCEL_DEPLOY_HOOK` is reused if present, to deploy right after the commit.)
+3. Settings → Actions → General → Workflow permissions → **Read and write**.
+4. Run the workflow once by hand (Actions → *Update Persian prices* → Run workflow) and check the commit.
+
+Defaults live in `content/pricing.json`: `navasan.item` (`usd_sell`, Tehran market sell rate — see the item list in the Navasan guide for others) and `navasan.unit` (`toman`, the unit of the API's value; set `rial` if the API ever returns Rial). If the API fails, the key is missing, or the rate moved more than 30% since the last run (`content/last-rate.json`), the job fails and **nothing is changed**. Local test: `NAVASAN_API_KEY=… DRY_RUN=1 node scripts/update-prices.mjs`.
+
 ## Environment variables
 
 Set these in Vercel → Project → Settings → **Environment Variables**:

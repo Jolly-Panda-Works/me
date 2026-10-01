@@ -1,0 +1,13 @@
+{
+  "_comment": "Source of truth for package prices (USD). scripts/update-prices.mjs multiplies these by the Navasan dollar rate and writes the Persian prices (Rial) into lang/fa.json. English prices in lang/en.json are edited by hand and must match these.",
+  "usd": {
+    "basic": 20,
+    "professional": 40,
+    "custom": [60, 80]
+  },
+  "navasan": {
+    "item": "usd_sell",
+    "unit": "toman"
+  },
+  "roundToMillionRial": 10
+}
