@@ -9,7 +9,7 @@ const LOCALE = { en: "en_US", fa: "fa_IR" };
 const LANG_LABEL = { en: "EN", fa: "فا" };
 
 export function vars(site, lang) {
-  return { lang, email: site.email, year: site.year, domain: site.domain };
+  return { lang, email: site.email, year: site.year, domain: site.domain, packages: (site.packagesUrl || {})[lang] || "" };
 }
 
 /** Absolute URL of a page: pageUrl(site, "fa", "faq/") -> https://…/fa/faq/ */
@@ -34,8 +34,10 @@ export function header(site, lang, activeKey, path) {
   const links = t.header.links
     .map((l) => `<a class="nav__link${l.key === activeKey ? " is-active" : ""}" href="${esc(fill(l.href, v))}"${l.key === activeKey ? ' aria-current="page"' : ""}>${esc(l.label)}</a>`)
     .join("\n        ");
-  const pricing = t.header.pricing;
+  const pricing = t.header.pricing; // optional: no secondary header button when absent
   const request = t.header.request;
+  const pricingMobile = pricing ? `\n        <a class="btn btn-secondary nav__mobile-cta" href="${esc(fill(pricing.href, v))}">${esc(pricing.label)}</a>` : "";
+  const pricingDesktop = pricing ? `\n        <a class="btn btn-secondary" href="${esc(fill(pricing.href, v))}">${esc(pricing.label)}</a>` : "";
 
   return `<a class="skip-link" href="#main">${esc(t.skip)}</a>
 
@@ -55,14 +57,14 @@ export function header(site, lang, activeKey, path) {
 
       <nav class="nav__links" id="navLinks">
         ${links}
-        <a class="btn btn-secondary nav__mobile-cta" href="${esc(fill(pricing.href, v))}">${esc(pricing.label)}</a>
+        ${pricingMobile.trim()}
         <a class="btn btn-primary nav__mobile-cta" href="${esc(fill(request.href, v))}">${esc(request.label)}</a>
         ${langSwitch(site, lang, path, " nav__mobile-lang")}
       </nav>
 
       <div class="nav__actions">
         ${langSwitch(site, lang, path)}
-        <a class="btn btn-secondary" href="${esc(fill(pricing.href, v))}">${esc(pricing.label)}</a>
+        ${pricingDesktop.trim()}
         <a class="btn btn-primary" href="${esc(fill(request.href, v))}">${esc(request.label)}</a>
       </div>
     </div>

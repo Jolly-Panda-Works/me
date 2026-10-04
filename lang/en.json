@@ -12,7 +12,7 @@
     },
     "description": "Bring your resume, portfolio and contact details together on one professional profile page — with a URL that's entirely yours.",
     "ctaPrimary": "Build My Profile",
-    "ctaSecondary": "See Pricing",
+    "ctaSecondary": "View samples",
     "urlLabel": "Your page address will look like this:",
     "mascotAlt": "Jolly Panda mascot",
     "scroll": "Scroll"
@@ -28,7 +28,7 @@
       },
       "resume": {
         "q": "Isn't a PDF resume enough?",
-        "a": "A PDF is static, awkward on a phone and has no room for images or samples. An online page puts it all in one place, and the Professional plan adds a resume download button too."
+        "a": "A PDF is static, awkward on a phone and has no room for images or samples. An online page puts it all in one place and can carry a resume download button too."
       },
       "social": {
         "q": "Can't social media do the same job?",
@@ -50,115 +50,8 @@
   },
   "cta": {
     "title": "Ready to build your profile?",
-    "text": "See the plans, browse completed work and send us your request.",
-    "button": "See plans & request a profile"
-  },
-  "pricing": {
-    "eyebrow": "Pricing",
-    "title": "A plan that fits you",
-    "subtitle": "Choose a plan and it'll carry over into the request form.",
-    "mostPopular": "Most Popular",
-    "cta": "Choose this plan",
-    "plans": {
-      "basic": {
-        "name": "Basic",
-        "features": [
-          "One single-page profile",
-          "Fully responsive design",
-          "Your own me.jollypanda.ir/bio/ URL",
-          "Social media links"
-        ],
-        "price": "$20",
-        "usd": "",
-        "hint": ""
-      },
-      "professional": {
-        "name": "Professional",
-        "features": [
-          "Everything in Basic",
-          "Portfolio / photo gallery",
-          "Resume download button (PDF)",
-          "Dedicated contact form",
-          "Page entrance animations"
-        ],
-        "price": "$40",
-        "usd": "",
-        "hint": ""
-      },
-      "custom": {
-        "name": "Custom",
-        "features": [
-          "Everything in Professional",
-          "Fully custom design",
-          "Unlimited sections",
-          "1:1 design consultation"
-        ],
-        "price": "$60–$80",
-        "usd": "",
-        "hint": "The final price depends on the options you choose"
-      }
-    },
-    "updatedLabel": "Prices last updated",
-    "updated": "September 22, 2026",
-    "note": "",
-    "samplesCta": "View completed work"
-  },
-  "plans": {
-    "meta": {
-      "title": "Plans & Request a Profile | Jolly Panda",
-      "description": "See the prices of our personal profile and online resume packages, browse completed work and send your request."
-    }
-  },
-  "form": {
-    "eyebrow": "Request a Profile",
-    "title": "Let's build your profile",
-    "subtitle": "Fill out the form below and we'll get back to you as soon as possible.",
-    "selectPlanPlaceholder": "— Select —",
-    "labels": {
-      "fullName": "Full Name",
-      "phone": "Phone Number",
-      "email": "Email",
-      "profession": "Profession",
-      "selectedPlan": "Selected Plan",
-      "projectDetails": "Project Details",
-      "urlLabel": "Personal Profile URL",
-      "urlSubLabel": "This will be the final, public link to your page.",
-      "urlPreviewPrefix": "me.jollypanda.ir/bio/"
-    },
-    "placeholders": {
-      "fullName": "e.g. John Doe",
-      "phone": "+1 555 123 4567",
-      "email": "you@example.com",
-      "profession": "e.g. Graphic Designer, Developer, Photographer...",
-      "projectDetails": "Tell us a bit about what you'd like us to build...",
-      "url": "your-name"
-    },
-    "submit": "Submit Request",
-    "submitting": "Submitting...",
-    "successTitle": "Your request was submitted!",
-    "successBody": "We'll reach out shortly to get started.",
-    "deliveryError": "Something went wrong sending your request. Please try again, or email us directly at the address below.",
-    "directEmailLabel": "Or email us directly:",
-    "antiBotError": "We couldn't verify your submission. Please wait a few seconds and try again.",
-    "rateLimitError": "Too many attempts. Please try again in a few minutes.",
-    "honeypotLabel": "Leave this field empty"
-  },
-  "slug": {
-    "checking": "Checking...",
-    "available": "✓ This URL is available",
-    "taken": "✕ This URL is already taken",
-    "reserved": "This URL is reserved.",
-    "invalid": "This URL is not valid",
-    "tooShort": "The URL must be at least 3 characters",
-    "tooLong": "The URL cannot be longer than 30 characters",
-    "invalidChars": "Only lowercase letters, numbers and hyphens are allowed",
-    "takenBySomeoneElse": "This URL was just taken by someone else. Please choose another one."
-  },
-  "errors": {
-    "required": "This field is required",
-    "invalidEmail": "Enter a valid email",
-    "invalidPhone": "Enter a valid phone number",
-    "slugRequired": "Please choose a URL",
-    "slugNotAvailable": "Please choose an available URL"
+    "text": "Browse the profiles we have built, then pick a package and send your request.",
+    "button": "See packages & request a profile",
+    "secondary": "View samples"
   }
 }

@@ -31,8 +31,7 @@ See [docs/architecture.md](docs/architecture.md) for the full project structure.
 * **No hardcoded user-facing text.** Home-page copy goes in `lang/fa.json` and `lang/en.json` (wired up via `data-i18n` / `data-i18n-list`); everything else (header, footer, How it works, FAQ, Privacy, profiles list, 404) goes in `content/*.json`.
 * **No hardcoded colors, spacing, or radii.** Use the CSS custom properties defined in `css/variables.css`.
 * **RTL-safe CSS.** Use logical properties (`margin-inline-start`, `padding-inline-end`, etc.) instead of `left`/`right`, since Persian is right-to-left.
-* **Plain, dependency-free JavaScript.** The project intentionally has no bundler or framework; keep new scripts self-contained and attach any public API to `window` the way the existing modules do (e.g. `window.ProfileSlugService`).
-* **Keep the backend boundary intact.** The browser only talks to the backend through `slug-service.js` (address availability) and `email-service.js` (`/api/token`, `/api/request`); form validation and anti-bot checks are enforced again on the server in `server/form-security.js`.
+* **Plain, dependency-free JavaScript.** The project intentionally has no bundler or framework; keep new scripts self-contained and attach any public API to `window` the way the existing modules do.
 
 ## Pull requests
 

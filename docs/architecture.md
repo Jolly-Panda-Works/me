@@ -3,23 +3,17 @@
 ```text
 .
 ├── content/                  # EDITABLE page data (en + fa): site, how-it-works, faq, privacy, bio, not-found
-├── lang/                     # EDITABLE home-page strings: en.json, fa.json (hero, pricing, form, errors)
-├── en/index.html, fa/index.html   # Home page sources: hero, why-a-profile questions, CTA to /plans/ (header/footer inserted at build)
-├── en/plans/index.html, fa/plans/index.html   # Plans page sources: pricing, "view completed work" button, request form
+├── lang/                     # EDITABLE home-page strings: en.json, fa.json (hero, why-a-profile questions, closing call-to-action)
+├── en/index.html, fa/index.html   # Home page sources: hero, why-a-profile questions, CTA buttons to the studio packages page and to /bio/ (header/footer inserted at build)
 ├── index.html                # Root redirector to /en/ or /fa/
 ├── css/                      # variables.css (tokens), base.css (header, footer, buttons), page.css (home), content.css (generated pages), bio.css (list table)
 ├── js/                       # app.js (header/menu/language links), language.js (home i18n), bio.js (search/filter),
-│                             # form.js, email-service.js, slug-*.js, plan-select.js, list-i18n.js
 ├── assets/                   # favicon, mascot artwork, 404 image
 ├── scripts/
 │   ├── build-site.mjs        # the build (see profiles.md)
-│   ├── update-prices.mjs     # daily: USD price x Navasan rate -> Persian prices (lang/fa.json)
 │   └── lib/                  # layout (header/footer/head), pages, sitemap/404/redirect helpers
-├── api/                      # Vercel functions: request.js (send form), token.js (anti-bot token)
-├── server/form-security.js   # validation, tokens, rate limit, Turnstile check, e-mail body
 ├── templates/notify-site.yml # optional: redeploy right after a profile repo is pushed
 ├── .github/workflows/redeploy.yml        # hourly redeploy through the Vercel deploy hook
-├── .github/workflows/update-prices.yml   # daily Persian price update (commits to main)
 └── vercel.json
 ```
 

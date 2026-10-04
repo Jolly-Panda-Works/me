@@ -15,11 +15,11 @@
     "steps": [
       {
         "title": "Choose a plan",
-        "text": "Compare Basic, Professional and Custom and pick the one that fits. Not sure yet? You can talk to us before deciding."
+        "text": "Open the packages page on the studio website, compare the plans and pick the one that fits. Not sure yet? You can talk to us before deciding."
       },
       {
         "title": "Send your request",
-        "text": "Fill in the request form with your name, contact details, profession, the plan you chose and the address you'd like, such as me.jollypanda.ir/bio/your-name. Add a few words about what you want on your page."
+        "text": "Fill in the request form on that page with your name, contact details and a few words about what you'd like on your page. When we get in touch, tell us the address you'd like too, for example me.jollypanda.ir/bio/your-name."
       },
       {
         "title": "We get in touch",
@@ -49,7 +49,7 @@
       "text": "Sending your request only takes a couple of minutes.",
       "primary": {
         "label": "Request a Profile",
-        "href": "/{lang}/plans/#request"
+        "href": "{packages}"
       },
       "secondary": {
         "label": "See examples",
@@ -76,11 +76,11 @@
     "steps": [
       {
         "title": "پکیج خود را انتخاب کنید",
-        "text": "پکیج‌های پایه، حرفه‌ای و اختصاصی را مقایسه کنید و مناسب‌ترین را برگزینید. هنوز مطمئن نیستید؟ می‌توانید پیش از تصمیم با ما صحبت کنید."
+        "text": "صفحه پکیج‌ها را در وب‌سایت استودیو باز کنید، پلن‌ها را مقایسه کنید و مناسب‌ترین را برگزینید. هنوز مطمئن نیستید؟ می‌توانید پیش از تصمیم با ما صحبت کنید."
       },
       {
         "title": "درخواست خود را ثبت کنید",
-        "text": "فرم درخواست را با نام، اطلاعات تماس، حوزه فعالیت، پکیج انتخابی و آدرس دلخواه‌تان، مثلاً me.jollypanda.ir/bio/your-name، پر کنید. چند کلمه هم دربارهٔ چیزهایی که می‌خواهید در صفحه‌تان باشد بنویسید."
+        "text": "فرم درخواست همان صفحه را با نام، اطلاعات تماس و چند کلمه دربارهٔ چیزهایی که می‌خواهید در صفحه‌تان باشد پر کنید. هنگام تماس، آدرس دلخواه‌تان را هم بگویید، مثلاً me.jollypanda.ir/bio/your-name."
       },
       {
         "title": "با شما تماس می‌گیریم",
@@ -110,7 +110,7 @@
       "text": "ثبت درخواست فقط چند دقیقه طول می‌کشد.",
       "primary": {
         "label": "درخواست پروفایل",
-        "href": "/{lang}/plans/#request"
+        "href": "{packages}"
       },
       "secondary": {
         "label": "مشاهده نمونه‌ها",

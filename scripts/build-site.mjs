@@ -268,33 +268,29 @@ function renderGeneratedPages(projects) {
   write("bio/index.html", bioRedirectPage(site));
 }
 
-// ----------------------------------------------- 4. home + plans: shared header/footer
-// Hand-written pages (en|fa/index.html = landing, en|fa/plans/index.html = pricing + request form)
-// get the shared header/footer inserted through the <!--@header--> / <!--@footer--> markers.
-const STATIC_PAGES = [
-  { file: "index.html", key: "home", path: "" },
-  { file: "plans/index.html", key: "plans", path: "plans/" },
-];
-
+// ----------------------------------------------- 4. home: shared header/footer
+// en|fa/index.html is hand-written; the shared header/footer are inserted through the
+// <!--@header--> / <!--@footer--> markers, and {{packages}} becomes the studio's packages page
+// (site.packagesUrl), where visitors pick a package and send their request.
 function renderHomePages() {
   for (const lang of LANGS) {
-    for (const pg of STATIC_PAGES) {
-      const rel = path.join(lang, pg.file);
-      const src = fs.readFileSync(rel, "utf8");
-      if (!src.includes("<!--@header-->") || !src.includes("<!--@footer-->")) {
-        throw new Error(`${rel} is missing the <!--@header--> / <!--@footer--> markers`);
-      }
-      const html = src
-        .replace("<!--@header-->", () => header(site, lang, pg.key, pg.path))
-        .replace("<!--@footer-->", () => footer(site, lang));
-      write(`${lang}/${pg.file}`, html);
+    const rel = path.join(lang, "index.html");
+    const src = fs.readFileSync(rel, "utf8");
+    if (!src.includes("<!--@header-->") || !src.includes("<!--@footer-->")) {
+      throw new Error(`${rel} is missing the <!--@header--> / <!--@footer--> markers`);
     }
+    const packages = String(site.packagesUrl[lang]).replace(/&/g, "&amp;");
+    const html = src
+      .replace("<!--@header-->", () => header(site, lang, "home", ""))
+      .replace("<!--@footer-->", () => footer(site, lang))
+      .replaceAll("{{packages}}", packages);
+    write(`${lang}/index.html`, html);
   }
 }
 
 // ------------------------------------------------------------ 5. seo files
 function writeSeoFiles(projects) {
-  const pagePaths = ["", "plans/", "bio/", "how-it-works/", "faq/", "privacy/"];
+  const pagePaths = ["", "bio/", "how-it-works/", "faq/", "privacy/"];
   write("sitemap.xml", sitemap(site, pagePaths, projects));
   write("robots.txt", robotsTxt(site));
 }

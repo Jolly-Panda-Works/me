@@ -174,7 +174,6 @@ ${urls.join("\n")}
 export function robotsTxt(site) {
   return `User-agent: *
 Allow: /
-Disallow: /api/
 
 Sitemap: ${site.domain}/sitemap.xml
 `;

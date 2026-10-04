@@ -48,13 +48,9 @@
           "href": "/{lang}/faq/"
         }
       ],
-      "pricing": {
-        "label": "Pricing",
-        "href": "/{lang}/plans/#pricing"
-      },
       "request": {
         "label": "Request a Profile",
-        "href": "/{lang}/plans/#request"
+        "href": "{packages}"
       }
     },
     "footer": {
@@ -76,16 +72,12 @@
               "href": "/{lang}/how-it-works/"
             },
             {
-              "label": "Pricing",
-              "href": "/{lang}/plans/#pricing"
-            },
-            {
               "label": "FAQ",
               "href": "/{lang}/faq/"
             },
             {
               "label": "Request a Profile",
-              "href": "/{lang}/plans/#request"
+              "href": "{packages}"
             }
           ]
         },
@@ -162,13 +154,9 @@
           "href": "/{lang}/faq/"
         }
       ],
-      "pricing": {
-        "label": "قیمت‌گذاری",
-        "href": "/{lang}/plans/#pricing"
-      },
       "request": {
         "label": "درخواست پروفایل",
-        "href": "/{lang}/plans/#request"
+        "href": "{packages}"
       }
     },
     "footer": {
@@ -190,16 +178,12 @@
               "href": "/{lang}/how-it-works/"
             },
             {
-              "label": "قیمت‌گذاری",
-              "href": "/{lang}/plans/#pricing"
-            },
-            {
               "label": "سؤالات متداول",
               "href": "/{lang}/faq/"
             },
             {
               "label": "درخواست پروفایل",
-              "href": "/{lang}/plans/#request"
+              "href": "{packages}"
             }
           ]
         },
@@ -244,5 +228,9 @@
       ],
       "copyright": "© {year} Jolly Panda. تمامی حقوق محفوظ است."
     }
+  },
+  "packagesUrl": {
+    "en": "https://web.jollypanda.ir/packages.html?type=portfolio&plan=special#packages",
+    "fa": "https://web.jollypanda.ir/fa/packages.html?type=portfolio&plan=special#packages"
   }
 }

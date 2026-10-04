@@ -34,19 +34,19 @@
         "items": [
           {
             "q": "How do I request a profile?",
-            "a": "Fill in the [request form](/{lang}/plans/#request) with your details, choose a plan and pick the address you'd like. We'll contact you to take it from there. The [How it works](/{lang}/how-it-works/) page explains every step."
+            "a": "Open the [packages page]({packages}) on our studio website, choose a package and send the request form there. We'll contact you to take it from there. The [How it works](/{lang}/how-it-works/) page explains every step."
           },
           {
             "q": "What can I choose as my address?",
-            "a": "Between 3 and 30 characters, using lowercase English letters, numbers and hyphens. It can't start or end with a hyphen. The form checks whether an address is available while you type and again when you submit."
+            "a": "Between 3 and 30 characters, using lowercase English letters, numbers and hyphens. It can't start or end with a hyphen. Tell us the address you'd like when we get in touch and we'll confirm that it's available."
           },
           {
             "q": "Which plans are available?",
-            "a": "**Basic** is a single-page profile with your own address and social links. **Professional** adds a portfolio or photo gallery, a resume download button, a contact form and entrance animations. **Custom** adds a fully custom design, unlimited sections and a one-to-one design consultation. See [Pricing](/{lang}/plans/#pricing)."
+            "a": "The packages, and what each one includes, are listed on the studio's [packages page]({packages})."
           },
           {
             "q": "How much does it cost?",
-            "a": "Prices are listed in [Pricing](/{lang}/plans/#pricing), together with the date they were last updated. Custom projects are priced according to the options you choose."
+            "a": "Prices are listed on the studio's [packages page]({packages}) in US dollars, converted to Rial at the day's rate for Persian. Custom projects are priced according to the options you choose."
           },
           {
             "q": "How do I pay?",
@@ -54,7 +54,7 @@
           },
           {
             "q": "What do I need to provide?",
-            "a": "A short bio or your resume, a profile photo, links to your social profiles and work, and portfolio material if your plan includes it. We'll tell you exactly what's needed when we get in touch."
+            "a": "A short bio or your resume, a profile photo, links to your social profiles and work, and portfolio material if your package includes it. We'll tell you exactly what's needed when we get in touch."
           }
         ]
       },
@@ -84,7 +84,7 @@
           },
           {
             "q": "How can I contact you?",
-            "a": "Email [{email}](mailto:{email}) or use the [request form](/{lang}/plans/#request). You'll also find us on Telegram, LinkedIn and GitHub through the links in the footer."
+            "a": "Email [{email}](mailto:{email}) or send a request from the [packages page]({packages}). You'll also find us on Telegram, LinkedIn and GitHub through the links in the footer."
           }
         ]
       }
@@ -98,7 +98,7 @@
       },
       "secondary": {
         "label": "Request a Profile",
-        "href": "/{lang}/plans/#request"
+        "href": "{packages}"
       }
     }
   },
@@ -135,19 +135,19 @@
         "items": [
           {
             "q": "چطور درخواست پروفایل بدهم؟",
-            "a": "[فرم درخواست](/{lang}/plans/#request) را با اطلاعات‌تان پر کنید، یک پکیج انتخاب کنید و آدرس دلخواه را بنویسید. ما با شما تماس می‌گیریم و ادامه کار را پیش می‌بریم. صفحهٔ [نحوه کار](/{lang}/how-it-works/) همهٔ مراحل را توضیح داده است."
+            "a": "[صفحه پکیج‌ها]({packages}) را در وب‌سایت استودیو باز کنید، یک پکیج انتخاب کنید و همان‌جا فرم درخواست را بفرستید. ما با شما تماس می‌گیریم و ادامه کار را پیش می‌بریم. صفحه [نحوه کار](/{lang}/how-it-works/) هر مرحله را توضیح می‌دهد."
           },
           {
             "q": "چه آدرسی می‌توانم انتخاب کنم؟",
-            "a": "بین ۳ تا ۳۰ کاراکتر شامل حروف کوچک انگلیسی، عدد و خط تیره. آدرس نمی‌تواند با خط تیره شروع یا تمام شود. فرم هنگام تایپ و دوباره هنگام ارسال بررسی می‌کند که آدرس آزاد است یا نه."
+            "a": "بین ۳ تا ۳۰ نویسه، با حروف کوچک انگلیسی، عدد و خط تیره. نباید با خط تیره شروع یا تمام شود. آدرس دلخواه‌تان را هنگام تماس به ما بگویید تا آزاد بودنش را تأیید کنیم."
           },
           {
             "q": "چه پکیج‌هایی وجود دارد؟",
-            "a": "**پایه** یک صفحه پروفایل تک‌صفحه‌ای با آدرس اختصاصی و لینک شبکه‌های اجتماعی است. **حرفه‌ای** علاوه بر آن گالری نمونه‌کار یا تصاویر، دکمه دانلود رزومه، فرم تماس اختصاصی و انیمیشن ورود صفحه دارد. **اختصاصی** طراحی کاملاً سفارشی، بخش‌های نامحدود و مشاوره طراحی یک‌به‌یک را هم اضافه می‌کند. بخش [قیمت‌گذاری](/{lang}/plans/#pricing) را ببینید."
+            "a": "پکیج‌ها و امکانات هر کدام در [صفحه پکیج‌ها]({packages}) وب‌سایت استودیو آمده است."
           },
           {
             "q": "هزینه چقدر است؟",
-            "a": "قیمت‌ها همراه با تاریخ آخرین به‌روزرسانی در بخش [قیمت‌گذاری](/{lang}/plans/#pricing) آمده است. قیمت پروژه‌های اختصاصی بسته به انتخاب‌های شما تعیین می‌شود."
+            "a": "قیمت‌ها در [صفحه پکیج‌ها]({packages}) وب‌سایت استودیو آمده است؛ به دلار، و در نسخه فارسی با نرخ روز به ریال تبدیل می‌شود. قیمت پروژه‌های اختصاصی بسته به انتخاب‌های شما تعیین می‌شود."
           },
           {
             "q": "چطور پرداخت کنم؟",
@@ -155,7 +155,7 @@
           },
           {
             "q": "چه اطلاعاتی باید بدهم؟",
-            "a": "یک معرفی کوتاه یا رزومه، عکس پروفایل، لینک شبکه‌های اجتماعی و کارهایتان و در صورت داشتن گالری در پکیج، نمونه‌کارها. هنگام تماس دقیقاً می‌گوییم چه چیزهایی لازم است."
+            "a": "یک معرفی کوتاه یا رزومه‌تان، یک عکس پروفایل، لینک شبکه‌های اجتماعی و کارهایتان، و نمونه‌کارها اگر پکیج شما گالری دارد. هنگام تماس دقیقاً می‌گوییم چه چیزی لازم است."
           }
         ]
       },
@@ -185,7 +185,7 @@
           },
           {
             "q": "چطور با شما در تماس باشم؟",
-            "a": "به [{email}](mailto:{email}) ایمیل بزنید یا از [فرم درخواست](/{lang}/plans/#request) استفاده کنید. از لینک‌های پایین صفحه هم می‌توانید ما را در تلگرام، لینکدین و گیت‌هاب پیدا کنید."
+            "a": "به [{email}](mailto:{email}) ایمیل بزنید یا از [صفحه پکیج‌ها]({packages}) درخواست بفرستید. از لینک‌های پایین صفحه هم می‌توانید ما را در تلگرام، لینکدین و گیت‌هاب پیدا کنید."
           }
         ]
       }
@@ -199,7 +199,7 @@
       },
       "secondary": {
         "label": "درخواست پروفایل",
-        "href": "/{lang}/plans/#request"
+        "href": "{packages}"
       }
     }
   }

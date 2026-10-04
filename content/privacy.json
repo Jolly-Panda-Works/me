@@ -4,7 +4,7 @@
   "en": {
     "meta": {
       "title": "Privacy Policy | Jolly Panda Profile",
-      "description": "How Jolly Panda Profile collects, uses and protects the information you send us through the request form and this website."
+      "description": "How Jolly Panda Profile collects, uses and protects the information you send us and the data this website processes."
     },
     "hero": {
       "eyebrow": "Privacy Policy",
@@ -12,7 +12,7 @@
       "lead": "This policy explains what information we collect through me.jollypanda.ir, why we collect it and the choices you have."
     },
     "updatedLabel": "Last updated",
-    "updated": "September 21, 2026",
+    "updated": "October 4, 2026",
     "sections": [
       {
         "title": "Who we are",
@@ -26,7 +26,7 @@
           "We collect only what's needed to run the service:"
         ],
         "list": [
-          "**Request form details:** your full name, phone number, email address, profession, the plan you select, the profile address you want and the project details you write.",
+          "**Messages you send us:** if you email us, we receive your email address and what you write. Package requests are not sent from this site; they are submitted on the studio's website (web.jollypanda.ir).",
           "**Technical data:** like most websites, our hosting provider processes technical data such as your IP address, browser type and the pages requested in its server logs.",
           "**Your language choice:** we save it in your browser's local storage so the site opens in the language you used last. It stays on your device."
         ]
@@ -36,7 +36,6 @@
         "list": [
           "To review your request and contact you.",
           "To design, build and publish your profile page.",
-          "To protect the request form from spam and abuse.",
           "To answer questions you send us."
         ]
       },
@@ -47,8 +46,6 @@
         ],
         "list": [
           "**Hosting:** Vercel serves this website.",
-          "**Email delivery:** Resend delivers your request to our inbox.",
-          "**Spam protection:** Cloudflare Turnstile may be used on the request form to tell people from bots.",
           "**Fonts:** your browser loads fonts directly from Google Fonts, which receives your IP address when it does."
         ]
       },
@@ -99,7 +96,7 @@
   "fa": {
     "meta": {
       "title": "سیاست حریم خصوصی | Jolly Panda Profile",
-      "description": "نحوهٔ جمع‌آوری، استفاده و محافظت Jolly Panda Profile از اطلاعاتی که از طریق فرم درخواست و این وب‌سایت برای ما ارسال می‌کنید."
+      "description": "نحوهٔ جمع‌آوری، استفاده و محافظت Jolly Panda Profile از اطلاعاتی که برای ما می‌فرستید و داده‌هایی که این وب‌سایت پردازش می‌کند."
     },
     "hero": {
       "eyebrow": "سیاست حریم خصوصی",
@@ -107,7 +104,7 @@
       "lead": "این صفحه توضیح می‌دهد از طریق me.jollypanda.ir چه اطلاعاتی جمع می‌کنیم، چرا جمع می‌کنیم و شما چه اختیاراتی دارید."
     },
     "updatedLabel": "آخرین به‌روزرسانی",
-    "updated": "۳۰ شهریور ۱۴۰۵",
+    "updated": "۱۲ مهر ۱۴۰۵",
     "sections": [
       {
         "title": "ما کیستیم",
@@ -121,7 +118,7 @@
           "فقط اطلاعاتی را جمع می‌کنیم که برای ارائه سرویس لازم است:"
         ],
         "list": [
-          "**اطلاعات فرم درخواست:** نام و نام خانوادگی، شماره تماس، ایمیل، حوزه فعالیت، پکیج انتخابی، آدرس دلخواه پروفایل و توضیحاتی که برای پروژه می‌نویسید.",
+          "**پیام‌هایی که برای ما می‌فرستید:** اگر به ما ایمیل بزنید، آدرس ایمیل و متن پیام شما را دریافت می‌کنیم. درخواست پکیج از این سایت ارسال نمی‌شود و در وب‌سایت استودیو (web.jollypanda.ir) ثبت می‌شود.",
           "**داده‌های فنی:** مانند بیشتر وب‌سایت‌ها، سرویس میزبانی ما داده‌های فنی مانند آدرس IP، نوع مرورگر و صفحات درخواست‌شده را در لاگ‌های سرور پردازش می‌کند.",
           "**زبان انتخابی شما:** آن را در حافظه محلی (local storage) مرورگرتان ذخیره می‌کنیم تا سایت با زبانی که آخرین بار استفاده کردید باز شود. این اطلاعات روی دستگاه شما می‌ماند."
         ]
@@ -131,7 +128,6 @@
         "list": [
           "برای بررسی درخواست شما و تماس با شما.",
           "برای طراحی، ساخت و انتشار صفحه پروفایل شما.",
-          "برای محافظت از فرم درخواست در برابر اسپم و سوءاستفاده.",
           "برای پاسخ به پرسش‌هایی که برای ما می‌فرستید."
         ]
       },
@@ -142,8 +138,6 @@
         ],
         "list": [
           "**میزبانی:** Vercel این وب‌سایت را ارائه می‌کند.",
-          "**ارسال ایمیل:** Resend درخواست شما را به صندوق ایمیل ما می‌رساند.",
-          "**محافظت در برابر اسپم:** ممکن است از Cloudflare Turnstile در فرم درخواست برای تشخیص انسان از ربات استفاده شود.",
           "**فونت‌ها:** مرورگر شما فونت‌ها را مستقیماً از Google Fonts دریافت می‌کند و گوگل در این حالت آدرس IP شما را دریافت می‌کند."
         ]
       },
