@@ -34,7 +34,7 @@
         "items": [
           {
             "q": "How do I request a profile?",
-            "a": "Fill in the [request form](/{lang}/#request) with your details, choose a plan and pick the address you'd like. We'll contact you to take it from there. The [How it works](/{lang}/how-it-works/) page explains every step."
+            "a": "Fill in the [request form](/{lang}/plans/#request) with your details, choose a plan and pick the address you'd like. We'll contact you to take it from there. The [How it works](/{lang}/how-it-works/) page explains every step."
           },
           {
             "q": "What can I choose as my address?",
@@ -42,11 +42,11 @@
           },
           {
             "q": "Which plans are available?",
-            "a": "**Basic** is a single-page profile with your own address and social links. **Professional** adds a portfolio or photo gallery, a resume download button, a contact form and entrance animations. **Custom** adds a fully custom design, unlimited sections and a one-to-one design consultation. See [Pricing](/{lang}/#pricing)."
+            "a": "**Basic** is a single-page profile with your own address and social links. **Professional** adds a portfolio or photo gallery, a resume download button, a contact form and entrance animations. **Custom** adds a fully custom design, unlimited sections and a one-to-one design consultation. See [Pricing](/{lang}/plans/#pricing)."
           },
           {
             "q": "How much does it cost?",
-            "a": "Prices are listed in [Pricing](/{lang}/#pricing), together with the date they were last updated. Custom projects are priced according to the options you choose."
+            "a": "Prices are listed in [Pricing](/{lang}/plans/#pricing), together with the date they were last updated. Custom projects are priced according to the options you choose."
           },
           {
             "q": "How do I pay?",
@@ -84,7 +84,7 @@
           },
           {
             "q": "How can I contact you?",
-            "a": "Email [{email}](mailto:{email}) or use the [request form](/{lang}/#request). You'll also find us on Telegram, LinkedIn and GitHub through the links in the footer."
+            "a": "Email [{email}](mailto:{email}) or use the [request form](/{lang}/plans/#request). You'll also find us on Telegram, LinkedIn and GitHub through the links in the footer."
           }
         ]
       }
@@ -98,7 +98,7 @@
       },
       "secondary": {
         "label": "Request a Profile",
-        "href": "/{lang}/#request"
+        "href": "/{lang}/plans/#request"
       }
     }
   },
@@ -135,7 +135,7 @@
         "items": [
           {
             "q": "چطور درخواست پروفایل بدهم؟",
-            "a": "[فرم درخواست](/{lang}/#request) را با اطلاعات‌تان پر کنید، یک پکیج انتخاب کنید و آدرس دلخواه را بنویسید. ما با شما تماس می‌گیریم و ادامه کار را پیش می‌بریم. صفحهٔ [نحوه کار](/{lang}/how-it-works/) همهٔ مراحل را توضیح داده است."
+            "a": "[فرم درخواست](/{lang}/plans/#request) را با اطلاعات‌تان پر کنید، یک پکیج انتخاب کنید و آدرس دلخواه را بنویسید. ما با شما تماس می‌گیریم و ادامه کار را پیش می‌بریم. صفحهٔ [نحوه کار](/{lang}/how-it-works/) همهٔ مراحل را توضیح داده است."
           },
           {
             "q": "چه آدرسی می‌توانم انتخاب کنم؟",
@@ -143,11 +143,11 @@
           },
           {
             "q": "چه پکیج‌هایی وجود دارد؟",
-            "a": "**پایه** یک صفحه پروفایل تک‌صفحه‌ای با آدرس اختصاصی و لینک شبکه‌های اجتماعی است. **حرفه‌ای** علاوه بر آن گالری نمونه‌کار یا تصاویر، دکمه دانلود رزومه، فرم تماس اختصاصی و انیمیشن ورود صفحه دارد. **اختصاصی** طراحی کاملاً سفارشی، بخش‌های نامحدود و مشاوره طراحی یک‌به‌یک را هم اضافه می‌کند. بخش [قیمت‌گذاری](/{lang}/#pricing) را ببینید."
+            "a": "**پایه** یک صفحه پروفایل تک‌صفحه‌ای با آدرس اختصاصی و لینک شبکه‌های اجتماعی است. **حرفه‌ای** علاوه بر آن گالری نمونه‌کار یا تصاویر، دکمه دانلود رزومه، فرم تماس اختصاصی و انیمیشن ورود صفحه دارد. **اختصاصی** طراحی کاملاً سفارشی، بخش‌های نامحدود و مشاوره طراحی یک‌به‌یک را هم اضافه می‌کند. بخش [قیمت‌گذاری](/{lang}/plans/#pricing) را ببینید."
           },
           {
             "q": "هزینه چقدر است؟",
-            "a": "قیمت‌ها همراه با تاریخ آخرین به‌روزرسانی در بخش [قیمت‌گذاری](/{lang}/#pricing) آمده است. قیمت پروژه‌های اختصاصی بسته به انتخاب‌های شما تعیین می‌شود."
+            "a": "قیمت‌ها همراه با تاریخ آخرین به‌روزرسانی در بخش [قیمت‌گذاری](/{lang}/plans/#pricing) آمده است. قیمت پروژه‌های اختصاصی بسته به انتخاب‌های شما تعیین می‌شود."
           },
           {
             "q": "چطور پرداخت کنم؟",
@@ -185,7 +185,7 @@
           },
           {
             "q": "چطور با شما در تماس باشم؟",
-            "a": "به [{email}](mailto:{email}) ایمیل بزنید یا از [فرم درخواست](/{lang}/#request) استفاده کنید. از لینک‌های پایین صفحه هم می‌توانید ما را در تلگرام، لینکدین و گیت‌هاب پیدا کنید."
+            "a": "به [{email}](mailto:{email}) ایمیل بزنید یا از [فرم درخواست](/{lang}/plans/#request) استفاده کنید. از لینک‌های پایین صفحه هم می‌توانید ما را در تلگرام، لینکدین و گیت‌هاب پیدا کنید."
           }
         ]
       }
@@ -199,7 +199,7 @@
       },
       "secondary": {
         "label": "درخواست پروفایل",
-        "href": "/{lang}/#request"
+        "href": "/{lang}/plans/#request"
       }
     }
   }

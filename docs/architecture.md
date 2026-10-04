@@ -4,7 +4,8 @@
 .
 ├── content/                  # EDITABLE page data (en + fa): site, how-it-works, faq, privacy, bio, not-found
 ├── lang/                     # EDITABLE home-page strings: en.json, fa.json (hero, pricing, form, errors)
-├── en/index.html, fa/index.html   # Home page sources (header/footer inserted at build)
+├── en/index.html, fa/index.html   # Home page sources: hero, why-a-profile questions, CTA to /plans/ (header/footer inserted at build)
+├── en/plans/index.html, fa/plans/index.html   # Plans page sources: pricing, "view completed work" button, request form
 ├── index.html                # Root redirector to /en/ or /fa/
 ├── css/                      # variables.css (tokens), base.css (header, footer, buttons), page.css (home), content.css (generated pages), bio.css (list table)
 ├── js/                       # app.js (header/menu/language links), language.js (home i18n), bio.js (search/filter),

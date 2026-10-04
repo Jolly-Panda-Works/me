@@ -49,7 +49,7 @@
       "text": "Sending your request only takes a couple of minutes.",
       "primary": {
         "label": "Request a Profile",
-        "href": "/{lang}/#request"
+        "href": "/{lang}/plans/#request"
       },
       "secondary": {
         "label": "See examples",
@@ -110,7 +110,7 @@
       "text": "ثبت درخواست فقط چند دقیقه طول می‌کشد.",
       "primary": {
         "label": "درخواست پروفایل",
-        "href": "/{lang}/#request"
+        "href": "/{lang}/plans/#request"
       },
       "secondary": {
         "label": "مشاهده نمونه‌ها",

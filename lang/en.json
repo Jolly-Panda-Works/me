@@ -17,6 +17,42 @@
     "mascotAlt": "Jolly Panda mascot",
     "scroll": "Scroll"
   },
+  "why": {
+    "eyebrow": "Why a personal profile?",
+    "title": "A few questions worth asking first",
+    "subtitle": "Not sure a personal page or portfolio is worth it? Here are straight answers to the questions people ask most.",
+    "items": {
+      "portfolio": {
+        "q": "Why do I need a portfolio website at all?",
+        "a": "Because a portfolio shows your work instead of just claiming it. An employer or client can see in seconds what you have done, what you are good at and how to reach you."
+      },
+      "resume": {
+        "q": "Isn't a PDF resume enough?",
+        "a": "A PDF is static, awkward on a phone and has no room for images or samples. An online page puts it all in one place, and the Professional plan adds a resume download button too."
+      },
+      "social": {
+        "q": "Can't social media do the same job?",
+        "a": "On social media your work gets buried between other people's posts and you don't control how it looks. A personal page is yours: you decide the order and the design, and all your links live in one place."
+      },
+      "url": {
+        "q": "What difference does my own address make?",
+        "a": "A short, memorable link like me.jollypanda.ir/bio/your-name goes in your resume, your email signature and your social bios. Wherever you are introduced, that one link is all anyone needs."
+      },
+      "forme": {
+        "q": "I'm not a designer or developer. Is it still for me?",
+        "a": "Yes. Anyone who wants to be seen professionally can use it: photographers, teachers, consultants, freelancers or employees. You only need to know what you want to show about yourself."
+      },
+      "hard": {
+        "q": "Isn't it hard to get one made?",
+        "a": "No. You don't need technical skills or an account. You fill in a short request form, we get in touch, and we take care of the design and publishing."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to build your profile?",
+    "text": "See the plans, browse completed work and send us your request.",
+    "button": "See plans & request a profile"
+  },
   "pricing": {
     "eyebrow": "Pricing",
     "title": "A plan that fits you",
@@ -64,7 +100,14 @@
     },
     "updatedLabel": "Prices last updated",
     "updated": "September 22, 2026",
-    "note": ""
+    "note": "",
+    "samplesCta": "View completed work"
+  },
+  "plans": {
+    "meta": {
+      "title": "Plans & Request a Profile | Jolly Panda",
+      "description": "See the prices of our personal profile and online resume packages, browse completed work and send your request."
+    }
   },
   "form": {
     "eyebrow": "Request a Profile",

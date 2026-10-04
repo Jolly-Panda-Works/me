@@ -10,9 +10,11 @@ All visible text lives in JSON, not in the HTML.
 | Privacy Policy | `content/privacy.json` |
 | Profiles list page texts | `content/bio.json` |
 | 404 page | `content/not-found.json` |
-| Home page (hero, **pricing and prices**, request form, error messages) | `lang/en.json`, `lang/fa.json` |
+| Home page (hero, "why a profile" questions, closing call-to-action), **Plans page** (pricing and prices, request form, error messages) | `lang/en.json`, `lang/fa.json` |
 
 Each file has an `en` and a `fa` block. In text you can use `**bold**`, `[link text](/{lang}/faq/)` and the placeholders `{lang}`, `{email}`, `{year}`. **Change the JSON, commit, push, and Vercel rebuilds.**
+
+The home-page questions are `why.items.*` (each has a `q` and an `a`) in the same two files; the closing button is `cta.*`. The structure of the two hand-written pages lives in `en|fa/index.html` (home) and `en|fa/plans/index.html` (plans), which also hold the static fallback text shown before JavaScript runs — keep it in sync when you edit the JSON.
 
 Updating prices: the **USD price of each package** lives in `content/pricing.json` (and, as text, in `lang/en.json`). **Persian prices are generated, don't edit them by hand** — `scripts/update-prices.mjs` multiplies the USD prices by the day's dollar rate from the Navasan API, rounds (`roundToMillionRial`) and writes the Rial text into `lang/fa.json`, the `pricing.updated` date, and the static fallback text in `fa/index.html`. The GitHub Action `.github/workflows/update-prices.yml` runs it every day and commits the result; see [setup](setup.md#daily-persian-prices). To change a package price: edit `content/pricing.json` **and** `pricing.plans.*.price` in `lang/en.json`, then run the workflow (Actions → *Update Persian prices* → Run workflow) or `node scripts/update-prices.mjs` locally.
 
@@ -24,7 +26,8 @@ Every page exists in both languages under a language prefix, so the URL always t
 
 | Page | English | Persian |
 | --- | --- | --- |
-| Home (hero, pricing, request form) | `/en/` | `/fa/` |
+| Home (hero, "why a profile" questions, button to the plans) | `/en/` | `/fa/` |
+| Plans (pricing, "view completed work" button, request form) | `/en/plans/` | `/fa/plans/` |
 | Profiles list (search + filter) | `/en/bio/` | `/fa/bio/` |
 | How it works | `/en/how-it-works/` | `/fa/how-it-works/` |
 | FAQ | `/en/faq/` | `/fa/faq/` |

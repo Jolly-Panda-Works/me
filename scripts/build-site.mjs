@@ -268,23 +268,33 @@ function renderGeneratedPages(projects) {
   write("bio/index.html", bioRedirectPage(site));
 }
 
-// ----------------------------------------------- 4. home: shared header/footer
+// ----------------------------------------------- 4. home + plans: shared header/footer
+// Hand-written pages (en|fa/index.html = landing, en|fa/plans/index.html = pricing + request form)
+// get the shared header/footer inserted through the <!--@header--> / <!--@footer--> markers.
+const STATIC_PAGES = [
+  { file: "index.html", key: "home", path: "" },
+  { file: "plans/index.html", key: "plans", path: "plans/" },
+];
+
 function renderHomePages() {
   for (const lang of LANGS) {
-    const src = fs.readFileSync(path.join(lang, "index.html"), "utf8");
-    if (!src.includes("<!--@header-->") || !src.includes("<!--@footer-->")) {
-      throw new Error(`${lang}/index.html is missing the <!--@header--> / <!--@footer--> markers`);
+    for (const pg of STATIC_PAGES) {
+      const rel = path.join(lang, pg.file);
+      const src = fs.readFileSync(rel, "utf8");
+      if (!src.includes("<!--@header-->") || !src.includes("<!--@footer-->")) {
+        throw new Error(`${rel} is missing the <!--@header--> / <!--@footer--> markers`);
+      }
+      const html = src
+        .replace("<!--@header-->", () => header(site, lang, pg.key, pg.path))
+        .replace("<!--@footer-->", () => footer(site, lang));
+      write(`${lang}/${pg.file}`, html);
     }
-    const html = src
-      .replace("<!--@header-->", () => header(site, lang, "home", ""))
-      .replace("<!--@footer-->", () => footer(site, lang));
-    write(`${lang}/index.html`, html);
   }
 }
 
 // ------------------------------------------------------------ 5. seo files
 function writeSeoFiles(projects) {
-  const pagePaths = ["", "bio/", "how-it-works/", "faq/", "privacy/"];
+  const pagePaths = ["", "plans/", "bio/", "how-it-works/", "faq/", "privacy/"];
   write("sitemap.xml", sitemap(site, pagePaths, projects));
   write("robots.txt", robotsTxt(site));
 }

@@ -95,9 +95,10 @@
     });
 
     // <title> and meta description
-    var titleVal = getPath(dict, "meta.title");
+    var metaKey = document.body.getAttribute("data-meta") || "meta";
+    var titleVal = getPath(dict, metaKey + ".title");
     if (typeof titleVal === "string") document.title = titleVal;
-    var descVal = getPath(dict, "meta.description");
+    var descVal = getPath(dict, metaKey + ".description");
     var descEl = document.querySelector('meta[name="description"]');
     if (descEl && typeof descVal === "string") descEl.setAttribute("content", descVal);
     var ogTitleEl = document.querySelector('meta[property="og:title"]');

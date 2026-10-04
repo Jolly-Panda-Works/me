@@ -6,7 +6,7 @@
  * rate from the Navasan API, shown in Rial ("۵۰ میلیون ریال").
  *
  * Writes: lang/fa.json (pricing.plans.*.price, pricing.updated),
- *         fa/index.html (static fallback text of the same fields + <time datetime>),
+ *         fa/plans/index.html (static fallback text of the same fields + <time datetime>),
  *         content/last-rate.json (used as a sanity check on the next run).
  *
  * Env:  NAVASAN_API_KEY   (required)  free key: https://t.me/navasan_contact_bot
@@ -24,7 +24,7 @@ const DRY = process.env.DRY_RUN === "1";
 const KEY = process.env.NAVASAN_API_KEY;
 const CFG_PATH = "content/pricing.json";
 const FA_PATH = "lang/fa.json";
-const FA_HTML = "fa/index.html";
+const FA_HTML = "fa/plans/index.html";
 const RATE_PATH = "content/last-rate.json";
 const MAX_JUMP = 0.3; // refuse a rate that moved more than 30% since the last run
 

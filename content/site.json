@@ -50,11 +50,11 @@
       ],
       "pricing": {
         "label": "Pricing",
-        "href": "/{lang}/#pricing"
+        "href": "/{lang}/plans/#pricing"
       },
       "request": {
         "label": "Request a Profile",
-        "href": "/{lang}/#request"
+        "href": "/{lang}/plans/#request"
       }
     },
     "footer": {
@@ -77,7 +77,7 @@
             },
             {
               "label": "Pricing",
-              "href": "/{lang}/#pricing"
+              "href": "/{lang}/plans/#pricing"
             },
             {
               "label": "FAQ",
@@ -85,7 +85,7 @@
             },
             {
               "label": "Request a Profile",
-              "href": "/{lang}/#request"
+              "href": "/{lang}/plans/#request"
             }
           ]
         },
@@ -164,11 +164,11 @@
       ],
       "pricing": {
         "label": "قیمت‌گذاری",
-        "href": "/{lang}/#pricing"
+        "href": "/{lang}/plans/#pricing"
       },
       "request": {
         "label": "درخواست پروفایل",
-        "href": "/{lang}/#request"
+        "href": "/{lang}/plans/#request"
       }
     },
     "footer": {
@@ -191,7 +191,7 @@
             },
             {
               "label": "قیمت‌گذاری",
-              "href": "/{lang}/#pricing"
+              "href": "/{lang}/plans/#pricing"
             },
             {
               "label": "سؤالات متداول",
@@ -199,7 +199,7 @@
             },
             {
               "label": "درخواست پروفایل",
-              "href": "/{lang}/#request"
+              "href": "/{lang}/plans/#request"
             }
           ]
         },

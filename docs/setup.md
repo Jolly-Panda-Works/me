@@ -44,6 +44,6 @@ python3 -m http.server -d _site 8080                              # http://local
 
 `BIO_REPOS` (space-separated repo names) skips the GitHub API — use it for a fast local build instead of listing the whole organization. Every edit to `content/*.json`, `lang/*.json` or `en|fa/index.html` needs a rebuild (`node scripts/build-site.mjs`) to show up in `_site/`.
 
-The `/api/*` endpoints (the request form) only exist on Vercel; `npx vercel dev` runs them locally if you need to test the form end to end.
+The `/api/*` endpoints (the request form on the Plans page) only exist on Vercel; `npx vercel dev` runs them locally if you need to test the form end to end.
 
 See also: [content editing](content.md), [profiles](profiles.md), [the request form](form.md), [architecture](architecture.md).

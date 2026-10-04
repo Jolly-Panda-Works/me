@@ -38,7 +38,7 @@
       "text": "Tell us about yourself and we'll build your profile.",
       "primary": {
         "label": "Request a Profile",
-        "href": "/{lang}/#request"
+        "href": "/{lang}/plans/#request"
       }
     }
   },
@@ -79,7 +79,7 @@
       "text": "خودتان را معرفی کنید تا پروفایل‌تان را بسازیم.",
       "primary": {
         "label": "درخواست پروفایل",
-        "href": "/{lang}/#request"
+        "href": "/{lang}/plans/#request"
       }
     }
   }

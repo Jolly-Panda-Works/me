@@ -650,3 +650,107 @@ select.form-field__input.is-highlighted {
 .form-turnstile:not(:empty) {
   margin-bottom: var(--space-sm);
 }
+
+/* ---------- Home: "why a profile" questions ---------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.why-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.why-card__mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  background: var(--color-yellow-light);
+  color: var(--color-orange-dark);
+  font-weight: 800;
+  font-size: var(--fs-h3);
+  line-height: 1;
+}
+
+.why-card h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-tight);
+}
+
+.why-card p {
+  font-size: var(--fs-body);
+}
+
+@media (min-width: 700px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1000px) {
+  .why-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .why-card { transition: none; }
+  .why-card:hover { transform: none; }
+}
+
+/* ---------- Home: closing call-to-action band ---------- */
+.cta-band {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.cta-band h2 {
+  font-size: var(--fs-h2);
+}
+
+.cta-band p {
+  font-size: var(--fs-lead);
+  max-width: 560px;
+  margin-bottom: var(--space-xs);
+}
+
+/* ---------- Plans page ---------- */
+/* first block on the page: clear the fixed header */
+.section--first {
+  padding-top: calc(var(--nav-height) + var(--space-xl));
+}
+
+.section-heading h1 {
+  font-size: var(--fs-h2);
+  margin-top: var(--space-sm);
+}
+
+/* "View completed work" button sitting with the plans */
+.pricing-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
